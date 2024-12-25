@@ -2,4 +2,4 @@
     let { data } = $props();
 </script>
 
-<h1>{data.hairtypes.hairtype}</h1>
+<h1>{data.hairtype._id}</h1>
