@@ -14,7 +14,10 @@ async function getHairTypes() {
 
     // You can specify a query/filter here
     // See https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/query-document/
-    const query = {};
+    const query = {$sort:
+      {
+        hairtype: 1
+      }};
 
     // Get all objects that match the query
     hairtypes = await collection.find(query).toArray();
