@@ -19,7 +19,7 @@ async function getHairTypes() {
     const sort = { hairtype: 1 }; // sort by hairtype in ascending order
 
     // Get all objects that match the query
-    hairtypes = await collection.find(query).sort(sort).toArray();
+    hairtypes = await collection.find({}).sort(sort).toArray();
     hairtypes.forEach((hairtype) => {
       hairtype._id = hairtype._id.toString(); // convert ObjectId to String
     });
