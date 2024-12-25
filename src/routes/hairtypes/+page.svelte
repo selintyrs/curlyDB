@@ -1,6 +1,5 @@
 <script>
-  export let data; // Die von der `load`-Funktion bereitgestellten Daten
-  const { hairtypes } = data;
+let {data}  = $props();
 </script>
 
 
