@@ -4,8 +4,8 @@
 </script>
 
 {#each hairtypes as hairtype}
-  <a href={"/hairtypes/" + hairtypes._id}>
-    {artist._id}
+  <a href={"/hairtypes/" + hairtype._id}>
+    {hairtype._id}
   </a>
-  <p>{hairtype.hairtype}</p>
+  <p>{hairtype.description}</p>
 {/each}
