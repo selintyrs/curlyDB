@@ -14,13 +14,12 @@ async function getHairTypes() {
 
     // You can specify a query/filter here
     // See https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/query-document/
-    const query = {$sort:
-      {
-        hairtype: 1
-      }};
+    const query = {};
+
+    const sort = { hairtype: 1 }; // sort by hairtype in ascending order
 
     // Get all objects that match the query
-    hairtypes = await collection.find(query).toArray();
+    hairtypes = await collection.find(query).sort(sort).toArray();
     hairtypes.forEach((hairtype) => {
       hairtype._id = hairtype._id.toString(); // convert ObjectId to String
     });
