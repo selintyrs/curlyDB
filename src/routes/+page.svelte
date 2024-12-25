@@ -27,7 +27,7 @@
     /* Textüberlagerung */
     .hero-overlay {
       position: absolute;
-      top: 10%;
+      top: 30%;
       left: 80%;
       transform: translate(-50%, -50%);
       color: black;
