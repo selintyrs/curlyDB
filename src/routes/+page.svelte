@@ -1,6 +1,9 @@
-<div class="hero-section">
-    <img src="/images/models/main.jpeg" alt="main" class="hero-image" />
-    <div class="hero-text">
+<script>
+    // Kein spezieller JS-Code erforderlich
+  </script>
+  
+  <div class="hero">
+    <div class="hero-overlay">
       <h1>Welcome to your curly hair database</h1>
       <p>Learn to embrace your curls!</p>
     </div>
@@ -8,48 +11,38 @@
   
   <style>
     /* Hero-Bereich */
-    .hero-section {
-      position: relative;
-      width: 100%; /* Vollbildbreite */
-      height: 100vh; /* Vollbildhöhe */
-      margin: 0; /* Entfernt alle Ränder */
-      padding: 0;
-      overflow: hidden;
-    }
-  
-    /* Bild über gesamte Breite und Höhe */
-    .hero-image {
-      width: 100vw; /* 100% der Bildschirmbreite */
-      height: 100vh; /* 100% der Bildschirmhöhe */
-      object-fit: cover; /* Bild proportional skalieren, ohne Verzerrung */
-      position: absolute;
+    .hero {
+      position: fixed; /* Feststehender Hintergrund über die gesamte Seite */
       top: 0;
       left: 0;
+      width: 100vw; /* Volle Breite des Viewports */
+      height: 100vh; /* Volle Höhe des Viewports */
+      background-image: url('/images/models/main.jpeg'); /* Bild hinzufügen */
+      background-size: cover; /* Bild proportional vergrößern, um den Bereich zu füllen */
+      background-position: center; /* Bild zentrieren */
+      background-repeat: no-repeat; /* Kein Wiederholen des Bildes */
+      z-index: -1; /* Hintergrund hinter allen Inhalten */
     }
   
     /* Textüberlagerung */
-    .hero-text {
+    .hero-overlay {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 10%;
+      left: 80%;
       transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
-      padding: 20px;
-      border-radius: 10px;
+      color: black;
+      text-align: left;
     }
   
-    /* Überschrift */
-    .hero-text h1 {
+    .hero-overlay h1 {
       font-size: 3rem;
       font-weight: bold;
-      margin: 0;
     }
   
-    /* Untertitel */
-    .hero-text p {
+    .hero-overlay p {
       font-size: 1.5rem;
-      margin: 10px 0 0 0;
+      margin-top: 10px;
     }
+  
   </style>
+  
