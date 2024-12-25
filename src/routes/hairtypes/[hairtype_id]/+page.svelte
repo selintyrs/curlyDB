@@ -1,5 +1,15 @@
 <script>
-    let { data } = $props();
+    export let data;
+    const { hairtypes } = data;
+    import RoutineCard from '$lib/components/RoutineCard.svelte';
 </script>
 
 <h1>{data.hairtype._id}</h1>
+
+<div class="row">
+    {#each hairtypes as hairtype}
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-2 gx-2">
+        <RoutineCard hairtype={hairtype} />
+    </div>
+    {/each}
+</div>
