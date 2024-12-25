@@ -1,5 +1,5 @@
 <div class="hero-section">
-    <img src="/images/models/main.jpg" alt="main" class="hero-image" />
+    <img src="/images/models/main.jpeg" alt="main" class="hero-image" />
     <div class="hero-text">
       <h1>Welcome to your curly hair database</h1>
       <p>Learn to embrace your curls!</p>
