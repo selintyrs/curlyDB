@@ -4,7 +4,7 @@ let {data}  = $props();
 
 
 
-{#each hairtypes as hairtype}
+{#each data.hairtypes as hairtype}
       <tr>
         <td>
           <a href={"/hairtypes/" + hairtype._id}>
