@@ -2,9 +2,8 @@
   let { hairtype } = $props();
 </script>
 
-<div class="row">
+<div class="card-container">
   <!-- Washing Card -->
-  <div class="col-sm-3 mb-1 mb-sm-0">
   <div class="card text-center shadow-none">
     <div class="class-header">
       <h5 class="card-title"><span class="step-number">01</span> Washing</h5>
@@ -22,11 +21,9 @@
       </ul>
     </div>
   </div>
-  </div>
 
   <!-- Styling Card -->
-  <div class="col-sm-3">
-  <div class="card">
+  <div class="card text-center shadow-none">
     <div class="class-header">
       <h5 class="card-title"><span class="step-number">02</span> Styling</h5>
     </div>
@@ -43,11 +40,9 @@
       </ul>
     </div>
   </div>
-  </div>
 
   <!-- Drying Card -->
-  <div class="col-sm-3">
-  <div class="card">
+  <div class="card text-center shadow-none">
     <div class="card-header">
       <h5 class="card-title"><span class="step-number">03</span> Drying</h5>
     </div>
@@ -64,11 +59,9 @@
       </ul>
     </div>
   </div>
-  </div>
 
   <!-- Refreshing Card -->
-  <div class="col-sm-3">
-  <div class="card">
+  <div class="card text-center shadow-none">
     <div class="card-header">
       <h5 class="card-title"><span class="step-number">04</span> Refreshing</h5>
     </div>
@@ -85,11 +78,10 @@
       </ul>
     </div>
   </div>
-  </div>
 </div>
 
 <style>
-  .row {
+  .card-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
