@@ -90,17 +90,17 @@
   }
 
   .card {
-    border: none;
-    border-radius: 0;
-    padding: 1rem;
-    flex: 1 1 calc(25% - 1rem); /* Karten sollen gleichmäßig verteilt sein */
-    width: 100%;
-    height: auto;
-    box-shadow: none;
-    background-color: transparent !important;
-    margin: 0.5rem;
-    text-align: left;
-  }
+      border: none;
+      border-radius: 0;
+      padding: 1rem;
+      flex: 1 1 calc(25% - 2rem); /* Karten sollen gleichmäßig verteilt sein */
+      max-width: calc(25% - 2rem); /* Ensure cards don't exceed 25% width */
+      height: auto;
+      box-shadow: none;
+      background-color: transparent !important;
+      margin: 0.5rem;
+      text-align: left;
+    }
 
   .card-header {
     margin-bottom: 5px; /* Abstand zwischen Header und Bild */
