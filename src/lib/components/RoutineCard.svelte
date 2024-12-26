@@ -83,7 +83,6 @@
 <style>
   .card-container {
     display: flex;
-    flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: space-between;
     padding: 1rem;
@@ -124,6 +123,7 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     font-style: italic;
+    text-align: left; /* Ensure text is aligned to the left */
   }
 
   .step-number {
@@ -137,12 +137,12 @@
     list-style-type: none;
     padding: 0;
   }
-
   li {
     font-size: 1rem;
     line-height: 1.4;
     font-style: italic;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: left; /* Ensure text is aligned to the left */
   }
 </style>
