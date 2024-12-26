@@ -28,8 +28,9 @@
     justify-content: space-between;
     width: 100%;
     height: auto;
-    border: none; /* Kein Rand */
-    box-shadow: none; /* Kein Schatten */
+    border: none; 
+    box-shadow: none;
+
   }
 
   .card-header {
@@ -47,11 +48,11 @@
     font-size: 1rem;
     font-weight: bold;
     font-style: italic;
-    color: #6c757d;
+    color: #000000;
   }
 
   .card-image img {
-    width: 100%; /* Bild wird in voller Breite angezeigt */
+    width: 150px; /* Bild wird in voller Breite angezeigt */
     height: 250px; /* Einheitliche Höhe */
     object-fit: contain; /* Bild wird nicht abgeschnitten, sondern skaliert */
     border-radius: 0; /* Keine abgerundeten Ecken */
@@ -62,8 +63,8 @@
   }
 
   .card-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-style: italic;
-    color: #6c757d;
+    color: #000000;
   }
 </style>
