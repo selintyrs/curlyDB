@@ -3,14 +3,19 @@
 </script>
 
 <div class="card text-center shadow-sm">
+  <div class="card-body">
+    <!-- Name und Hairtype über dem Bild -->
+    <h5 class="card-title">{hairtype.name.toUpperCase()}</h5>
+    <h6 class="card-subtitle text-muted">{hairtype.hairtype}</h6>
+  </div>
+  <!-- Bild nach dem Namen -->
   <img
     src={hairtype.picture}
     class="card-img-top"
     alt={hairtype.name}
   />
   <div class="card-body">
-    <h5 class="card-title">{hairtype.name.toUpperCase()}</h5>
-    <h6 class="card-subtitle text-muted">{hairtype.hairtype}</h6>
+    <!-- Beschreibung -->
     <p class="card-text">{hairtype.description}</p>
   </div>
 </div>
@@ -35,12 +40,14 @@
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
+    margin-bottom: 5px; /* Kleiner Abstand zum Hairtype */
   }
 
   .card-subtitle {
     font-size: 1rem;
     font-weight: bold;
     font-style: italic;
+    margin-bottom: 15px; /* Größerer Abstand zum Bild */
   }
 
   .card-text {
