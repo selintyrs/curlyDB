@@ -5,7 +5,7 @@
   <div class="hero">
     <div class="hero-overlay">
       <h1>Welcome to your curly hair database</h1>
-      <p>Learn to embrace your curls!</p>
+      <p>Learn to embrace your curls! bla</p>
     </div>
   </div>
   

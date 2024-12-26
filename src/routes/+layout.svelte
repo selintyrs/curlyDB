@@ -43,10 +43,10 @@
     padding: 0;
   }
 
-  .content-container {
+  .container-fluid {
     min-height: 100vh;
     padding-top: 1rem;
-    background-color: #f8f9fa; /* Gleiche Hintergrundfarbe wie der Body */
+    background-color: #bd987a8a; /* Gleiche Hintergrundfarbe wie der Body */
   }
 
   nav {
