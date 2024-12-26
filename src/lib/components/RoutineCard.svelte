@@ -108,7 +108,7 @@
   }
 
   .card-img-top {
-    width: 300px;
+    width: 280px;
     height: auto;
     border-radius: 0px;
     object-fit: contain;
