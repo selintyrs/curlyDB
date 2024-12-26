@@ -1,9 +1,8 @@
 <script>
-    let { hairtype } = $props();
+  let { hairtype } = $props();
 </script>
 
 <div class="card-container">
-  
   <!-- Washing Card -->
   <div class="card">
     <div class="class-header">
@@ -15,11 +14,9 @@
       alt="Washing Step"
     />
     <div class="card-body">
-      
       <ul>
         {#each hairtype.routines.washing.instructions as instruction}
           <li>{instruction}</li>
-          <br />
         {/each}
       </ul>
     </div>
@@ -39,7 +36,6 @@
       <ul>
         {#each hairtype.routines.styling.instructions as instruction}
           <li>{instruction}</li>
-          <br />
         {/each}
       </ul>
     </div>
@@ -59,7 +55,6 @@
       <ul>
         {#each hairtype.routines.drying.instructions as instruction}
           <li>{instruction}</li>
-            <br />
         {/each}
       </ul>
     </div>
@@ -79,7 +74,6 @@
       <ul>
         {#each hairtype.routines.refreshing.instructions as instruction}
           <li>{instruction}</li>
-          <br />
         {/each}
       </ul>
     </div>
@@ -90,8 +84,8 @@
   .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
+    gap: 1.5rem;
+    justify-content: space-around;
     padding: 1rem;
   }
 
@@ -99,11 +93,12 @@
     border: none;
     border-radius: 0;
     padding: 1rem;
-    flex: 1 0 calc(25% - 1rem); /* Karten sollen gleichmäßig verteilt sein */
+    flex: 1 1 calc(25% - 1rem); /* Karten sollen gleichmäßig verteilt sein */
     max-width: 18rem;
     box-shadow: none;
     background-color: transparent !important;
     margin: 0.5rem;
+    text-align: center;
   }
 
   .card-header {
@@ -113,7 +108,7 @@
 
   .card-img-top {
     width: 200px;
-    height: 125px;
+    height: auto;
     border-radius: 0px;
     object-fit: contain;
   }
@@ -124,14 +119,14 @@
   }
 
   .card-title {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     font-style: italic;
   }
 
   .step-number {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-right: 0.5rem;
     font-style: italic;
@@ -143,9 +138,10 @@
   }
 
   li {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.4;
     font-style: italic;
     font-weight: bold;
+    margin-bottom: 1rem;
   }
 </style>
