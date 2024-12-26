@@ -25,28 +25,24 @@
 
     .hero-content h1 {
         position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%,-40%); 
-        text-align: center;
-        color: white;
-        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+        top: 20%;
+        right: 5%;
+        text-align: left;
+        color: rgb(0, 0, 0);
         font-size: 2.8rem; /* Größere Schrift für mehr Präsenz */
         font-weight: bold;
         font-style: italic;
         line-height: 1.5; /* Abstand zwischen den Zeilen */
-        width: 80%; /* Breite für Zeilenumbruch */
         word-wrap: break-word;
     }
 
     .hero-content p {
         position: absolute;
-        bottom: 10%;
+        bottom: 5%;
         right: 5%;
         text-align: right;
         color: black;
-        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-style: italic;
         font-weight: bold;
     }

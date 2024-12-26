@@ -30,11 +30,13 @@
     height: auto;
     border: none; 
     box-shadow: none;
+    border-radius: 0;
 
   }
 
   .card-header {
     margin-bottom: 10px; /* Abstand zwischen Header und Bild */
+    background-color: transparent; /* Header is see-through */
   }
 
   .card-title {
@@ -59,12 +61,18 @@
   }
 
   .card-body {
-    margin-top: 10px;
+    flex-grow: 1; /* Ensures the card-body takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns text to the bottom */
   }
 
   .card-text {
     font-size: 1rem;
     font-style: italic;
     color: #000000;
+    word-wrap: break-word; /* Allows text to wrap to the next line */
   }
+
+
 </style>
