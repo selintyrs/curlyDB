@@ -2,12 +2,9 @@
   let { children } = $props();
 </script>
 
-<nav
-  class="navbar navbar-expand-lg"
-  style="background-color: #654321;"
->
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #5D4037;" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">CurlyDB</a>
+    <a class="navbar-brand" href="/" style="color: white;">CurlyDB</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,16 +12,17 @@
       data-bs-target="#navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
-      aria-label="Toggle navigation">
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/hairtypes">Hairtype</a>
+          <a class="nav-link active" aria-current="page" href="/hairtypes" style="color: white;">Hairtype</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/insider">Insider</a>
+          <a class="nav-link active" aria-current="page" href="/insider" style="color: white;">Insider</a>
         </li>
       </ul>
     </div>
@@ -32,24 +30,28 @@
 </nav>
 
 
-<div class="container mt-3">
+<div class="content-container">
   {@render children()}
 </div>
 
 <style>
-  :global(body) {
-    background-color: #bd987a8a; /* Standard-Hintergrundfarbe */
+  /* Globale Einstellungen für den Body */
+  body {
+    background-color: #b49d8a8a; /* Standard-Hintergrundfarbe */
     margin: 0;
     padding: 0;
   }
 
-  .container-fluid {
-    min-height: 100vh;
-    padding-top: 1rem;
-    background-color: #bd987a8a; /* Gleiche Hintergrundfarbe wie der Body */
+  /* Navbar-Styling */
+  .navbar {
+    z-index: 10; /* Navbar bleibt immer oben */
+    border-bottom: 2px solid #4e342e; /* Optional: Grenze für Kontrast */
   }
 
-  nav {
-    margin-bottom: 1rem;
+  /* Container für den Seiteninhalt */
+  .content-container {
+    padding-top: 4rem; /* Platz für die fixe Navbar */
+    min-height: 100vh; /* Mindestens die Höhe des Bildschirms */
+    background-color: #b49d8a8a; /* Gleiche Hintergrundfarbe wie der Body */
   }
 </style>
