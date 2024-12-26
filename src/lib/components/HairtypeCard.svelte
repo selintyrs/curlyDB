@@ -61,10 +61,7 @@
   }
 
   .card-body {
-    flex-grow: 1; /* Ensures the card-body takes up remaining space */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Aligns text to the bottom */
+    padding: 10px; /* Adds padding around the description */
     background-color: transparent !important;
   }
 
@@ -73,6 +70,7 @@
     font-style: italic;
     color: #000000;
     word-wrap: break-word; /* Allows text to wrap to the next line */
+    margin: 0; /* Removes default margin */
   }
 
 

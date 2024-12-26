@@ -15,7 +15,7 @@
 
 <style>
     .hero-section {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background-image: url("/images/models/main.jpeg");
         background-size: cover;
@@ -26,7 +26,7 @@
 
     .hero-content h1 {
         position: absolute;
-        top: 15%;
+        top: 10%;
         right: 3%;
         text-align: left;
         color: rgb(0, 0, 0);
@@ -43,7 +43,7 @@
         right: 5%;
         text-align: right;
         color: black;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-style: italic;
         font-weight: bold;
     }
