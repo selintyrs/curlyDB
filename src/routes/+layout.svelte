@@ -3,8 +3,8 @@
 </script>
 
 <nav
-  class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
-  data-bs-theme="dark"
+  class="navbar navbar-expand-lg"
+  style="background-color: #654321;"
 >
   <div class="container-fluid">
     <a class="navbar-brand" href="/">CurlyDB</a>
