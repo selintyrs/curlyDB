@@ -1,57 +1,39 @@
 <script>
-  let { children } = $props();
+  let { children } = $$props;
 </script>
 
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #5D4037;" data-bs-theme="dark">
+
+
+<nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/" style="color: white;">CurlyDB</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand" href="/">CurlyDB</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/hairtypes" style="color: white;">Hairtype</a>
+          <a class="nav-link" href="/hairtypes">Hairtypes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/insider" style="color: white;">Insider</a>
+          <a class="nav-link" href="/insider">Insider</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-
 <div class="content-container">
   {@render children()}
 </div>
 
 <style>
-  /* Globale Einstellungen für den Body */
   body {
-    background-color: #b49d8a8a; /* Standard-Hintergrundfarbe */
+    background-color: #bd9878; /* Deine fixe Hintergrundfarbe */
     margin: 0;
     padding: 0;
   }
-
-  /* Navbar-Styling */
-  .navbar {
-    z-index: 10; /* Navbar bleibt immer oben */
-    border-bottom: 2px solid #4e342e; /* Optional: Grenze für Kontrast */
-  }
-
-  /* Container für den Seiteninhalt */
+  
   .content-container {
-    padding-top: 4rem; /* Platz für die fixe Navbar */
-    min-height: 100vh; /* Mindestens die Höhe des Bildschirms */
-    background-color: #b49d8a8a; /* Gleiche Hintergrundfarbe wie der Body */
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
   }
 </style>
