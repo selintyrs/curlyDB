@@ -10,7 +10,7 @@
 
     <a
       href={`hairtypes/${hairtype._id}`} style="text-decoration: none; color: inherit;">
-      <HairtypeCard {hairtype} />
+      <HairtypeCard hairtype = {hairtype} />
     </a>
   </div>
   {/each}
