@@ -4,14 +4,43 @@
   import HairtypeCard from "$lib/components/HairtypeCard.svelte";
 </script>
 
-<div class="row">
-  {#each hairtypes as hairtype}
-    <div class="col-sm-6 col-md-4 col-lg-3 mb-2 gx-2">
+<div class="container">
+  <!-- Überschrift -->
+  <h1 class="page-title">Discover Your Curl Type</h1>
+  <p class="page-description">Find the best products and tips for your curly hair.</p>
 
-    <a
-      href={`hairtypes/${hairtype._id}`} style="text-decoration: none; color: inherit;">
-      <HairtypeCard hairtype = {hairtype} />
-    </a>
+  <!-- Grid für Karten -->
+  <div class="row">
+    {#each hairtypes as hairtype}
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+        <a href={`hairtypes/${hairtype._id}`} class="card-link">
+          <HairtypeCard hairtype={hairtype} />
+        </a>
+      </div>
+    {/each}
   </div>
-  {/each}
 </div>
+
+<style>
+  .page-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #4a4a4a;
+  }
+
+  .page-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #6c757d;
+  }
+
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
