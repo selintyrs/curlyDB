@@ -48,15 +48,15 @@
   }
 
   .card-subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
     color: #000000;
   }
 
   .card-image img {
-    width: 150px; /* Bild wird in voller Breite angezeigt */
-    height: 250px; /* Einheitliche Höhe */
+    width: 200px; /* Bild wird in voller Breite angezeigt */
+    height: 300px; /* Einheitliche Höhe */
     object-fit: contain; /* Bild wird nicht abgeschnitten, sondern skaliert */
     border-radius: 0; /* Keine abgerundeten Ecken */
   }
