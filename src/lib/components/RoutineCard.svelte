@@ -19,6 +19,7 @@
       <ul>
         {#each hairtype.routines.washing.instructions as instruction}
           <li>{instruction}</li>
+          <br />
         {/each}
       </ul>
     </div>
@@ -27,7 +28,7 @@
   <!-- Styling Card -->
   <div class="card">
     <div class="class-header">
-      <h5 class="card-title">02 Styling</h5>
+      <h5 class="card-title"><span class="step-number">02</span> Styling</h5>
     </div>
     <img
       src={hairtype.routines.styling.image}
@@ -38,6 +39,7 @@
       <ul>
         {#each hairtype.routines.styling.instructions as instruction}
           <li>{instruction}</li>
+          <br />
         {/each}
       </ul>
     </div>
@@ -46,7 +48,7 @@
   <!-- Drying Card -->
   <div class="card">
     <div class="card-header">
-      <h5 class="card-title">03 Drying</h5>
+      <h5 class="card-title"><span class="step-number">03</span> Drying</h5>
     </div>
     <img
       src={hairtype.routines.drying.image}
@@ -57,6 +59,7 @@
       <ul>
         {#each hairtype.routines.drying.instructions as instruction}
           <li>{instruction}</li>
+            <br />
         {/each}
       </ul>
     </div>
@@ -65,7 +68,7 @@
   <!-- Refreshing Card -->
   <div class="card">
     <div class="card-header">
-      <h5 class="card-title">04 Refreshing</h5>
+      <h5 class="card-title"><span class="step-number">04</span> Refreshing</h5>
     </div>
     <img
       src={hairtype.routines.refreshing.image}
@@ -76,6 +79,7 @@
       <ul>
         {#each hairtype.routines.refreshing.instructions as instruction}
           <li>{instruction}</li>
+          <br />
         {/each}
       </ul>
     </div>
@@ -85,19 +89,21 @@
 <style>
   .card-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
     padding: 1rem;
   }
 
   .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: none;
+    border-radius: 0;
     padding: 1rem;
-    flex: 1;
+    flex: 1 0 calc(25% - 1rem); /* Karten sollen gleichmäßig verteilt sein */
     max-width: 18rem;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     background-color: transparent !important;
+    margin: 0.5rem;
   }
 
   .card-header {
@@ -106,8 +112,8 @@
   }
 
   .card-img-top {
-    width: 400px;
-    height: 200px;
+    width: 200px;
+    height: 125px;
     border-radius: 0px;
     object-fit: contain;
   }
