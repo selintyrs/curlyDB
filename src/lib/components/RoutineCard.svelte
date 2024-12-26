@@ -83,7 +83,7 @@
 <style>
   .card-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
     justify-content: space-between;
     padding: 1rem;
@@ -94,13 +94,14 @@
       border: none;
       border-radius: 0;
       padding: 1rem;
-      flex: 0 0 calc(50% - 2rem); /* Karten sollen gleichmäßig verteilt sein */
-      max-width: calc(50% - 2rem); /* Ensure cards don't exceed 25% width */
+      flex: 1 1 calc(25% - 2rem); /* Karten sollen gleichmäßig verteilt sein */
+      max-width: calc(25% - 2rem); /* Ensure cards don't exceed 25% width */
       height: 100%;
       box-shadow: none;
       background-color: transparent !important;
       margin: 0.5rem;
       text-align: left;
+      box-sizing: border-box;
     }
 
   .card-header {
