@@ -1,48 +1,51 @@
 <script>
-    // Kein spezieller JS-Code erforderlich
+    // Kein spezieller JS-Code nötig
   </script>
   
-  <div class="hero">
-    <div class="hero-overlay">
+  <div class="hero-section">
+    <div class="hero-content">
       <h1>Welcome to your curly hair database</h1>
       <p>Learn to embrace your curls!</p>
     </div>
   </div>
   
+  <!-- Weitere Inhalte -->
+  <div class="main-content">
+    <p>This is additional content below the hero section.</p>
+  </div>
+  
   <style>
-    /* Hero-Bereich */
-    .hero {
-      position: fixed; /* Feststehender Hintergrund über die gesamte Seite */
-      top: 0;
-      left: 0;
-      width: 100vw; /* Volle Breite des Viewports */
-      height: 100vh; /* Volle Höhe des Viewports */
-      background-image: url('/images/models/main.jpeg'); /* Bild hinzufügen */
-      background-size: cover; /* Bild proportional vergrößern, um den Bereich zu füllen */
-      background-position: center; /* Bild zentrieren */
-      background-repeat: no-repeat; /* Kein Wiederholen des Bildes */
-      z-index: -1; /* Hintergrund hinter allen Inhalten */
+    .hero-section {
+      height: 100vh; /* Voller Bildschirmhöhe */
+      background-image: url('/images/models/main.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
     }
   
-    /* Textüberlagerung */
-    .hero-overlay {
+    .hero-content {
       position: absolute;
-      top: 45%;
-      left: 75%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      color: black;
-      text-align: left;
+      text-align: center;
+      color: white;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
     }
   
-    .hero-overlay h1 {
-      font-size: 2.7rem;
+    .hero-content h1 {
+      font-size: 2.5rem;
       font-weight: bold;
     }
   
-    .hero-overlay p {
-      font-size: 1.5rem;
-      margin-top: 10px;
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
     }
   
+    .main-content {
+      padding: 2rem;
+    }
   </style>
   
