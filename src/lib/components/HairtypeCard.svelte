@@ -31,6 +31,7 @@
     border: none; 
     box-shadow: none;
     border-radius: 0;
+    background-color: transparent !important; /* Card is see-through */
 
   }
 
