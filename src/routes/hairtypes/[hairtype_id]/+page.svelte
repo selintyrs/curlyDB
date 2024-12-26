@@ -1,5 +1,5 @@
 <script>
-    let { data } = $props();
+    export let hairtype;
     import RoutineCard from "$lib/components/RoutineCard.svelte";
 </script>
 
