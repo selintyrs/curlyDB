@@ -2,7 +2,7 @@
   let { children } = $props();
 </script>
 
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #5D4037;" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #755a3b;" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/" style="color: white;">CurlyDB</a>
     <button
@@ -37,7 +37,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Standard Hintergrundfarbe */
+    background-color: #f1c18aa9; /* Standard Hintergrundfarbe */
   }
 
   .navbar {
