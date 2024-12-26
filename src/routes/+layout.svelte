@@ -35,3 +35,21 @@
 <div class="container mt-3">
   {@render children()}
 </div>
+
+<style>
+  :global(body) {
+    background-color: #bd987a8a; /* Standard-Hintergrundfarbe */
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-container {
+    min-height: 100vh;
+    padding-top: 1rem;
+    background-color: #f8f9fa; /* Gleiche Hintergrundfarbe wie der Body */
+  }
+
+  nav {
+    margin-bottom: 1rem;
+  }
+</style>
