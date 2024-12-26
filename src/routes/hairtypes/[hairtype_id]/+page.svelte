@@ -22,4 +22,14 @@
       font-style: italic;
       color: #000000;
     }
+
+    .row {
+    margin-top: 20px;
+  }
+
+  .col {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
 </style>  
