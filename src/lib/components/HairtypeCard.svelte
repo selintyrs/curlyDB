@@ -2,57 +2,68 @@
     let { hairtype } = $props();
 </script>
 
-<div class="card text-center shadow-sm">
-  <div class="card-body">
-    <!-- Name und Hairtype über dem Bild -->
+<div class="card text-center shadow-none">
+  <!-- Name und Hairtype über dem Bild -->
+  <div class="card-header">
     <h5 class="card-title">{hairtype.name.toUpperCase()}</h5>
     <h6 class="card-subtitle text-muted">{hairtype.hairtype}</h6>
   </div>
-  <!-- Bild nach dem Namen -->
-  <img
-    src={hairtype.picture}
-    class="card-img-top"
-    alt={hairtype.name}
-  />
+  <!-- Bild -->
+  <div class="card-image">
+    <img
+      src={hairtype.picture}
+      alt={hairtype.name}
+    />
+  </div>
+  <!-- Beschreibung -->
   <div class="card-body">
-    <!-- Beschreibung -->
     <p class="card-text">{hairtype.description}</p>
   </div>
 </div>
 
 <style>
   .card {
-    height: 100%; /* Gleiche Höhe für alle Karten */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 18rem;
-    margin: auto;
+    width: 100%;
+    height: auto;
+    border: none; /* Kein Rand */
+    box-shadow: none; /* Kein Schatten */
   }
 
-  .card-img-top {
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+  .card-header {
+    margin-bottom: 10px; /* Abstand zwischen Header und Bild */
   }
 
   .card-title {
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
-    margin-bottom: 5px; /* Kleiner Abstand zum Hairtype */
+    margin-bottom: 5px; /* Kleiner Abstand zwischen Titel und Subtitle */
   }
 
   .card-subtitle {
     font-size: 1rem;
     font-weight: bold;
     font-style: italic;
-    margin-bottom: 15px; /* Größerer Abstand zum Bild */
+    color: #6c757d;
+  }
+
+  .card-image img {
+    width: 100%; /* Bild wird in voller Breite angezeigt */
+    height: 250px; /* Einheitliche Höhe */
+    object-fit: contain; /* Bild wird nicht abgeschnitten, sondern skaliert */
+    border-radius: 0; /* Keine abgerundeten Ecken */
+  }
+
+  .card-body {
+    margin-top: 10px;
   }
 
   .card-text {
     font-size: 0.9rem;
-    margin-top: 10px;
     font-style: italic;
+    color: #6c757d;
   }
 </style>
