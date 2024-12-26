@@ -4,7 +4,7 @@
 
 <div class="hero-section">
     <div class="hero-content">
-        <h1>Welcome to your curly hair database</h1>
+        <h1>Welcome to your <br /> curly hair database</h1>
         <p>Learn to embrace your curls!</p>
     </div>
 </div>
@@ -25,20 +25,23 @@
 
     .hero-content h1 {
         position: absolute;
-        top: 45%;
-        left: 10%;
-        transform: translate(0, -50%);
-        text-align: left;
-        color: black;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-40%); 
+        text-align: center;
+        color: white;
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-        font-size: 2.5rem;
+        font-size: 2.8rem; /* Größere Schrift für mehr Präsenz */
         font-weight: bold;
         font-style: italic;
+        line-height: 1.5; /* Abstand zwischen den Zeilen */
+        width: 80%; /* Breite für Zeilenumbruch */
+        word-wrap: break-word;
     }
 
     .hero-content p {
         position: absolute;
-        bottom: 10%; 
+        bottom: 10%;
         right: 5%;
         text-align: right;
         color: black;
