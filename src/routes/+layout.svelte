@@ -34,14 +34,11 @@
 </div>
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #E7D5BD; /* Standard Hintergrundfarbe */
-  }
 
   .navbar {
     z-index: 10;
+    font-style: italic;
+    font-weight: bold;
   }
 
   .content-container {
