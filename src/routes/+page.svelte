@@ -27,15 +27,15 @@
     /* Textüberlagerung */
     .hero-overlay {
       position: absolute;
-      top: 30%;
-      left: 80%;
+      top: 50%;
+      left: 70%;
       transform: translate(-50%, -50%);
       color: black;
       text-align: left;
     }
   
     .hero-overlay h1 {
-      font-size: 3rem;
+      font-size: 2.7rem;
       font-weight: bold;
     }
   
