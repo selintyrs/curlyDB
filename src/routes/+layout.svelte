@@ -1,5 +1,5 @@
 <script>
-  let { children } = $$props;
+  let { children } = $props();
 </script>
 
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #5D4037;" data-bs-theme="dark">
