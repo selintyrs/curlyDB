@@ -34,11 +34,10 @@
 </div>
 
 <style>
-  /* Globale Einstellungen */
   body {
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Standard-Hintergrundfarbe */
+    background-color: #f8f9fa; /* Standard Hintergrundfarbe */
   }
 
   .navbar {

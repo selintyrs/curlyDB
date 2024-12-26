@@ -1,5 +1,5 @@
 <script>
-    // Kein spezieller JS-Code nötig
+    // Kein JS-Code notwendig
   </script>
   
   <div class="hero-section">
@@ -9,14 +9,13 @@
     </div>
   </div>
   
-  <!-- Weitere Inhalte -->
   <div class="main-content">
-    <p>This is additional content below the hero section.</p>
+    <p>Additional content below the hero section.</p>
   </div>
   
   <style>
     .hero-section {
-      height: 100vh; /* Voller Bildschirmhöhe */
+      height: 100vh;
       background-image: url('/images/models/main.jpeg');
       background-size: cover;
       background-position: center;
