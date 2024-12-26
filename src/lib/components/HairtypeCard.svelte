@@ -36,7 +36,7 @@
   }
 
   .card-header {
-    margin-bottom: 10px; /* Abstand zwischen Header und Bild */
+    margin-bottom: 5px; /* Abstand zwischen Header und Bild */
     background-color: transparent !important; /* Header is see-through */
   }
 
@@ -64,6 +64,8 @@
   .card-body {
     padding: 10px; /* Adds padding around the description */
     background-color: transparent !important;
+    margin-top: 5px; /* Abstand zwischen Bild und Beschreibung */
+    
   }
 
   .card-text {

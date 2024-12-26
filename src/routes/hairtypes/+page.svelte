@@ -12,7 +12,7 @@
   <div class="row row-cols-1 row-cols-md-3 g-4">
     {#each hairtypes as hairtype}
       <div class="col d-flex align-items-stretch">
-        <a href={`hairtypes/${hairtype._id}`} class="card-link">
+        <a href={`/hairtypes/${hairtype._id}`} class="card-link">
           <HairtypeCard hairtype={hairtype} />
         </a>
       </div>
@@ -44,5 +44,6 @@
   .col {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
   }
 </style>
