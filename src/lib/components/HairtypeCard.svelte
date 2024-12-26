@@ -17,6 +17,10 @@
 
 <style>
   .card {
+    height: 100%; /* Gleiche Höhe für alle Karten */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 18rem;
     margin: auto;
   }

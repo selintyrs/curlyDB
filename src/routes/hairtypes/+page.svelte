@@ -10,9 +10,9 @@
   <p class="page-description">Find the best products and tips for your curly hair.</p>
 
   <!-- Grid für Karten -->
-  <div class="row">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
     {#each hairtypes as hairtype}
-      <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+      <div class="col d-flex align-items-stretch">
         <a href={`hairtypes/${hairtype._id}`} class="card-link">
           <HairtypeCard hairtype={hairtype} />
         </a>
@@ -42,5 +42,14 @@
   .card-link {
     text-decoration: none;
     color: inherit;
+  }
+
+  .row {
+    margin-top: 20px;
+  }
+
+  .col {
+    display: flex;
+    justify-content: center;
   }
 </style>
