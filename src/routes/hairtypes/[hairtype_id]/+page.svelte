@@ -3,7 +3,7 @@
     import RoutineCard from "$lib/components/RoutineCard.svelte";
 </script>
 
-<h1>{data.hairtype._id}</h1>
+<h1>{data.hairtype.name}</h1>
 
 <div class="row">
     {#each hairtypes as hairtype}
