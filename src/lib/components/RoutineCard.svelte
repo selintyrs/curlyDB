@@ -86,14 +86,15 @@
     gap: 1.5rem;
     justify-content: space-between;
     padding: 1rem;
+    flex-wrap: wrap;
   }
 
   .card {
       border: none;
       border-radius: 0;
       padding: 1rem;
-      flex: 1 1 calc(25% - 2rem); /* Karten sollen gleichmäßig verteilt sein */
-      max-width: calc(25% - 2rem); /* Ensure cards don't exceed 25% width */
+      flex: 0 0 calc(50% - 2rem); /* Karten sollen gleichmäßig verteilt sein */
+      max-width: calc(50% - 2rem); /* Ensure cards don't exceed 25% width */
       height: auto;
       box-shadow: none;
       background-color: transparent !important;
@@ -107,10 +108,10 @@
   }
 
   .card-img-top {
-    width: 280px;
+    width: 100%;
     height: auto;
     border-radius: 0px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .card-body {
