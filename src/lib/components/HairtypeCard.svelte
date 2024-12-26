@@ -36,7 +36,7 @@
 
   .card-header {
     margin-bottom: 10px; /* Abstand zwischen Header und Bild */
-    background-color: transparent; /* Header is see-through */
+    background-color: transparent !important; /* Header is see-through */
   }
 
   .card-title {
@@ -65,6 +65,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Aligns text to the bottom */
+    background-color: transparent !important;
   }
 
   .card-text {

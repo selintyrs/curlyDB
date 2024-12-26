@@ -26,8 +26,8 @@
 
     .hero-content h1 {
         position: absolute;
-        top: 20%;
-        right: 5%;
+        top: 15%;
+        right: 3%;
         text-align: left;
         color: rgb(0, 0, 0);
         font-size: 2.8rem; /* Größere Schrift für mehr Präsenz */
