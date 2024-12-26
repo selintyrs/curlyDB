@@ -120,14 +120,14 @@
   }
 
   .card-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     font-style: italic;
   }
 
   .step-number {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-right: 0.5rem;
     font-style: italic;
