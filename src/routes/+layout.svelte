@@ -37,7 +37,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #efd6ad; /* Standard Hintergrundfarbe */
+    background-color: #E7D5BD; /* Standard Hintergrundfarbe */
   }
 
   .navbar {

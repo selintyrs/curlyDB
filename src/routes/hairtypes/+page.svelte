@@ -7,7 +7,6 @@
 <div class="container">
   <!-- Überschrift -->
   <h1 class="page-title">Discover Your Curl Type</h1>
-  <p class="page-description">Find the best products and tips for your curly hair.</p>
 
   <!-- Grid für Karten -->
   <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -28,16 +27,9 @@
     font-size: 2.5rem;
     font-weight: bold;
     font-style: italic;
-    color: #4a4a4a;
+    color: #000000;
   }
 
-  .page-description {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #6c757d;
-  }
 
   .card-link {
     text-decoration: none;
