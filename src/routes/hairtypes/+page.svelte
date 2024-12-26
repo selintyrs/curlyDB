@@ -32,6 +32,7 @@
 
 
   .card-link {
+    display: block; /* Macht den gesamten Inhalt klickbar */
     text-decoration: none;
     color: inherit;
   }
