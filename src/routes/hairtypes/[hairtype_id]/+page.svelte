@@ -1,16 +1,8 @@
 <script>
-    export let data;
-    const { hairtype } = data;
+    let { data } = $props();
 
     import RoutineCard from "$lib/components/RoutineCard.svelte";
 </script>
 
 
-{#if data.hairtype}
-  <h1>{data.hairtype.name}</h1>
-  <div class="row">
-    <RoutineCard hairtype={data.hairtype} />
-  </div>
-{:else}
-  <p>Loading...</p>
-{/if}
+ <h1>{data.hairtype.name}</h1>
