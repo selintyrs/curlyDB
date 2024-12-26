@@ -4,7 +4,7 @@
 
 <div class="card-container">
   <!-- Washing Card -->
-  <div class="card">
+  <div class="card text-center shadow-none">
     <div class="class-header">
       <h5 class="card-title"><span class="step-number">01</span> Washing</h5>
     </div>
@@ -23,7 +23,7 @@
   </div>
 
   <!-- Styling Card -->
-  <div class="card">
+  <div class="card text-center shadow-none">
     <div class="class-header">
       <h5 class="card-title"><span class="step-number">02</span> Styling</h5>
     </div>
@@ -42,7 +42,7 @@
   </div>
 
   <!-- Drying Card -->
-  <div class="card">
+  <div class="card text-center shadow-none">
     <div class="card-header">
       <h5 class="card-title"><span class="step-number">03</span> Drying</h5>
     </div>
@@ -61,7 +61,7 @@
   </div>
 
   <!-- Refreshing Card -->
-  <div class="card">
+  <div class="card text-center shadow-none">
     <div class="card-header">
       <h5 class="card-title"><span class="step-number">04</span> Refreshing</h5>
     </div>
@@ -85,7 +85,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
   }
 
@@ -94,11 +94,12 @@
     border-radius: 0;
     padding: 1rem;
     flex: 1 1 calc(25% - 1rem); /* Karten sollen gleichmäßig verteilt sein */
-    max-width: 18rem;
+    width: 100%;
+    height: auto;
     box-shadow: none;
     background-color: transparent !important;
     margin: 0.5rem;
-    text-align: center;
+    text-align: left;
   }
 
   .card-header {
@@ -107,7 +108,7 @@
   }
 
   .card-img-top {
-    width: 200px;
+    width: 300px;
     height: auto;
     border-radius: 0px;
     object-fit: contain;
