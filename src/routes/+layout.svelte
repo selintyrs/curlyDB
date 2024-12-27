@@ -9,7 +9,7 @@
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #c28562;" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/" style="color: black;">
-      <img src="/images/icon.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="/images/icon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       CurlyDB</a>
     <button
       class="navbar-toggler"
