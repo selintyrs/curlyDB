@@ -47,9 +47,12 @@
     font-style: italic;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 0; /* Kein zusätzlicher Abstand unterhalb der Navbar */
+    margin: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     display: flex;
+    position: sticky;
+    top: 0;
+
   }
 
   .content-container {
