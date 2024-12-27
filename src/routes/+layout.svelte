@@ -42,7 +42,8 @@
   .navbar {
     z-index: 10;
     font-style: italic;
-    font-weight: bold;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
   }
 
   .content-container {

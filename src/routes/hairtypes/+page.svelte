@@ -28,6 +28,7 @@
     font-weight: bold;
     font-style: italic;
     color: #000000;
+    font-family: 'Roboto', sans-serif;
   }
 
 

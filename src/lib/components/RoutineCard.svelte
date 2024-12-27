@@ -88,7 +88,7 @@
     padding: 2rem;
     width: 100%;
     background-color: transparent !important;
-    margin-top: 0.5;
+    margin-top: 0;
   }
 
   .card {
@@ -102,12 +102,18 @@
   }
 
   .card-header {
-    font-size: 1.9rem;
-    font-weight: bold;
-    font-style: italic;
     margin-bottom: 1rem;
     text-align: left;
     background-color: transparent !important;
+  }
+
+  .card-title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin-bottom: 0.5rem;
   }
 
   .card-img-top {
@@ -122,6 +128,7 @@
   .card-body {
     font-size: 1.2rem;
     font-style: italic;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: transparent !important;
@@ -131,6 +138,7 @@
   .step-number {
     font-size: 2.2rem;
     font-style: italic;
+    font-family: 'Roboto', sans-serif;
     color: #000000; 
     margin-right: 0.5rem;
   }

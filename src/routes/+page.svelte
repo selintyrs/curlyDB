@@ -46,7 +46,8 @@
         color: black;
         font-size: 2rem;
         font-style: italic;
-        font-weight: bold;
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif;
     }
 
     .main-content {

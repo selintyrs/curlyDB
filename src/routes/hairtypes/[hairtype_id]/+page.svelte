@@ -17,7 +17,8 @@
       margin-top: 2rem;
       margin-bottom: 1;
       font-size: 3.5rem;
-      font-weight: bold;
+      font-weight: 900;
+      font-family: 'Roboto', sans-serif;
       font-style: italic;
       color: #000000;
     }

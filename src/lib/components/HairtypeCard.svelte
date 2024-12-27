@@ -32,25 +32,29 @@
     box-shadow: none;
     border-radius: 0;
     background-color: transparent !important; /* Card is see-through */
+    margin-bottom: 1px;
 
   }
 
   .card-header {
-    margin-bottom: 1px; /* Abstand zwischen Header und Bild */
+    margin-bottom: 0.8px; /* Abstand zwischen Header und Bild */
     background-color: transparent !important; /* Header is see-through */
   }
 
   .card-title {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 900;
     font-style: italic;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 5px; /* Kleiner Abstand zwischen Titel und Subtitle */
+    color: #000000;
   }
 
   .card-subtitle {
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
+    font-family: 'Roboto', sans-serif;
     color: #000000;
   }
 
@@ -64,13 +68,14 @@
   .card-body {
     padding: 10px; /* Adds padding around the description */
     background-color: transparent !important;
-    margin-top: 1px; /* Abstand zwischen Bild und Beschreibung */
+    margin-top: 0.7px; /* Abstand zwischen Bild und Beschreibung */
     
   }
 
   .card-text {
     font-size: 1rem;
     font-style: italic;
+    font-family: 'Roboto', sans-serif;
     color: #000000;
     word-wrap: break-word; /* Allows text to wrap to the next line */
     margin: 0; /* Removes default margin */
