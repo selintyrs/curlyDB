@@ -97,11 +97,13 @@
       box-shadow: none;
       background-color: transparent !important;
       text-align: left;
-      flex: 1 1 calc(30% - 2rem); /* Breitere Karten */
+      flex: 0 0 calc(30% - 2rem); /* Breitere Karten */
     max-width: calc(30% - 2rem);
     margin: 1rem;
     padding: 2rem;
     height: auto; /* Dynamische Höhe */
+
+    
     }
 
   .card-header {
