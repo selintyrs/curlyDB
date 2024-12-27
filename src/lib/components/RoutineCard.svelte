@@ -123,7 +123,7 @@
     height: auto;
     max-height: 200px;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
     border-radius: 0%;
   }
 

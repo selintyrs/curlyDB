@@ -24,7 +24,7 @@
     }
 
     .row {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
 </style>  
