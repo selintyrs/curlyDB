@@ -8,7 +8,9 @@
 
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #c28562;" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/" style="color: black;">CurlyDB</a>
+    <a class="navbar-brand" href="/" style="color: black;">
+      <img src="/images/icon.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      CurlyDB</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -23,7 +25,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/hairtypes" style="color: black;">Hairtype</a>
+          <a class="nav-link active" aria-current="page" href="/hairtypes" style="color: black;">Hairtypes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/insider" style="color: black;">Insider</a>

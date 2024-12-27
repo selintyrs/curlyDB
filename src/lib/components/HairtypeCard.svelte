@@ -54,6 +54,7 @@
     font-style: italic;
     font-family: 'Roboto', sans-serif;
     color: #000000;
+    margin-right: 0.5rem;
   }
 
   .card-image img {

@@ -135,6 +135,7 @@
     color: #000000;
     background-color: transparent !important;
     text-align: left;
+    margin-left: 0rem;
   }
 
   .step-number {
