@@ -84,31 +84,38 @@
   .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center; /* Zentriere die Karten auf der Seite */
-    padding: 1rem;
+    gap: 1.5rem; /* Abstand zwischen Karten */
+    justify-content: center; /* Zentriert die Karten */
+    padding: 2rem;
   }
 
   .card {
-    flex: 0 1 calc(25% - 2rem); /* Jede Karte nimmt 25% Breite minus Abstand ein */
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    flex: 0 1 calc(23% - 1rem); /* 23% Breite, damit vier Karten in einer Reihe Platz haben */
+    background: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Vergrößert Karte beim Hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
 
   .card-header {
     margin-bottom: 0.5rem;
-    font-weight: bold;
     font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
   }
 
   .card-img-top {
     width: 100%;
-    height: 200px;
+    height: 150px; /* Einheitliche Höhe für Bilder */
     object-fit: cover;
     border-bottom: 1px solid #ddd;
   }
@@ -124,25 +131,28 @@
   }
 
   li {
-    margin-bottom: 0.5rem;
     font-size: 0.9rem;
+    line-height: 1.4;
+    color: #555;
+    text-align: left;
   }
 
   .step-number {
     font-size: 1.5rem;
-    color: #555;
+    font-weight: bold;
+    color: #e30613; /* Rot für Nummerierung */
     margin-right: 0.5rem;
   }
 
   @media (max-width: 768px) {
     .card {
-      flex: 0 1 calc(50% - 2rem); /* Zwei Karten pro Zeile auf Tablets */
+      flex: 0 1 calc(45% - 1rem); /* Zwei Karten pro Zeile auf kleineren Geräten */
     }
   }
 
   @media (max-width: 480px) {
     .card {
-      flex: 0 1 calc(100% - 2rem); /* Eine Karte pro Zeile auf kleinen Geräten */
+      flex: 0 1 calc(100% - 1rem); /* Eine Karte pro Zeile auf sehr kleinen Geräten */
     }
   }
 </style>
