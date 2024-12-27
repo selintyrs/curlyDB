@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet" />
 </svelte:head>
 
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: transparent;" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: white;" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/" style="color: black;">
       <img src="/images/icon.png" alt="Logo" width="38" height="36" class="d-inline-block align-text-top">

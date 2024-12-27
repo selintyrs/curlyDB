@@ -8,7 +8,7 @@ export const actions = {
             for: data.get("tip_for"),
             what: data.get("tip_text"),
         }
-        await db.createInsider(hairtype);
+        await db.createInsider(insiders);
         return {success: true}
     }
 }

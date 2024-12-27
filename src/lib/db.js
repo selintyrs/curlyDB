@@ -57,6 +57,23 @@ async function getHairType(id) {
   return hairtype;
 }
 
+// Create Insider tips
+async function createInsider(insiders) {
+  insiders.hairtype_id = "";
+  insiders.tip_for = "";
+  insiders.tip_text = "";
+  insiders.submitted_by = "";
+
+  try {
+    const collection = db.collection("insiders");
+    const result = await collection.insertOne(insiders);
+    return result.insertedId.toString();
+  } catch (error) {
+    console.log(error);}}
+
+
+
 export default {
   getHairTypes,
-  getHairType}
+  getHairType,
+  createInsider,}

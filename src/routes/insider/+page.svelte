@@ -7,7 +7,8 @@
 <div class="section-1">
     <div class="hero-content">
         <h1>Welcome to your <br /> curly hair database</h1>
-        <p>Learn to embrace your curls!</p>
+        <p>Learn to embrace your curls!</p>¨
+        <a class="btn btn-primary" href={`/insider/create`} role="button">Add New Tip</a>
     </div>
 </div>
 
