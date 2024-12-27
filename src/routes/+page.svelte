@@ -16,7 +16,7 @@
 <style>
     .hero-section {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 56px); /* 100vh minus der Navbar-Höhe (56px bei Bootstrap) */
     background-image: url("/images/models/main.jpeg");
     background-size: cover;
     background-position: center;
