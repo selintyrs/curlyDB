@@ -5,8 +5,7 @@
 <div class="card text-center shadow-none">
   <!-- Name und Hairtype über dem Bild -->
   <div class="card-header">
-    <h5 class="card-title">{hairtype.name.toUpperCase()}</h5>
-    <h6 class="card-subtitle text-muted">{hairtype.hairtype}</h6>
+    <h5 class="card-title"><span class="hairtype">{hairtype.hairtype}</span>{hairtype.name.toUpperCase()}</h5>
   </div>
   <!-- Bild -->
   <div class="card-image">
@@ -42,17 +41,16 @@
   }
 
   .card-title {
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-size: 1.7rem;
+    font-weight: bold;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 5px; /* Kleiner Abstand zwischen Titel und Subtitle */
     color: #000000;
   }
 
-  .card-subtitle {
-    font-size: 1.5rem;
-    font-weight: bold;
+  .hairtype {
+    font-size: 2.2rem;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
     color: #000000;
@@ -76,6 +74,7 @@
     font-size: 1rem;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     color: #000000;
     word-wrap: break-word; /* Allows text to wrap to the next line */
     margin: 0; /* Removes default margin */

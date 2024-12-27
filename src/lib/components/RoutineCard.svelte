@@ -88,7 +88,9 @@
     padding: 2rem;
     width: 100%;
     background-color: transparent !important;
-    margin-top: 0;
+    margin-top: 0rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
   }
 
   .card {
@@ -108,7 +110,7 @@
   }
 
   .card-title {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     font-weight: bold;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
@@ -126,7 +128,7 @@
   }
 
   .card-body {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;

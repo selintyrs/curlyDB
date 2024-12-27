@@ -15,7 +15,7 @@
     .page-title {
       text-align: left;
       margin-top: 2rem;
-      margin-bottom: 1;
+      margin-bottom: 0.2;
       font-size: 3.5rem;
       font-weight: 900;
       font-family: 'Roboto', sans-serif;
