@@ -82,58 +82,45 @@
 
 <style>
   .card-container {
-    display: flex;
-    flex-wrap: nowrap; /* Keine Zeilenumbrüche */
-    justify-content: space-around; /* Gleichmäßiger Abstand */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Vier Karten in einer Reihe */
+    gap: 1rem; /* Abstand zwischen den Karten */
     padding: 2rem;
-    gap: 2rem;
   }
 
   .card {
-    flex: 0 1 calc(22% - 2rem); /* Breitere Karten */
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Linksbündiger Text */
+    text-align: center;
     padding: 1rem;
-    max-width: 300px; /* Maximale Breite */
   }
 
   .card-header {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
     color: #333;
+    margin-bottom: 1rem;
   }
 
   .card-img-top {
     width: 100%;
     height: auto;
-    max-height: 180px;
+    max-height: 150px; /* Einheitliche Bildhöhe */
     object-fit: cover;
     margin-bottom: 1rem;
   }
 
   .card-body {
     font-size: 1rem;
-    line-height: 1.5;
     color: #555;
   }
 
-  ul {
-    list-style: disc;
-    padding-left: 1.5rem; /* Abstand für Aufzählung */
-  }
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
   .step-number {
-    font-size: 1.2rem;
-    color: #e30613;
+    font-size: 1.5rem;
+    color: #e30613; /* Rot für die Nummer */
     margin-right: 0.5rem;
   }
 </style>
