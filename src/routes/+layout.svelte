@@ -48,8 +48,7 @@
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 10px;
-    border-bottom-color: #3f3f3f;
-    border-bottom-width: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .content-container {
