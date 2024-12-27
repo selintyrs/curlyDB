@@ -22,6 +22,7 @@
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
+        margin-top: 10%;
     }
 
     .hero-content h1 {
