@@ -88,6 +88,7 @@
     padding: 2rem;
     width: 100%;
     background-color: transparent !important;
+    margin-top: 0.5;
   }
 
   .card {
