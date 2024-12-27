@@ -47,7 +47,9 @@
     font-style: italic;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom-color: #3f3f3f;
+    border-bottom-width: 1px;
   }
 
   .content-container {
