@@ -83,45 +83,57 @@
 <style>
   .card-container {
     display: flex;
-    flex-wrap: nowrap; /* Karten nicht umbrechen */
-    justify-content: space-between; /* Gleichmäßiger Abstand */
-    gap: 1rem; /* Abstand zwischen Karten */
+    flex-wrap: nowrap; /* Keine Zeilenumbrüche */
+    justify-content: space-around; /* Gleichmäßiger Abstand */
     padding: 2rem;
+    gap: 2rem;
   }
 
   .card {
-    flex: 1; /* Karten haben gleiche Breite */
-    max-width: 23%; /* Karten nehmen max. 23% der Breite */
+    flex: 0 1 calc(22% - 2rem); /* Breitere Karten */
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left; /* Linksbündiger Text */
+    padding: 1rem;
+    max-width: 300px; /* Maximale Breite */
   }
 
   .card-header {
-    padding: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 1rem;
     color: #333;
   }
 
   .card-img-top {
     width: 100%;
     height: auto;
-    max-height: 200px; /* Einheitliche Bildhöhe */
+    max-height: 180px;
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
   }
 
   .card-body {
-    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 1.5rem; /* Abstand für Aufzählung */
+  }
+
+  li {
+    margin-bottom: 0.5rem;
   }
 
   .step-number {
-    font-size: 1.5rem;
-    color: #e30613; /* Rot für Nummerierung */
+    font-size: 1.2rem;
+    color: #e30613;
     margin-right: 0.5rem;
   }
 </style>
