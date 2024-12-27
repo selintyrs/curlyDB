@@ -101,7 +101,7 @@
   }
 
   .card-header {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 1rem;
@@ -121,13 +121,14 @@
   .card-body {
     font-size: 1.2rem;
     font-style: italic;
+    font-weight: bold;
     color: #000000;
     background-color: transparent !important;
     text-align: left;
   }
 
   .step-number {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     font-style: italic;
     color: #000000; 
     margin-right: 0.5rem;

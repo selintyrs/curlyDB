@@ -14,7 +14,8 @@
 <style>
     .page-title {
       text-align: left;
-      margin-top: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1;
       font-size: 3.5rem;
       font-weight: bold;
       font-style: italic;
