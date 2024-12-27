@@ -31,8 +31,9 @@
         text-align: left;
         color: rgb(0, 0, 0);
         font-size: 2.8rem; /* Größere Schrift für mehr Präsenz */
-        font-weight: bold;
+        font-weight: 400;
         font-style: italic;
+        font-family: 'Roboto', sans-serif;
         line-height: 1.5; /* Abstand zwischen den Zeilen */
         word-wrap: break-word;
     }
