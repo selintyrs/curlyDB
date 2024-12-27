@@ -84,7 +84,7 @@
   .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible Spalten */
-    gap: 2rem; /* Abstand zwischen den Karten */
+    gap: 1.8rem; /* Abstand zwischen den Karten */
     padding: 2rem;
     width: 100%;
     background-color: transparent !important;
