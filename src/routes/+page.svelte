@@ -15,16 +15,17 @@
 
 <style>
     .hero-section {
-        width: 100%;
-        height: 100vh;
-        background-image: url("/images/models/main.jpeg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        margin-top: 1%;
-        margin-right: 0%;
-        margin-left: 0%;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/models/main.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Wichtig für absolute Positionierung der Inhalte */
+    margin: 0; /* Entfernt unnötige Margins */
+    padding: 0; /* Keine Abstände */
+    top: 0; /* Beginnt direkt unter der Navbar */
+    z-index: 1; /* Stellt sicher, dass es unter der Navbar liegt */
     }
 
     .hero-content h1 {

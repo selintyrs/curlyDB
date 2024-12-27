@@ -47,8 +47,9 @@
     font-style: italic;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: 0; /* Kein zusätzlicher Abstand unterhalb der Navbar */
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
   }
 
   .content-container {
