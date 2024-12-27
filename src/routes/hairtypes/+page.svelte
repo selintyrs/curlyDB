@@ -1,6 +1,5 @@
 <script>
-  export let data;
-  const { hairtypes } = data;
+  
   import HairtypeCard from "$lib/components/HairtypeCard.svelte";
 </script>
 
