@@ -96,15 +96,16 @@
     border-radius: 0px;
     overflow: hidden;
     box-shadow: none;
-    text-align: center;
+    text-align: left;
     padding: 1rem;
   }
 
   .card-header {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 1rem;
+    text-align: left;
     background-color: transparent !important;
   }
 
@@ -114,19 +115,31 @@
     max-height: 200px;
     object-fit: cover;
     margin-bottom: 1rem;
+    border-radius: 0%;
   }
 
   .card-body {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: italic;
-    color: #555;
+    color: #000000;
     background-color: transparent !important;
+    text-align: left;
   }
 
   .step-number {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-style: italic;
     color: #000000; 
     margin-right: 0.5rem;
   }
+
+  ul {
+  list-style: none; /* Entfernt die Disks */
+  padding: 0; /* Entfernt den Standard-Abstand auf der linken Seite */
+  margin: 0; /* Entfernt den Standard-Abstand oben und unten */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Fügt etwas Abstand zwischen den Listenpunkten hinzu */
+}
 </style>
