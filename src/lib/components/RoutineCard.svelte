@@ -83,9 +83,10 @@
 <style>
   .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible Spalten */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible Spalten */
     gap: 2rem; /* Abstand zwischen den Karten */
     padding: 2rem;
+    width: 100%;
   }
 
   .card {
