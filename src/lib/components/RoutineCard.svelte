@@ -83,8 +83,8 @@
 <style>
   .card-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Vier Karten in einer Reihe */
-    gap: 1rem; /* Abstand zwischen den Karten */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible Spalten */
+    gap: 2rem; /* Abstand zwischen den Karten */
     padding: 2rem;
   }
 
@@ -108,7 +108,7 @@
   .card-img-top {
     width: 100%;
     height: auto;
-    max-height: 150px; /* Einheitliche Bildhöhe */
+    max-height: 200px;
     object-fit: cover;
     margin-bottom: 1rem;
   }
