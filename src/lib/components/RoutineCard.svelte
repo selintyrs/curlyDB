@@ -87,14 +87,15 @@
     gap: 2rem; /* Abstand zwischen den Karten */
     padding: 2rem;
     width: 100%;
+    background-color: transparent !important;
   }
 
   .card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: transparent !important;
+    border: none;
+    border-radius: 0px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     text-align: center;
     padding: 1rem;
   }
@@ -102,8 +103,9 @@
   .card-header {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    font-style: italic;
     margin-bottom: 1rem;
+    background-color: transparent !important;
   }
 
   .card-img-top {
@@ -116,12 +118,15 @@
 
   .card-body {
     font-size: 1rem;
+    font-style: italic;
     color: #555;
+    background-color: transparent !important;
   }
 
   .step-number {
-    font-size: 1.5rem;
-    color: #e30613; /* Rot für die Nummer */
+    font-size: 1.7rem;
+    font-style: italic;
+    color: #000000; 
     margin-right: 0.5rem;
   }
 </style>
