@@ -4,8 +4,8 @@
 
 <div class="card-container">
   <!-- Washing Card -->
-  <div class="card text-center shadow-none">
-    <div class="class-header">
+  <div class="card">
+    <div class="card-header">
       <h5 class="card-title"><span class="step-number">01</span> Washing</h5>
     </div>
     <img
@@ -23,8 +23,8 @@
   </div>
 
   <!-- Styling Card -->
-  <div class="card text-center shadow-none">
-    <div class="class-header">
+  <div class="card">
+    <div class="card-header">
       <h5 class="card-title"><span class="step-number">02</span> Styling</h5>
     </div>
     <img
@@ -42,7 +42,7 @@
   </div>
 
   <!-- Drying Card -->
-  <div class="card text-center shadow-none">
+  <div class="card">
     <div class="card-header">
       <h5 class="card-title"><span class="step-number">03</span> Drying</h5>
     </div>
@@ -61,7 +61,7 @@
   </div>
 
   <!-- Refreshing Card -->
-  <div class="card text-center shadow-none">
+  <div class="card">
     <div class="card-header">
       <h5 class="card-title"><span class="step-number">04</span> Refreshing</h5>
     </div>
@@ -83,71 +83,66 @@
 <style>
   .card-container {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: space-between;
-    padding: 1rem;
     flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* Zentriere die Karten auf der Seite */
+    padding: 1rem;
   }
 
   .card {
-      border: none;
-      border-radius: 0;
-      padding: 1rem;
-      box-shadow: none;
-      background-color: transparent !important;
-      text-align: left;
-      flex: 0 0 calc(30% - 2rem); /* Breitere Karten */
-    max-width: calc(30% - 2rem);
-    margin: 1rem;
-    padding: 2rem;
-    height: auto; /* Dynamische Höhe */
-
-    
-    }
+    flex: 0 1 calc(25% - 2rem); /* Jede Karte nimmt 25% Breite minus Abstand ein */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+  }
 
   .card-header {
-    margin-bottom: 5px; /* Abstand zwischen Header und Bild */
-    background-color: transparent !important; /* Header is see-through */
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 
   .card-img-top {
     width: 100%;
-    height: auto;
-    border-radius: 0px;
+    height: 200px;
     object-fit: cover;
+    border-bottom: 1px solid #ddd;
   }
 
   .card-body {
-    margin-top: 0.5rem;
-    background-color: transparent !important;
-  }
-
-  .card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    font-style: italic;
-    text-align: left; /* Ensure text is aligned to the left */
-  }
-
-  .step-number {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-right: 0.5rem;
-    font-style: italic;
+    padding: 1rem;
   }
 
   ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
   }
+
   li {
-    font-size: 1rem;
-    line-height: 1.4;
-    font-style: italic;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: left; /* Ensure text is aligned to the left */
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .step-number {
+    font-size: 1.5rem;
+    color: #555;
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 1 calc(50% - 2rem); /* Zwei Karten pro Zeile auf Tablets */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card {
+      flex: 0 1 calc(100% - 2rem); /* Eine Karte pro Zeile auf kleinen Geräten */
+    }
   }
 </style>
