@@ -24,7 +24,7 @@
     position: relative; /* Wichtig für absolute Positionierung der Inhalte */
     margin: 0; /* Entfernt unnötige Margins */
     padding: 0; /* Keine Abstände */
-    top: 56px; /* Beginnt direkt unter der Navbar */
+    top: 0px; /* Beginnt direkt unter der Navbar */
     z-index: 1; /* Stellt sicher, dass es unter der Navbar liegt */
     }
 
