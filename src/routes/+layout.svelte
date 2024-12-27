@@ -10,7 +10,7 @@
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: transparent;" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/" style="color: black;">
-      <img src="/images/icon.png" alt="Logo" width="34" height="32" class="d-inline-block align-text-top">
+      <img src="/images/icon.png" alt="Logo" width="38" height="36" class="d-inline-block align-text-top">
       CurlyDB</a>
     <button
       class="navbar-toggler"
