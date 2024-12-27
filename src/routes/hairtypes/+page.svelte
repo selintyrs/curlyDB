@@ -23,7 +23,7 @@
 <style>
   .page-title {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 2.2rem;
     font-size: 3.5rem;
     font-weight: bold;
     font-style: italic;
