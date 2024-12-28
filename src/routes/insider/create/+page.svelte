@@ -1,18 +1,26 @@
 <script>
   let {form} = $props();
+  const { hairtypes } = data;
 </script>
 
 <form method="Post" action="?/create">
-  <div class="col-md-6">
-    <label for="inputLength" class="form-label">tip text</label>
-    <textarea
-      class="form-control"
-      id="tip_text"
-      name="tip_text"
-      rows="3"
-      required
-    ></textarea>
-  </div>
+  <h2>Select your hairtype:</h2>
+    <div>
+        {#each hairtypes as hairtype}
+            <div>
+                <input
+                    type="radio"
+                    name="hairtype_id"
+                    id="hairtype-{hairtype._id}"
+                    value="{hairtype._id}"
+                />
+                <label for="hairtype-{hairtype._id}">
+                    {hairtype.name}
+                </label>
+            </div>
+        {/each}
+    </div>
+    
   <div class="col-md-6">
     <label for="inputYear" class="form-label">tip for</label>
     <select
