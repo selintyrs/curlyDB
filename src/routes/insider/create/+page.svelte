@@ -148,7 +148,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px; /* Space between columns */
-    margin-top: 40px;
+    margin-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .form-left {
