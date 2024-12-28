@@ -12,6 +12,7 @@
   <!-- svelte-ignore a11y_label_has_associated_control -->
   <label>{hairtype.hairtype}</label>
 {/each}
+  </div>
 
 
 
