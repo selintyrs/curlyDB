@@ -16,7 +16,9 @@
         id="flexRadioDefault1"
         value="2A"
       />
-      <label class="form-check-label" for="flexRadioDefault1">2A - SLIGHT WAVES</label>
+      <label class="form-check-label" for="flexRadioDefault1"
+        >2A - SLIGHT WAVES</label
+      >
     </div>
     <div class="form-check">
       <input
@@ -26,7 +28,9 @@
         id="flexRadioDefault2"
         value="2B"
       />
-      <label class="form-check-label" for="flexRadioDefault2">2B - SOFT WAVES</label>
+      <label class="form-check-label" for="flexRadioDefault2"
+        >2B - SOFT WAVES</label
+      >
     </div>
     <div class="form-check">
       <input
@@ -36,7 +40,9 @@
         id="flexRadioDefault3"
         value="2C"
       />
-      <label class="form-check-label" for="flexRadioDefault3">2C - SOFT CURLS</label>
+      <label class="form-check-label" for="flexRadioDefault3"
+        >2C - SOFT CURLS</label
+      >
     </div>
     <div class="form-check">
       <input
@@ -46,7 +52,9 @@
         id="flexRadioDefault4"
         value="3A"
       />
-      <label class="form-check-label" for="flexRadioDefault4">3A - CLASSIC CURLS</label>
+      <label class="form-check-label" for="flexRadioDefault4"
+        >3A - CLASSIC CURLS</label
+      >
     </div>
     <div class="form-check">
       <input
@@ -56,7 +64,9 @@
         id="flexRadioDefault5"
         value="3B"
       />
-      <label class="form-check-label" for="flexRadioDefault5">3B - SPIRAL CURLS</label>
+      <label class="form-check-label" for="flexRadioDefault5"
+        >3B - SPIRAL CURLS</label
+      >
     </div>
     <div class="form-check">
       <input
@@ -66,7 +76,9 @@
         id="flexRadioDefault6"
         value="3C"
       />
-      <label class="form-check-label" for="flexRadioDefault6">3C - CORKSCREWS</label>
+      <label class="form-check-label" for="flexRadioDefault6"
+        >3C - CORKSCREWS</label
+      >
     </div>
     <div class="form-check">
       <input
@@ -76,7 +88,9 @@
         id="flexRadioDefault7"
         value="4A"
       />
-      <label class="form-check-label" for="flexRadioDefault7">4A - SLIGHTLY COILED</label>
+      <label class="form-check-label" for="flexRadioDefault7"
+        >4A - SLIGHTLY COILED</label
+      >
     </div>
     <div class="form-check">
       <input
@@ -96,7 +110,9 @@
         id="flexRadioDefault9"
         value="4C"
       />
-      <label class="form-check-label" for="flexRadioDefault9">4C - SUPER KINKY</label>
+      <label class="form-check-label" for="flexRadioDefault9"
+        >4C - SUPER KINKY</label
+      >
     </div>
   </div>
 
@@ -133,7 +149,7 @@
 {/if}
 
 <div class="banner">
-<img src="/images/locken.jpg" alt="banner" />  
+  <img src="/images/locken.jpg" alt="banner" />
 </div>
 
 <style>
@@ -145,7 +161,7 @@
     font-weight: 900;
     font-style: italic;
     color: #000000;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 
   .form-container {
@@ -162,7 +178,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-family: 'roboto', sans-serif;
+    font-family: "roboto", sans-serif;
     font-style: italic;
   }
 
@@ -177,38 +193,39 @@
   }
 
   .form-check-label {
-    font-family: 'roboto', sans-serif;
+    font-family: "roboto", sans-serif;
     font-style: italic;
     font-size: 1.2rem;
     font-weight: lighter;
   }
 
   .form-question {
-    font-family: 'roboto', sans-serif;
+    font-family: "roboto", sans-serif;
     font-style: italic;
     font-size: 1.7rem;
   }
 
   .form-select {
-    font-family: 'roboto', sans-serif;
+    font-family: "roboto", sans-serif;
     font-style: italic;
     font-size: 1rem;
     font-weight: lighter;
   }
 
   .btn {
-   border-color: black;
-   border-width: 2px;
-   background-color: white;
-   font-style: italic;
-   font-family: 'roboto', sans-serif;
-   color: black;
+    border-color: black;
+    border-width: 2px;
+    background-color: white;
+    font-style: italic;
+    font-family: "roboto", sans-serif;
+    color: black;
   }
 
   .banner {
-    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
     height: auto;
     background-position: center;
-    margin-top: 10px
+    margin-top: 10px;
   }
 </style>
