@@ -192,6 +192,7 @@
   height: 20px; /* Enlarges the radio button */
   border-width: 2px; /* Increases border thickness */
   margin-right: 10px; /* Space between radio button and label */
+  color:#000000;
 }
 
 .form-check-label {
@@ -199,7 +200,7 @@
   font-style: italic;
   font-size: 1.2rem;
   font-weight: lighter;
-  line-height: 0.8; /* Reduces spacing between lines */
+  line-height: 0.5; /* Reduces spacing between lines */
   text-align: left;
 }
 
@@ -208,7 +209,6 @@
   font-family: "Roboto", sans-serif;
   font-style: italic;
   font-size: 1.7rem;
-  margin-bottom: 20px;
 }
 
 .form-select {
@@ -216,6 +216,11 @@
   font-style: italic;
   font-size: 1rem;
   font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  margin-bottom: 20px;
 }
 
 .btn {
