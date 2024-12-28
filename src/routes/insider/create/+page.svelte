@@ -2,12 +2,13 @@
   let { form } = $props();
 </script>
 
-
+<h1 class="page-title">Sharing is caring!</h1>
+<h2 class="page-subtitle">Share your most beloved tips and tricks:</h2>
 
 <form method="Post" action="?/create" class="form-container">
   <!-- Left Column -->
   <div class="form-left">
-    <h2>Select your hairtype:</h2>
+    <h2 class="form-question">Select your hairtype:</h2>
     <div class="form-check">
       <input
         class="form-check-input"
@@ -103,7 +104,7 @@
   <!-- Right Column -->
   <div class="form-right">
     <div class="col-md-6">
-      <label for="inputYear" class="form-label">Tip for</label>
+      <label for="inputYear" class="form-question">Tip for</label>
       <select class="form-select" id="tip_for" name="tip_for" required>
         <option selected disabled value="">Select</option>
         <option value="Washing">Washing</option>
@@ -113,12 +114,12 @@
       </select>
     </div>
     <div class="col-12">
-      <label for="inputLength" class="form-label">Your insider tip: </label>
+      <label for="inputLength" class="form-question">Your insider tip: </label>
       <textarea
         class="form-control"
         id="tip_text"
         name="tip_text"
-        rows="3"
+        rows="5"
         required
       ></textarea>
     </div>
@@ -133,6 +134,16 @@
 {/if}
 
 <style>
+  .page-title {
+    text-align: left;
+    margin-top: 1.7rem;
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+  }
+
   .form-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -143,12 +154,26 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-family: 'roboto', sans-serif;
+    font-style: italic;
   }
 
   .form-right {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .form-check-label {
+    font-family: 'roboto', sans-serif;
+    font-style: italic;
+  }
+
+  .form-question {
+    font-family: 'roboto', sans-serif;
+    font-style: italic;
+    font-size: 1.7rem;
+
   }
 
   .btn {
