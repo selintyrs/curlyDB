@@ -9,13 +9,36 @@
     <label for="inputName" class="form-label">hairtype</label>
     <input name="hairtype_id" class="form-control" id="inputName">
   </div>
+
+
   <div class="col-md-6">
     <label for="inputYear" class="form-label">tip for</label>
-    <input name="tip_for" class="form-control" id="inputYear">
+    <select
+      class="form-select"
+      id="tip_for"
+      name="tip_for"
+      required
+    >
+      <option selected disabled value="">Select</option>
+      <option value="1">Washing</option>
+      <option value="2">Styling</option>
+      <option value="3">Drying</option>
+      <option value="4">Refreshing</option>
+    </select>
+
   </div>
+
+
   <div class="col-12">
     <label for="inputLength" class="form-label">tip text</label>
-    <input name="tip_text" class="form-control" id="inputLength">
+    <textarea
+      class="form-control"
+      id="tip_text"
+      name="tip_text"
+      rows="3"
+      required
+    ></textarea>
+
   </div>
   
   <div class="col-12">
