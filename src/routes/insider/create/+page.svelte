@@ -167,6 +167,10 @@
     gap: 20px;
   }
 
+  .form-check {
+    padding-left: 5px
+  }
+
   .form-check-label {
     font-family: 'roboto', sans-serif;
     font-style: italic;
@@ -183,7 +187,7 @@
   .form-select {
     font-family: 'roboto', sans-serif;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: lighter;
   }
 

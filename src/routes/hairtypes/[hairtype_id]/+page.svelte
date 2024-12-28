@@ -21,6 +21,7 @@
       font-family: 'Roboto', sans-serif;
       font-style: italic;
       color: #000000;
+      padding-left: 5px;
     }
 
     .row {

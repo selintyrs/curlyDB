@@ -21,6 +21,10 @@
 </div>
 
 <style>
+.container {
+    margin: 0px;
+  }
+
   .page-title {
     text-align: left;
     margin-top: 0rem;
@@ -29,6 +33,7 @@
     font-style: italic;
     color: #000000;
     font-family: 'Roboto', sans-serif;
+    padding-left: 5px;
   }
 
 

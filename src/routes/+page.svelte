@@ -34,9 +34,9 @@
 
     .hero-content h1 {
         position: absolute;
-        top: 10%;
+        top: 7%;
         right: 3%;
-        text-align: left;
+        text-align: right;
         color: rgb(0, 0, 0);
         font-size: 2.8rem; /* Größere Schrift für mehr Präsenz */
         font-weight: 900;
@@ -49,7 +49,7 @@
     .hero-content p {
         position: absolute;
         bottom: 5%;
-        right: 5%;
+        right: 3%;
         text-align: right;
         color: black;
         font-size: 2rem;
