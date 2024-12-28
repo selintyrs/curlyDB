@@ -27,7 +27,7 @@
   }
 
   .page-title {
-    text-align: left;
+    text-align: center;
     margin-top: 0rem;
     font-size: 3.5rem;
     font-weight: 900;
@@ -46,7 +46,6 @@
 
   .row {
     margin-top: 20px;
-    justify-content: center;
   }
 
   .col {
