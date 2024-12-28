@@ -22,7 +22,8 @@
 
 <style>
 .container {
-    margin: 0px;
+    margin-left: 0px;
+    padding-left: 20px ;
   }
 
   .page-title {
