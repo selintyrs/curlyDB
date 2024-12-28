@@ -177,14 +177,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Center content horizontally */
-  gap: 15px;
+  gap: 10px;
   font-family: "Roboto", sans-serif;
   font-style: italic;
 }
 
 .form-check {
   display: flex;
-  align-items: center; /* Centers radio button with label */
+  align-items: center; 
+  margin-bottom: 5px;/* Centers radio button with label */
 }
 
 .form-check-input {
@@ -216,7 +217,7 @@
   font-style: italic;
   font-size: 1rem;
   font-weight: lighter;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .form-control {
@@ -230,7 +231,7 @@
   font-style: italic;
   font-family: "Roboto", sans-serif;
   color: black;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .banner img {
