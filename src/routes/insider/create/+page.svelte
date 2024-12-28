@@ -165,52 +165,60 @@
   }
 
   .form-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px; /* Space between columns */
-    margin-top: 50px;
-    padding: 0 30px;
-    margin-bottom: 10px;
-  }
-
-  .form-left, .form-right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Space between form elements */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Space between columns */
+  margin-top: 50px;
+  padding: 0 30px;
+  margin-bottom: 10px;
 }
 
 .form-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  gap: 15px;
   font-family: "Roboto", sans-serif;
   font-style: italic;
 }
 
+.form-check-label {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.3; /* Reduces spacing between lines */
+}
 
-  .form-check-label {
-    font-family: "roboto", sans-serif;
-    font-style: italic;
-    font-size: 1.2rem;
-    font-weight: lighter;
-  }
-
-  .form-right .form-question,
+.form-right .form-question,
 .form-left .form-question {
   font-family: "Roboto", sans-serif;
   font-style: italic;
   font-size: 1.7rem;
 }
-  .btn {
-    border-color: black;
-    border-width: 2px;
-    background-color: white;
-    font-style: italic;
-    font-family: "roboto", sans-serif;
-    color: black;
-  }
 
-  .banner img {
-  max-width: 100%;
+.form-select {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.btn {
+  border-color: black;
+  border-width: 2px;
+  background-color: white;
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.banner img {
+  width: 100vw; /* Full width of the viewport */
   height: auto;
   display: block;
+  margin: 0; /* Removes any extra margins */
+  padding: 0;
 }
 
 /* Responsive Adjustment */
@@ -219,8 +227,10 @@
     grid-template-columns: 1fr; /* Stacks both columns vertically */
   }
 
-  .form-left, .form-right {
+  .form-left,
+  .form-right {
     padding: 0;
+    align-items: center; /* Center content in smaller screens */
   }
 }
 </style>
