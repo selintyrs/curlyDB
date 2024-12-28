@@ -153,8 +153,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px; /* Space between columns */
     margin-top: 60px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .form-left {
@@ -206,7 +206,8 @@
 
   .banner {
     width: 100%;
-    height: 100%;
+    height: 60%;
     background-position: center;
+    margin-top: 10px
   }
 </style>
