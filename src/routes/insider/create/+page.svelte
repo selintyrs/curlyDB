@@ -8,84 +8,93 @@
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault1"
+      value="2A"
     />
-    <label class="form-check-label" for="flexRadioDefault1"> 2A </label>
+    <label class="form-check-label" for="flexRadioDefault1">2A</label>
   </div>
   <div class="form-check">
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault2"
-      checked
+      value="2B"
     />
-    <label class="form-check-label" for="flexRadioDefault2"> 2B </label>
+    <label class="form-check-label" for="flexRadioDefault2">2B</label>
   </div>
   <div class="form-check">
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault3"
+      value="2C"
     />
-    <label class="form-check-label" for="flexRadioDefault3"> 2C </label>
+    <label class="form-check-label" for="flexRadioDefault3">2C</label>
   </div>
   <div class="form-check">
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault4"
+      value="3A"
     />
-    <label class="form-check-label" for="flexRadioDefault4"> 3A </label>
+    <label class="form-check-label" for="flexRadioDefault4">3A</label>
   </div>
   <div class="form-check">
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault5"
+      value="3B"
     />
-    <label class="form-check-label" for="flexRadioDefault5"> 3B </label>
+    <label class="form-check-label" for="flexRadioDefault5">3B</label>
   </div>
   <div class="form-check">
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault6"
+      value="3C"
     />
-    <label class="form-check-label" for="flexRadioDefault6"> 3C </label>
+    <label class="form-check-label" for="flexRadioDefault6">3C</label>
   </div>
   <div class="form-check">
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault7"
+      value="4A"
     />
-    <label class="form-check-label" for="flexRadioDefault7"> 4A </label>
+    <label class="form-check-label" for="flexRadioDefault7">4A</label>
   </div>
   <div class="form-check">
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault8"
+      value="4B"
     />
-    <label class="form-check-label" for="flexRadioDefault8"> 4B </label>
+    <label class="form-check-label" for="flexRadioDefault8">4B</label>
   </div>
   <div class="form-check">
     <input
       class="form-check-input"
       type="radio"
-      name="flexRadioDefault"
+      name="hairtype_id"
       id="flexRadioDefault9"
+      value="4C"
     />
-    <label class="form-check-label" for="flexRadioDefault9"> 4C </label>
+    <label class="form-check-label" for="flexRadioDefault9">4C</label>
   </div>
+  
 
   <div class="col-md-6">
     <label for="inputYear" class="form-label">tip for</label>
