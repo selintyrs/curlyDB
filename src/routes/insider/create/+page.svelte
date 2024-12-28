@@ -1,5 +1,6 @@
 <script>
   
+  const { hairtypes } = data;
   let {form} = $props();
 
 </script>
@@ -7,7 +8,24 @@
 <form method="Post" action="?/create">
   <div class="col-md-6">
     <label for="inputName" class="form-label">hairtype</label>
-    <input name="hairtype_id" class="form-control" id="inputName">
+    <label class="form-label" for= "id">Select Hairtype</label>
+    {#each hairtypes as hairtype}
+      <div class="form-check">
+        <input 
+          class="form-check-input" 
+          type="radio" 
+          name="hairtype_id" 
+          id="hairtype-{hairtype._id}" 
+          value="{hairtype._id}" 
+          required>
+        <label class="form-check-label" for="hairtype-{hairtype._id}">
+          {hairtype.hairtype}
+        </label>
+      </div>
+    {/each}
+    <div class="invalid-feedback">
+      Please select a hairtype.
+    </div>
   </div>
 
 
