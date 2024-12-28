@@ -1,15 +1,13 @@
 import db from "$lib/db.js";
 
 export async function load() {
-    try {
-        const hairtypes = await db.getHairTypes();
-        return { hairtypes };
-    } catch (error) {
-        console.error("Error loading hairtypes:", error);
-        throw new Error("Failed to load hairtypes");
-    }
-}
 
+    return{
+        hairtypes: await db.getHairTypes()
+        
+    }
+    
+}
 
 
 
