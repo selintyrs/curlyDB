@@ -206,8 +206,8 @@
   }
 
   .banner {
-    width: 100vh;
-    height: 60%;
+    max-width: 100%;
+    height: auto;
     background-position: center;
     margin-top: 10px
   }
