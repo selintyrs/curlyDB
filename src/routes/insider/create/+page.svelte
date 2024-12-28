@@ -132,6 +132,10 @@
   <p>Successfully added!</p>
 {/if}
 
+<div class="banner">
+<img src="/imageslocken.jpg" alt="Models with curly hair" />  
+</div>
+
 <style>
   .page-title {
     text-align: left;
@@ -168,7 +172,7 @@
   }
 
   .form-check {
-    padding-left: 5px
+    margin-left: 5px;
   }
 
   .form-check-label {
@@ -198,5 +202,11 @@
    font-style: italic;
    font-family: 'roboto', sans-serif;
    color: black;
+  }
+
+  .banner {
+    width: 100%;
+    height: 100%;
+    background-position: center;
   }
 </style>
