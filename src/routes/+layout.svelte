@@ -10,9 +10,8 @@
 </svelte:head>
 
 <nav
-  class="navbar navbar-expand-lg bg-body-tertiary"
-  data-bs-theme="light" 
-  style="background-color: white;"
+  class="navbar navbar-expand-lg bg-body-tertiary" 
+  style="background-color: #ffffff;"
 >
   
   <div class="container-fluid">
