@@ -238,6 +238,7 @@
   width: 100vw; /* Full width of the viewport */
   height: auto;
   display: block;
+  overflow: hidden;
   margin: 0; /* Removes any extra margins */
   padding: 0;
 }
