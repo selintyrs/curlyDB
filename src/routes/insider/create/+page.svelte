@@ -153,8 +153,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px; /* Space between columns */
     margin-top: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
   }
 
   .form-left {
