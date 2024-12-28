@@ -23,6 +23,7 @@
 <style>
 .container {
     margin: 0px;
+    align-content: center;
   }
 
   .page-title {
