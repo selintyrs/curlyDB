@@ -148,7 +148,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px; /* Space between columns */
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .form-left {
@@ -166,9 +166,10 @@
   }
 
   .form-check-label {
-    font-family: 'roboto';
+    font-family: 'roboto', sans-serif;
     font-style: italic;
     font-size: 1.2rem;
+    font-weight: lighter;
   }
 
   .form-question {
@@ -178,14 +179,15 @@
   }
 
   .form-select {
-    font-family: 'roboto';
+    font-family: 'roboto', sans-serif;
     font-style: italic;
     font-size: 1.2rem;
+    font-weight: lighter;
   }
 
   .btn {
    border-color: black;
-   border-width: 5px;
+   border-width: 2px;
    background-color: white;
    font-style: italic;
    font-family: 'roboto', sans-serif;

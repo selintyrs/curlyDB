@@ -2,13 +2,12 @@
     // Kein JS-Code notwendig
 </script>
 
-<div class="content-container">
+
 <div class="hero-section">
     <div class="hero-content">
         <h1>Welcome to your <br /> curly hair database</h1>
         <p>Learn to embrace your curls!</p>
     </div>
-</div>
 </div>
 
 <div class="main-content">
@@ -17,11 +16,7 @@
 
 <style>
 
-    .content-container {
-        padding-left: 0rem;
-        padding-right: 0rem;
-        padding-top: 0rem;
-    }
+    
 
     .hero-section {
     width: 100%;
