@@ -3,7 +3,6 @@
 </script>
 
 <h1 class="page-title">Sharing is caring!</h1>
-<h2 class="page-subtitle">Share your most beloved tips and tricks:</h2>
 
 <form method="Post" action="?/create" class="form-container">
   <!-- Left Column -->
@@ -137,17 +136,8 @@
   .page-title {
     text-align: left;
     margin-top: 0rem;
+    margin-bottom: 15px;
     font-size: 3.5rem;
-    font-weight: 900;
-    font-style: italic;
-    color: #000000;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .page-subtitle {
-    text-align: left;
-    margin-top: 0rem;
-    font-size: 2.5rem;
     font-weight: 900;
     font-style: italic;
     color: #000000;
@@ -176,7 +166,7 @@
   }
 
   .form-check-label {
-    font-family: 'roboto', sans-serif;
+    font-family: 'roboto';
     font-style: italic;
     font-size: 1.2rem;
   }
@@ -188,13 +178,14 @@
   }
 
   .form-select {
-    font-family: 'roboto', sans-serif;
+    font-family: 'roboto';
     font-style: italic;
     font-size: 1.2rem;
   }
 
   .btn {
    border-color: black;
+   border-width: 5px;
    background-color: white;
    font-style: italic;
    font-family: 'roboto', sans-serif;
