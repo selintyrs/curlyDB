@@ -152,7 +152,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px; /* Space between columns */
-    margin-top: 60px;
+    margin-top: 50px;
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 10px;
