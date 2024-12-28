@@ -133,7 +133,7 @@
 {/if}
 
 <div class="banner">
-<img src="/images.locken.jpg" alt="banner" />  
+<img src="/images/locken.jpg" alt="banner" />  
 </div>
 
 <style>
