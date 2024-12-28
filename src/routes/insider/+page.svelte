@@ -1,6 +1,7 @@
 <script>
     export let data; // Die von der `load`-Funktion bereitgestellten Daten
-    const { hairtypes } = data; // Extrahiere die Filme aus den Daten
+    const { insiders } = data; // Extrahiere die Filme aus den Daten
+    import InsiderCard from "$lib/components/InsiderCard.svelte";
 
 </script>
 
@@ -12,9 +13,14 @@
     </div>
 </div>
 
-<div class="main-content">
-    <p>Additional content below the hero section.</p>
-</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {#each insiders as insider}
+      <div class="col d-flex align-items-stretch">
+          <InsiderCard insider={insider} />
+      </div>
+    {/each}
+  </div>
+
 
 <div class="section-2">
     <div class="hero-content">
