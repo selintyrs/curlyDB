@@ -169,29 +169,21 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px; /* Space between columns */
     margin-top: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0 30px;
     margin-bottom: 10px;
   }
 
-  .form-left {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-family: "roboto", sans-serif;
-    font-style: italic;
-    padding-left: 10%;
-  }
+  .form-left, .form-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
+}
 
-  .form-right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+.form-left {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+}
 
-  .form-check {
-    margin-left: 5px;
-  }
 
   .form-check-label {
     font-family: "roboto", sans-serif;
@@ -200,19 +192,12 @@
     font-weight: lighter;
   }
 
-  .form-question {
-    font-family: "roboto", sans-serif;
-    font-style: italic;
-    font-size: 1.7rem;
-  }
-
-  .form-select {
-    font-family: "roboto", sans-serif;
-    font-style: italic;
-    font-size: 1rem;
-    font-weight: lighter;
-  }
-
+  .form-right .form-question,
+.form-left .form-question {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 1.7rem;
+}
   .btn {
     border-color: black;
     border-width: 2px;
@@ -222,17 +207,20 @@
     color: black;
   }
 
-  .banner {
-    width: 100%;
-    overflow: hidden;
-    height: auto;
-    background-position: center;
-    margin-top: 10px;
+  .banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+  .form-container {
+    grid-template-columns: 1fr; /* Stacks both columns vertically */
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  .form-left, .form-right {
+    padding: 0;
   }
+}
 </style>
