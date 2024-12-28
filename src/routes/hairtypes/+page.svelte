@@ -23,10 +23,11 @@
 <style>
 .container {
     margin: 0px;
+    align-content: center;
   }
 
   .page-title {
-    text-align: center;
+    text-align: left;
     margin-top: 0rem;
     font-size: 3.5rem;
     font-weight: 900;
