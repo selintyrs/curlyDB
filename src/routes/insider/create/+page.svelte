@@ -228,4 +228,10 @@
     background-position: center;
     margin-top: 10px;
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 </style>
