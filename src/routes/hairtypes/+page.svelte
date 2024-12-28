@@ -22,7 +22,7 @@
 
 <style>
 .container {
-    margin-left: 0px;
+    margin: 0px;
   }
 
   .page-title {
