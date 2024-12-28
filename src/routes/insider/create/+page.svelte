@@ -206,7 +206,7 @@
   }
 
   .banner {
-    width: 100%;
+    width: 100vh;
     height: 60%;
     background-position: center;
     margin-top: 10px
