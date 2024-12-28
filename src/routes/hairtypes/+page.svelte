@@ -22,10 +22,10 @@
 
 <style>
   .page-title {
-    text-align: center;
-    margin-top: 2.2rem;
+    text-align: left;
+    margin-top: 0rem;
     font-size: 3.5rem;
-    font-weight: bold;
+    font-weight: 900;
     font-style: italic;
     color: #000000;
     font-family: 'Roboto', sans-serif;
