@@ -1,7 +1,10 @@
 import db from "$lib/db.js";
 
 
-
+export async function load() {
+    const hairtypes = await db.getHairTypes(); // Hairtypes aus der DB abrufen
+    return { hairtypes }; // An die Seite übergeben
+}
 
 export const actions = {
     create: async ({ request }) => {

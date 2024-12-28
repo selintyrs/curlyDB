@@ -1,9 +1,6 @@
 <script>
-
   let {form} = $props();
-
 </script>
-
 
 <form method="Post" action="?/create">
   <div class="col-md-6">
@@ -15,11 +12,7 @@
       rows="3"
       required
     ></textarea>
-  
   </div>
-
-
-
   <div class="col-md-6">
     <label for="inputYear" class="form-label">tip for</label>
     <select
@@ -34,10 +27,7 @@
       <option value="3">Drying</option>
       <option value="4">Refreshing</option>
     </select>
-
   </div>
-
-
   <div class="col-12">
     <label for="inputLength" class="form-label">tip text</label>
     <textarea
@@ -47,9 +37,7 @@
       rows="3"
       required
     ></textarea>
-
   </div>
-  
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Add Insider</button>
   </div>
