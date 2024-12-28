@@ -1,12 +1,9 @@
 <script>
-  
-  const { hairtypes } = data;
+
   let {form} = $props();
 
 </script>
-{#each hairtypes as hairtype}
-<h1>{ hairtype.name}</h1>
-{/each}
+
 
 <form method="Post" action="?/create">
   <div class="col-md-6">
