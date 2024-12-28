@@ -134,7 +134,7 @@
         class="form-control"
         id="tip_text"
         name="tip_text"
-        rows="5"
+        rows="6"
         required
       ></textarea>
     </div>
