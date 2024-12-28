@@ -1,6 +1,5 @@
 <script>
-  let {form} = $props();
-  const { hairtypes } = data;
+  let {data, form} = $props();
 </script>
 
 <form method="Post" action="?/create">
@@ -20,7 +19,7 @@
             </div>
         {/each}
     </div>
-    
+
   <div class="col-md-6">
     <label for="inputYear" class="form-label">tip for</label>
     <select
