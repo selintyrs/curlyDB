@@ -24,5 +24,5 @@
 </form>
 
 {#if form?.success}
-<p>Insider added successfully!</p>
+<p>Insider added !</p>
 {/if}
