@@ -23,7 +23,7 @@
 <style>
 .container {
     margin-left: 0px;
-    padding-left: 20px ;
+    padding-left: 30x ;
   }
 
   .page-title {
