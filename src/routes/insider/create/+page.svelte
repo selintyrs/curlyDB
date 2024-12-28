@@ -4,14 +4,21 @@
   let {form} = $props();
 
 </script>
+{#each hairtypes as hairtype}
+<h1>{ hairtype.name}</h1>
+{/each}
 
 <form method="Post" action="?/create">
   <div class="col-md-6">
-    {#each hairtypes as hairtype}
-  <input type="radio" name="hairtype_id" value="{hairtype._id}">
-  <!-- svelte-ignore a11y_label_has_associated_control -->
-  <label>{hairtype.hairtype}</label>
-{/each}
+    <label for="inputLength" class="form-label">tip text</label>
+    <textarea
+      class="form-control"
+      id="tip_text"
+      name="tip_text"
+      rows="3"
+      required
+    ></textarea>
+  
   </div>
 
 
