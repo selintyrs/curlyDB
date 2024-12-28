@@ -187,7 +187,8 @@
   font-style: italic;
   font-size: 1.2rem;
   font-weight: lighter;
-  line-height: 1.3; /* Reduces spacing between lines */
+  line-height: 1; /* Reduces spacing between lines */
+  text-align: left;
 }
 
 .form-right .form-question,
@@ -195,6 +196,7 @@
   font-family: "Roboto", sans-serif;
   font-style: italic;
   font-size: 1.7rem;
+  margin-bottom: 20px;
 }
 
 .form-select {
@@ -211,6 +213,7 @@
   font-style: italic;
   font-family: "Roboto", sans-serif;
   color: black;
+  margin-top: 20px;
 }
 
 .banner img {
