@@ -59,10 +59,7 @@ async function getHairType(id) {
 
 // Create Insider tips
 async function createInsider(insiders) {
-  insiders.hairtype_id = "";
-  insiders.tip_for = "";
-  insiders.tip_text = "";
-  insiders.submitted_by = "";
+  
 
   try {
     const collection = db.collection("insiders");
