@@ -176,10 +176,22 @@
 .form-left {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: flex-start; /* Center content horizontally */
   gap: 15px;
   font-family: "Roboto", sans-serif;
   font-style: italic;
+}
+
+.form-check {
+  display: flex;
+  align-items: center; /* Centers radio button with label */
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px; /* Enlarges the radio button */
+  border-width: 2px; /* Increases border thickness */
+  margin-right: 10px; /* Space between radio button and label */
 }
 
 .form-check-label {
@@ -187,7 +199,7 @@
   font-style: italic;
   font-size: 1.2rem;
   font-weight: lighter;
-  line-height: 1; /* Reduces spacing between lines */
+  line-height: 0.8; /* Reduces spacing between lines */
   text-align: left;
 }
 

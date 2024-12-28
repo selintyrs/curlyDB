@@ -11,7 +11,7 @@
 
 <nav
   class="navbar navbar-expand-lg bg-body-tertiary"
-  data-bs-theme="dark" 
+  data-bs-theme="light" 
   style="background-color: white;"
 >
   
