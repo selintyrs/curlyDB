@@ -133,7 +133,7 @@
 {/if}
 
 <div class="banner">
-<img src="/imageslocken.jpg" alt="Models with curly hair" />  
+<img src="/images.locken.jpg" alt="banner" />  
 </div>
 
 <style>
