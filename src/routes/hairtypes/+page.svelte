@@ -37,17 +37,12 @@
   font-style: italic;
   color: #000000;
   font-family: 'Roboto', sans-serif;
-  align-self: flex-start; /* Positioniert den Titel links im flex-Container */
   padding-left: 5px;
 }
 
 .row {
-  display: grid; /* Nutzt CSS-Grid für die Kartenanordnung */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsives Verhalten */
-  gap: 20px; /* Abstand zwischen Karten */
   margin-top: 20px;
-  width: 100%; /* Füllt den Container aus */
-  justify-content: center; /* Zentriert die Karten horizontal */
+  justify-content: center;
 }
 
 .card-link {
