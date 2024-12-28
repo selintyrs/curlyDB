@@ -79,8 +79,8 @@
 
   .content-container {
     min-height: 100vh;
-    padding-left: 0rem;
+    padding-left: 2rem;
     padding-right: 0rem;
-    padding-top: 0rem;
+    padding-top: 2rem;
   }
 </style>
