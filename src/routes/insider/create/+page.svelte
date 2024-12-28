@@ -180,6 +180,7 @@
     gap: 10px;
     font-family: "roboto", sans-serif;
     font-style: italic;
+    padding-left: 10%;
   }
 
   .form-right {
