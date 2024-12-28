@@ -80,7 +80,7 @@
   .content-container {
     min-height: 100vh;
     padding-left: 2rem;
-    padding-right: 0rem;
-    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-top: 0rem;
   }
 </style>
