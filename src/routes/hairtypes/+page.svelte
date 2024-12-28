@@ -23,7 +23,6 @@
 <style>
 .container {
     margin: 0px;
-    align-content: center;
   }
 
   .page-title {
@@ -46,6 +45,7 @@
 
   .row {
     margin-top: 20px;
+    justify-content: center;
   }
 
   .col {
