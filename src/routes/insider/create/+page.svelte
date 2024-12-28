@@ -100,10 +100,10 @@
     <label for="inputYear" class="form-label">tip for</label>
     <select class="form-select" id="tip_for" name="tip_for" required>
       <option selected disabled value="">Select</option>
-      <option value="1">Washing</option>
-      <option value="2">Styling</option>
-      <option value="3">Drying</option>
-      <option value="4">Refreshing</option>
+      <option value="Washing">Washing</option>
+      <option value="Styling">Styling</option>
+      <option value="Drying">Drying</option>
+      <option value="Refreshing">Refreshing</option>
     </select>
   </div>
   <div class="col-12">
