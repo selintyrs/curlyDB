@@ -75,8 +75,9 @@ async function createInsider(insiders) {
     let insiders = [];
     try {
       const collection = db.collection("insiders");
+      const query = {};
 
-     insiders = await collection.find({}).toArray(); // Alle Dokumente abrufen
+     insiders = await collection.find(query).toArray(); // Alle Dokumente abrufen
       insiders.forEach((insider) => {
         insider._id = insider._id.toString(); // Konvertiere ObjectId zu String
       });
