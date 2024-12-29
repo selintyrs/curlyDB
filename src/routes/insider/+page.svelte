@@ -17,11 +17,16 @@
 
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      {#each insiders as insider}
-        <div class="col">
-          <InsiderCard insider={insider} />
-        </div>
-      {/each}
+        {#if insiders && insiders.length > 0}
+        {#each insiders as insider}
+          <div class="col d-flex align-items-stretch">
+            <InsiderCard insider={insider} />
+          </div>
+        {/each}
+      {:else}
+        <p>No insiders found!</p>
+      {/if}
+      
     </div>
   </div>
 
