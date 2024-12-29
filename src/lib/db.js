@@ -69,14 +69,15 @@ async function createInsider(insiders) {
     console.log(error);}
   }
 
+
   // Get 6 random insider tips
   async function getInsiders() {
     let insiders = [];
     try {
       const collection = db.collection("insiders");
       const query = {};
-      const sort = { $sample: { size: 6 } }; // get 6 random records
-      insiders = await collection.aggregate([{ $sample: { size: 6 } }]).toArray();
+      const sort = { $sample: { size: 5 } }; // get 6 random records
+      insiders = await collection.aggregate([{ $sample: { size: 5 } }]).toArray();
       insiders.forEach((insider) => {
         insider._id = insider._id.toString(); // convert ObjectId to String
       });
