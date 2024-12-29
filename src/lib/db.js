@@ -70,22 +70,22 @@ async function createInsider(insiders) {
   }
 
 
-  // Get 6 random insider tips
+  // Get all insiders
   async function getInsiders() {
     let insiders = [];
     try {
       const collection = db.collection("insiders");
       const query = {};
 
-     insiders = await collection.find(query).toArray(); // Alle Dokumente abrufen
+      insiders = await collection.find(query).toArray(); // Fetch all documents
       insiders.forEach((insider) => {
-        insider._id = insider._id.toString(); // Konvertiere ObjectId zu String
+        insider._id = insider._id.toString(); // Convert ObjectId to String
       });
       
     } catch (error) {
       console.log("Error fetching all insiders:", error);
     }
-      return insiders;
+    return insiders;
   }
 
 
