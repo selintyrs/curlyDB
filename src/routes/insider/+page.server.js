@@ -8,3 +8,12 @@ export async function load() {
     }
     
 }
+
+export async function load() {
+
+    return{
+        insiders: await db.getInsiders()
+        
+    }
+    
+}

@@ -66,11 +66,30 @@ async function createInsider(insiders) {
     const result = await collection.insertOne(insiders);
     return result.insertedId.toString();
   } catch (error) {
-    console.log(error);}}
+    console.log(error);}
+  }
+
+  // Get 6 random insider tips
+  async function getInsiders() {
+    let insiders = [];
+    try {
+      const collection = db.collection("insiders");
+      const query = {};
+      const sort = { $sample: { size: 6 } }; // get 6 random records
+      insiders = await collection.aggregate([{ $sample: { size: 6 } }]).toArray();
+      insiders.forEach((insider) => {
+        insider._id = insider._id.toString(); // convert ObjectId to String
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    return insiders;
+  }
 
 
 
 export default {
   getHairTypes,
   getHairType,
-  createInsider,}
+  createInsider,
+  getInsiders,}
