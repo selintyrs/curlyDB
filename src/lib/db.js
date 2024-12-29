@@ -84,9 +84,7 @@ async function createInsider(insiders) {
       
     } catch (error) {
       console.log("Error fetching all insiders:", error);
-      return [];
     }
-    console.log("All insiders fetched:", insiders); // Debugging
       return insiders;
   }
 
