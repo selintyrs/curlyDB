@@ -74,18 +74,24 @@ async function createInsider(insiders) {
   async function getInsiders() {
     let insiders = [];
     try {
-      const collection = db.collection("insiders");
-      const query = {};
-      const sort = { $sample: { size: 5 } }; // get 6 random records
-      insiders = await collection.aggregate([{ $sample: { size: 5 } }]).toArray();
-      insiders.forEach((insider) => {
-        insider._id = insider._id.toString(); // convert ObjectId to String
-      });
+        const collection = db.collection("insiders");
+        const count = await collection.countDocuments();
+        console.log("Total documents in collection:", count); // Debug
+
+        if (count > 0) {
+            const sampleSize = Math.min(count, 5); // Maximal 5 Samples
+            insiders = await collection.aggregate([{ $sample: { size: sampleSize } }]).toArray();
+            console.log("Sampled insiders:", insiders); // Debug
+
+            insiders.forEach((insider) => {
+                insider._id = insider._id.toString();
+            });
+        }
     } catch (error) {
-      console.log(error);
+        console.error("Error fetching insiders:", error);
     }
     return insiders;
-  }
+}
 
 
 
@@ -93,4 +99,4 @@ export default {
   getHairTypes,
   getHairType,
   createInsider,
-  getInsiders,}
+  getInsiders}
