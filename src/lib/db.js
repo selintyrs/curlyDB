@@ -74,24 +74,19 @@ async function createInsider(insiders) {
   async function getInsiders() {
     let insiders = [];
     try {
-        const collection = db.collection("insiders");
-        const count = await collection.countDocuments();
-        console.log("Total documents in collection:", count); // Debug
-
-        if (count > 0) {
-            const sampleSize = Math.min(count, 5); // Maximal 5 Samples
-            insiders = await collection.aggregate([{ $sample: { size: sampleSize } }]).toArray();
-            console.log("Sampled insiders:", insiders); // Debug
-
-            insiders.forEach((insider) => {
-                insider._id = insider._id.toString();
-            });
-        }
+      const collection = db.collection("insiders");
+      
+     insiders = await collection.find({}).toArray(); // Alle Dokumente abrufen
+      insiders.forEach((insider) => {
+        insider._id = insider._id.toString(); // Konvertiere ObjectId zu String
+      });
+      console.log("All insiders fetched:", insiders); // Debugging
+      return insiders;
     } catch (error) {
-        console.error("Error fetching insiders:", error);
+      console.error("Error fetching all insiders:", error);
+      return [];
     }
-    return insiders;
-}
+  }
 
 
 
