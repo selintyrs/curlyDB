@@ -75,17 +75,18 @@ async function createInsider(insiders) {
     let insiders = [];
     try {
       const collection = db.collection("insiders");
-      
+
      insiders = await collection.find({}).toArray(); // Alle Dokumente abrufen
       insiders.forEach((insider) => {
         insider._id = insider._id.toString(); // Konvertiere ObjectId zu String
       });
-      console.log("All insiders fetched:", insiders); // Debugging
-      return insiders;
+      
     } catch (error) {
-      console.error("Error fetching all insiders:", error);
+      console.log("Error fetching all insiders:", error);
       return [];
     }
+    console.log("All insiders fetched:", insiders); // Debugging
+      return insiders;
   }
 
 
