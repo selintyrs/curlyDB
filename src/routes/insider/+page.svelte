@@ -102,7 +102,7 @@
 
     .btn {
   position: absolute; /* Ensure the button is positioned relative to the container */
-  bottom: 3%; /* Push the button to the bottom */
+  bottom: 15%; /* Push the button to the bottom */
   right: 3%; /* Push the button to the right */
   border-color: black;
   border-width: 2px;
