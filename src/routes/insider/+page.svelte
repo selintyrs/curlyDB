@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="carousel-container">
   <h1 class="page-title">Curly Hair Tips</h1>
 
   <div id="carouselExample" class="carousel slide">
@@ -26,9 +26,9 @@
       {#each chunkedInsiders as group, index}
         <div class="carousel-item {index === 0 ? 'active' : ''}">
           <div class="container">
-            <div class="row">
+            <div class="row gx-4">
               {#each group as insider}
-                <div class="col-md-4 d-flex align-items-stretch">
+                <div class="col d-flex align-items-stretch">
                   <InsiderCard insider={insider} />
                 </div>
               {/each}
@@ -72,8 +72,56 @@
       background-image: url("/images/models/small_group.jpeg");
   }
 
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-   color: black;
+  .carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
   }
 
+  .carousel-inner {
+    width: calc(100% - 120px); /* Leaves space for navigation buttons */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .row {
+    justify-content: center; /* Center-align the tips */
+  }
+
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    z-index: 10;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1); /* Makes icons visible */
+    width: 40px;
+    height: 40px;
+  }
+
+  .col {
+    flex: 0 0 16%; /* Ensures 6 items fit per row */
+    max-width: 16%;
+    padding: 0 10px;
+  }
+
+  .carousel {
+    position: relative;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 </style>
