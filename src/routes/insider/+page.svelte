@@ -28,7 +28,7 @@
           <div class="container">
             <div class="row gx-4">
               {#each group as insider}
-                <div class="col d-flex align-items-stretch">
+                <div class="col-md-2 d-flex align-items-stretch">
                   <InsiderCard insider={insider} />
                 </div>
               {/each}
@@ -76,17 +76,16 @@
     width: 100%;
     margin: 0 auto;
     padding: 20px 0;
+    position: relative;
   }
 
   .carousel-inner {
-    width: calc(100% - 120px); /* Leaves space for navigation buttons */
+    width: 100%; /* Leaves space for navigation buttons */
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
   }
 
   .row {
-    justify-content: center; /* Center-align the tips */
+    width: 100%; /* Center-align the tips */
   }
 
   .carousel-item {
@@ -97,20 +96,33 @@
 
   .carousel-control-prev,
   .carousel-control-next {
-    width: 60px;
-    background-color: rgba(0, 0, 0, 0.3);
+    width: 5%;
+    background-color: rgba(0, 0, 0, 0.1);
     border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 10;
   }
 
+
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    filter: invert(1); /* Makes icons visible */
-    width: 40px;
-    height: 40px;
+    filter: invert(1); /* Für sichtbare Icons */
+    width: 30px;
+    height: 30px;
   }
 
-  .col {
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+
+  .col-md-2 {
     flex: 0 0 16%; /* Ensures 6 items fit per row */
     max-width: 16%;
     padding: 0 10px;

@@ -25,7 +25,7 @@
     margin-top: 0rem;
     margin-left: 0rem;
     margin-right: 0rem;
-    border: none;
+    border: 1.2px solid rgba(0, 0, 0, 0.2);
     border-radius: 0px;
     overflow: hidden;
     box-shadow: none;
