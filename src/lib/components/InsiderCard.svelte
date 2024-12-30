@@ -5,7 +5,7 @@
 
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"><span class="step-number">{insider.hairtype_id}</span>{insider.tip_for}</h5>
+      <h5 class="card-title"><span class="hairtype">{insider.hairtype_id}</span>{insider.tip_for}</h5>
       <p class="card-text">{insider.tip_text}</p>
     </div>
   </div>
@@ -27,5 +27,17 @@
     box-shadow: none;
     text-align: left;
     
+    }
+
+    .card-body {
+      font-size: 2.2rem;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif;
+      color: #000000;
+
+    }
+
+    .hairtype {
+      margin-right: 0.5rem;
     }
     </style>

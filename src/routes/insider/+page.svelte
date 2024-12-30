@@ -12,35 +12,27 @@
   </div>
 </div>
 
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+
+<div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
-      {#if insiders && insiders.length > 0}
-          {#each insiders.slice(0, Math.ceil(insiders.length / 6)) as group, i}
-              <div class="carousel-item {i === 0 ? 'active' : ''}">
-                  <div class="container">
-                      <div class="row row-cols-1 row-cols-md-3 g-4">
-                          {#each group as insider}
-                              <div class="col d-flex align-items-stretch">
-                                  <InsiderCard insider={insider} />
-                              </div>
-                          {/each}
-                      </div>
-                  </div>
-              </div>
-          {/each}
-      {:else}
-          <p>No insiders found!</p>
-      {/if}
+    {#each insiders as insider, index}
+      <div class="carousel-item {index === 0 ? 'active' : ''}">
+        <div class="d-flex justify-content-center">
+          <InsiderCard insider={insider} />
+        </div>
+      </div>
+    {/each}
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
   </button>
 </div>
+
 
 <div class="section-2">
   <div class="hero-content">
