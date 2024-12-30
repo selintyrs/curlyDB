@@ -13,9 +13,11 @@
 <div class="section-1">
   <div class="section-1-content">
       <h1>You're not alone - <br /> we got eachother's back</h1>
+      <div class="create">
       <p>Share your most beloved tips <br /> with your curly community:</p>
       <a class="btn btn-primary" href={`/insider/create`} role="button">Add new insider</a>
   </div>
+</div>
 </div>
 
 <div class="container">
@@ -88,10 +90,14 @@
         word-wrap: break-word;
     }
 
-    .section-1-content p {
-      position: absolute;
-        bottom: 15%;
+    .create {
+      bottom: 20%;
         right: 3%;
+
+    }
+
+    .create p {
+      position: absolute;
         text-align: right;
         color: black;
         font-size: 1.7rem;
@@ -108,8 +114,6 @@
   font-family: "Roboto", sans-serif;
   color: black;
   margin-top: 10px;
-  bottom: 3%;
-        right: 3%;
 }
 
 
