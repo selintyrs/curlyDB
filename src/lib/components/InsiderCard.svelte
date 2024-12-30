@@ -5,8 +5,27 @@
 
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">{insider.hairtype_id}</h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">{insider.tip_for}</h6>
+      <h5 class="card-title"><span class="step-number">{insider.hairtype_id}</span>{insider.tip_for}</h5>
       <p class="card-text">{insider.tip_text}</p>
     </div>
   </div>
+
+  <style>
+    .card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible Spalten */
+      gap: 0rem; /* Abstand zwischen den Karten */
+      padding: 0rem;
+      width: 100%;
+      background-color: transparent !important;
+      margin-top: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+      border: none;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    text-align: left;
+    
+    }
+    </style>
