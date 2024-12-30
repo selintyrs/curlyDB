@@ -103,8 +103,7 @@ position: relative;
   .carousel-control-prev,
   .carousel-control-next {
     position: absolute;
-    top: 50%;
-    z-index: 5;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
