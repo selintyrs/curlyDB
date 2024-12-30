@@ -110,11 +110,11 @@ position: relative;
   }
 
   .carousel-control-prev {
-    left: -10px; /* Move the button outside */
+    left: -20px; /* Move the button outside */
   }
 
   .carousel-control-next {
-    right: -10px; /* Move the button outside */
+    right: -20px; /* Move the button outside */
   }
 
 
