@@ -53,8 +53,6 @@
 
 <div class="section-2">
   <div class="section-2-content">
-      <h1>Welcome to your <br /> curly hair database</h1>
-      <p>Learn to embrace your curls!</p>
   </div>
 </div>
 
