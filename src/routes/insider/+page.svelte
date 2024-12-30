@@ -95,11 +95,11 @@
   }
 
   .carousel-control-prev {
-    left: 0;
+    left: 2%;
   }
 
   .carousel-control-next {
-    right: 0;
+    right: 2%;
   }
 
 
@@ -108,8 +108,7 @@
     width: 40px;
     height: 40px;
     color: black;
-    margin-left: 10px;
-    margin-right: 10px;
+
   }
 
   .row {
