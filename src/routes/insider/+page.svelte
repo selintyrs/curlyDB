@@ -61,7 +61,7 @@
 <style>
   .section-1, .section-2 {
       width: 100%;
-      height: 100%;
+      height: 10vh;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
