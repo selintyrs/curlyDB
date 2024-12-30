@@ -90,6 +90,15 @@
 
   }
 
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+
   .carousel-control-prev-icon, .carousel-control-next-icon {
     filter: invert(1); /* Makes icons visible */
     width: 40px;
@@ -105,6 +114,7 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    padding: 0px;
   }
 
 </style>
