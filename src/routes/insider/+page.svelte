@@ -73,7 +73,7 @@
   }
 
   .container {
-  margin: 0 auto; /* Zentriert den Container horizontal */
+  margin: 0; /* Zentriert den Container horizontal */
   display: flex;
   flex-direction: column; /* Stapelt Titel und Grid vertikal */
   align-items: center; /* Zentriert den Grid-Inhalt horizontal */
