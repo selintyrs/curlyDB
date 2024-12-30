@@ -74,10 +74,6 @@
       background-image: url("/images/models/group.jpeg");
   }
 
-  .section-1-content {
-    position: relative; /* Ensures child elements can use absolute positioning */
-  }
-
   .section-1-content h1 {
     position: absolute;
         top: 4%;
