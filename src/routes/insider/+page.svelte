@@ -90,7 +90,7 @@
 
     .section-1-content p {
       position: absolute;
-        bottom: 20%;
+        bottom: 23%;
         right: 3%;
         text-align: right;
         color: black;
