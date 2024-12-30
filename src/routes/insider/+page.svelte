@@ -37,6 +37,8 @@
         </div>
       {/each}
     </div>
+
+
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -73,16 +75,20 @@
   }
 
   .container {
-  margin: 0 auto; /* Zentriert den Container horizontal */
-  display: flex;
-  flex-direction: column; /* Stapelt Titel und Grid vertikal */
-  align-items: center; /* Zentriert den Grid-Inhalt horizontal */
-  width: 100%;
+position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0;
 }
 
 .carousel {
-  align-items: center;
+  position: relative;
 }
+
+.carousel-inner {
+    margin: 0 auto;
+    width: 90%; /* Adjust to your needs */
+  }
 
   .page-title {
     font-size: 3.5rem;
@@ -94,13 +100,25 @@
 
   }
 
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .carousel-control-prev {
-    left: 2%;
+    left: 10px; /* Move the button outside */
   }
 
   .carousel-control-next {
-    right: 2%;
+    right: 10px; /* Move the button outside */
   }
+
+
 
 
   .carousel-control-prev-icon, .carousel-control-next-icon {
