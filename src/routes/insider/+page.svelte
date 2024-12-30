@@ -12,6 +12,8 @@
   </div>
 </div>
 
+<div class="container">
+  <h1 class="page-title">Curly Hair Tips</h1>
 
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
@@ -31,6 +33,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
 </div>
 
 
@@ -56,4 +59,9 @@
   .section-2 {
       background-image: url("/images/models/small_group.jpeg");
   }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+   color: black;
+  }
+
 </style>
