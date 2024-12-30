@@ -72,8 +72,39 @@
       background-image: url("/images/models/small_group.jpeg");
   }
 
+  .container {
+  margin: 0 auto; /* Zentriert den Container horizontal */
+  display: flex;
+  flex-direction: column; /* Stapelt Titel und Grid vertikal */
+  align-items: center; /* Zentriert den Grid-Inhalt horizontal */
+  width: 100%;
+}
+
+  .page-title {
+    font-size: 3.5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+
+  }
+
   .carousel-control-prev-icon, .carousel-control-next-icon {
-   color: black;
+    filter: invert(1); /* Makes icons visible */
+    width: 40px;
+    height: 40px;
+  }
+
+  .row {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
   }
 
 </style>

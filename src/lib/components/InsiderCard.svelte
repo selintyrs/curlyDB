@@ -33,7 +33,7 @@
   }
 
   .card-title {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     font-style: italic;
     font-family: "Roboto", sans-serif;
     color: #000000;
