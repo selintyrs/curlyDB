@@ -74,6 +74,10 @@
       background-image: url("/images/models/group.jpeg");
   }
 
+  .section-1-content {
+    position: relative; /* Ensures child elements can use absolute positioning */
+  }
+
   .section-1-content h1 {
     position: absolute;
         top: 4%;
@@ -101,15 +105,17 @@
     }
 
     .btn {
+  position: absolute; /* Ensure the button is positioned relative to the container */
+  bottom: 3%; /* Push the button to the bottom */
+  right: 3%; /* Push the button to the right */
   border-color: black;
   border-width: 2px;
   background-color: transparent;
   font-style: italic;
   font-family: "Roboto", sans-serif;
   color: black;
-  margin-top: 10px;
-  bottom: 3%;
-        right: 3%;
+  padding: 10px 20px; /* Optional: Adjust padding for better spacing */
+  font-weight: bold; /* Make the text stand out */
 }
 
 
