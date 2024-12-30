@@ -68,10 +68,10 @@
       position: relative;
   }
   .section-1 {
-      background-image: url("/images/models/group.jpeg");
+      background-image: url("/images/models/small_group.jpeg");
   }
   .section-2 {
-      background-image: url("/images/models/small_group.jpeg");
+      background-image: url("/images/models/group.jpeg");
   }
 
   .container {
@@ -110,11 +110,11 @@ position: relative;
   }
 
   .carousel-control-prev {
-    left: 1px; /* Move the button outside */
+    left: -10px; /* Move the button outside */
   }
 
   .carousel-control-next {
-    right: 1px; /* Move the button outside */
+    right: -10px; /* Move the button outside */
   }
 
 
