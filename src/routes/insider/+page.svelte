@@ -73,11 +73,15 @@
   }
 
   .container {
-  margin: 0; /* Zentriert den Container horizontal */
+  margin: 0 auto; /* Zentriert den Container horizontal */
   display: flex;
   flex-direction: column; /* Stapelt Titel und Grid vertikal */
   align-items: center; /* Zentriert den Grid-Inhalt horizontal */
   width: 100%;
+}
+
+.carousel {
+  align-items: center;
 }
 
   .page-title {
@@ -103,17 +107,21 @@
     filter: invert(1); /* Makes icons visible */
     width: 40px;
     height: 40px;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .row {
   margin-top: 20px;
+  margin-bottom: 20px;
   justify-content: center;
 }
 
 .col-md-4 {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 0px;
   }
 
