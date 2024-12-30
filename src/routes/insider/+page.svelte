@@ -76,11 +76,11 @@
 
   .section-1-content h1 {
     position: absolute;
-        top: 5%;
+        top: 4%;
         right: 3%;
         text-align: right;
         color: rgb(0, 0, 0);
-        font-size: 2rem; /* Größere Schrift für mehr Präsenz */
+        font-size: 1.9rem; /* Größere Schrift für mehr Präsenz */
         font-weight: 900;
         font-style: italic;
         font-family: 'Roboto', sans-serif;
@@ -90,7 +90,7 @@
 
     .section-1-content p {
       position: absolute;
-        bottom: 5%;
+        bottom: 15%;
         right: 3%;
         text-align: right;
         color: black;
@@ -103,7 +103,7 @@
     .btn {
   border-color: black;
   border-width: 2px;
-  background-color: white;
+  background-color: transparent;
   font-style: italic;
   font-family: "Roboto", sans-serif;
   color: black;
