@@ -61,7 +61,7 @@
 <style>
   .section-1, .section-2 {
       width: 100%;
-      height: 10vh;
+      height: 100vh;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -86,6 +86,18 @@
         font-family: 'Roboto', sans-serif;
         line-height: 1.5; /* Abstand zwischen den Zeilen */
         word-wrap: break-word;
+    }
+
+    .section-1-content p {
+      position: absolute;
+        bottom: 5%;
+        right: 3%;
+        text-align: right;
+        color: black;
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif;
     }
 
   .container {
