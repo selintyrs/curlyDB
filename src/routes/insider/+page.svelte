@@ -19,7 +19,7 @@
 </div>
 
 <div class="container">
-  <h1 class="page-title">Curly Hair Tips</h1>
+  <h1 class="page-title">Read the tips of your community:</h1>
 
   <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
@@ -96,7 +96,7 @@ position: relative;
   font-style: italic;
   color: #000000;
   font-family: 'Roboto', sans-serif;
-  text-align: left;
+  text-align: center;
 
   }
 
