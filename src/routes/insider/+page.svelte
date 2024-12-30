@@ -108,8 +108,8 @@
     width: 40px;
     height: 40px;
     color: black;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .row {
