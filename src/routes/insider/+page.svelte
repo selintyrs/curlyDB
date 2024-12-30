@@ -11,9 +11,9 @@
 </script>
 
 <div class="section-1">
-  <div class="hero-content">
-      <h1>Welcome to your <br /> curly hair database</h1>
-      <p>Learn to embrace your curls!</p>
+  <div class="section-1-content">
+      <h1>You're not alone - <br /> we got eachother's back</h1>
+      <p>Share your most beloved tips with your curly community:</p>
       <a class="btn btn-primary" href={`/insider/create`} role="button">Add New Tip</a>
   </div>
 </div>
@@ -52,7 +52,7 @@
 
 
 <div class="section-2">
-  <div class="hero-content">
+  <div class="section-2-content">
       <h1>Welcome to your <br /> curly hair database</h1>
       <p>Learn to embrace your curls!</p>
   </div>
@@ -61,7 +61,7 @@
 <style>
   .section-1, .section-2 {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -73,6 +73,20 @@
   .section-2 {
       background-image: url("/images/models/group.jpeg");
   }
+
+  .section-1-content h1 {
+    position: absolute;
+        top: 7%;
+        right: 3%;
+        text-align: right;
+        color: rgb(0, 0, 0);
+        font-size: 2.8rem; /* Größere Schrift für mehr Präsenz */
+        font-weight: 900;
+        font-style: italic;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5; /* Abstand zwischen den Zeilen */
+        word-wrap: break-word;
+    }
 
   .container {
 position: relative;
