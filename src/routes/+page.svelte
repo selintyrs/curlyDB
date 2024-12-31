@@ -12,11 +12,12 @@
 
 <div class="card-container">
     <div class="card" style="width: 18rem;">
-        <a href="/hairtypes" class="card-link" aria-label="Hair Types"></a>
+        <a href="/hairtypes" class="card-link" aria-label="Hair Types">
         <img src="/images/icons/hairtype.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
           <p class="card-text">Find out your curl type.</p>
         </div>
+    </a>
       </div>
       <div class="card" style="width: 18rem;">
         <img src="/images/icons/community.png" class="card-img-top" alt="hairtype">
@@ -84,6 +85,8 @@
     margin-top: 0rem;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .card-img-top {
