@@ -225,11 +225,13 @@ position: relative;
   right: 3%; /* Push the button to the right */
   border-color: black;
   border-width: 2px;
+  border-radius: 2%;
   background-color: transparent;
   font-style: italic;
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   color: black;
-  padding: 10px 20px; /* Optional: Adjust padding for better spacing */
+  padding: 5px 10px; /* Optional: Adjust padding for better spacing */
   font-weight: bold; /* Make the text stand out */
   }
 

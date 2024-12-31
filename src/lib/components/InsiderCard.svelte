@@ -47,7 +47,7 @@
     font-size: 1rem;
     font-style: italic;
     font-family: "Roboto", sans-serif;
-    font-weight: bold;
+    font-weight: lighter;
     color: #000000;
     word-wrap: break-word; /* Allows text to wrap to the next line */
     margin: 0; /* Removes default margin */
