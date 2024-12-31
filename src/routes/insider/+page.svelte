@@ -2,6 +2,7 @@
   export let data; // The data provided by the load function
   const { insiders, hairtypeId } = data; // Extract the insiders from the data
   import InsiderCard from "$lib/components/InsiderCard.svelte";
+  import { enhance } from "$app/forms";
 
   let selectedHairtype = hairtypeId || ""; // Aktuell ausgewählter Filter
 
@@ -59,6 +60,7 @@
 </div>
 
 <!-- Filter-Dropdown -->
+<form method="GET" use:enhance>
 <div class="filter">
 <label for="hairtype">Filter by Hairtype:</label>
 <select id="hairtype" bind:value={selectedHairtype}>
@@ -74,8 +76,9 @@
   <option value="4C">4C</option>
   <!-- Weitere Optionen hinzufügen -->
 </select>
-<button on:click={applyFilter} class="btn">Apply Filter</button>
+<button on:click={applyFilter} class="apply">Apply Filter</button>
 </div>
+</form>
 
 
 <div class="section-2">
@@ -213,8 +216,21 @@ position: relative;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #000000;
-    margin-bottom: 5px;
-    
+    margin-bottom: 10px;
+
+  }
+
+  .apply  {
+    bottom: 15%; /* Push the button to the bottom */
+  right: 3%; /* Push the button to the right */
+  border-color: black;
+  border-width: 2px;
+  background-color: transparent;
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  padding: 10px 20px; /* Optional: Adjust padding for better spacing */
+  font-weight: bold; /* Make the text stand out */
   }
 
 </style>
