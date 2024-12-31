@@ -59,21 +59,23 @@
 </div>
 
 <!-- Filter-Dropdown -->
-<div>
+<div class="filter">
 <label for="hairtype">Filter by Hairtype:</label>
 <select id="hairtype" bind:value={selectedHairtype}>
   <option value="">All Hairtypes</option>
-  <option value="1A">1A</option>
-  <option value="1B">1B</option>
   <option value="2A">2A</option>
   <option value="2B">2B</option>
+  <option value="2C">2C</option>
+  <option value="3A">3A</option>
+  <option value="3B">3B</option>
+  <option value="3C">3C</option>
+  <option value="4A">4A</option>
+  <option value="4B">4B</option>
+  <option value="4C">4C</option>
   <!-- Weitere Optionen hinzufügen -->
 </select>
-<button on:click={applyFilter}>Apply Filter</button>
+<button on:click={applyFilter} class="btn">Apply Filter</button>
 </div>
-
-<!-- Insider-Daten anzeigen -->
-
 
 
 <div class="section-2">
@@ -203,6 +205,16 @@ position: relative;
     justify-content: center;
     margin-top: 0px;
     padding: 0px;
+  }
+
+  .filter {
+    font-size: 1rem;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+    
   }
 
 </style>
