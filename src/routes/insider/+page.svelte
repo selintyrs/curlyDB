@@ -73,18 +73,7 @@
 </div>
 
 <!-- Insider-Daten anzeigen -->
-<div>
-{#if insiders.length > 0}
-  {#each insiders as insider}
-    <div>
-      <h3>{insider.tip_for}</h3>
-      <p>{insider.tip_text}</p>
-    </div>
-  {/each}
-{:else}
-  <p>No tips found!</p>
-{/if}
-</div>
+
 
 
 <div class="section-2">
