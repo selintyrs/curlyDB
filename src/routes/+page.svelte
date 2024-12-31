@@ -11,7 +11,7 @@
 </div>
 
 <div class="main-content">
-    <p>Additional content below the hero section.</p>
+    <p></p>
 </div>
 
 <style>

@@ -11,11 +11,7 @@ async function getHairTypes() {
   let hairtypes = [];
   try {
     const collection = db.collection("hairtypes");
-
-    // You can specify a query/filter here
-    // See https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/query-document/
     const query = {};
-
     const sort = { hairtype: 1 }; // sort by hairtype in ascending order
 
     // Get all objects that match the query
@@ -60,7 +56,6 @@ async function getHairType(id) {
 // Create Insider tips
 async function createInsider(insiders) {
   
-
   try {
     const collection = db.collection("insiders");
     const result = await collection.insertOne(insiders);
@@ -77,7 +72,7 @@ async function createInsider(insiders) {
       const collection = db.collection("insiders");
       const query = {};
 
-      insiders = await collection.find(query).toArray(); // Fetch all documents
+      insiders = await collection.aggregate([{ $sample: { size: 100 } }]).toArray(); // Adjust size as needed
       insiders.forEach((insider) => {
         insider._id = insider._id.toString(); // Convert ObjectId to String
       });
