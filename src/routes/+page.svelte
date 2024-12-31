@@ -14,19 +14,19 @@
     <div class="card" style="width: 18rem;">
         <img src="/images/icons/hairtype.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Find out your curl type.</p>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
         <img src="/images/icons/community.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Read the community insiders.</p>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
         <img src="/images/icons/advice.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Share your insiders.</p>
         </div>
       </div>
 </div>
@@ -89,5 +89,16 @@
     padding: 10px;
     width: 50%;
     height: auto;
+    align-items: center;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: transparent !important;
+    text-align: center;
   }
 </style>
