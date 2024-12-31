@@ -89,6 +89,7 @@
     margin-top: 0rem;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+    justify-content: center; /* Zentriert die Inhalte vertikal */
   }
 
   .card {
@@ -99,7 +100,7 @@
   text-align: center;
   width: 18rem;
   padding: 1rem;
-  border: 1px solid #ddd; /* Optional für die Karten-Rahmen */
+  border: transparent; /* Optional für die Karten-Rahmen */
   border-radius: 8px; /* Optional für abgerundete Ecken */
   background-color: #fff;
 }
