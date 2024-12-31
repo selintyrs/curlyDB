@@ -89,7 +89,7 @@
     margin-top: 0rem;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
-    justify-content: center; /* Zentriert die Inhalte vertikal */
+    align-items: center;
   }
 
   .card {
