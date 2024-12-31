@@ -83,10 +83,26 @@ async function createInsider(insiders) {
     return insiders;
   }
 
+  export async function getInsidersByHairtype(hairtypeId) {
+    try {
+      const collection = db.collection("insiders");
+      const results = await collection.find({ hairtype_id: hairtypeId }).toArray();
+      results.forEach(insider => {
+        insider._id = insider._id.toString(); // ObjectId zu String konvertieren
+      });
+      return results;
+    } catch (error) {
+      console.error("Error fetching insiders by hairtype:", error);
+      return [];
+    }
+  }
+  
+
 
 
 export default {
   getHairTypes,
   getHairType,
   createInsider,
-  getInsiders}
+  getInsiders,
+  getInsidersByHairtype,}

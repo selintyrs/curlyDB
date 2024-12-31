@@ -1,12 +1,20 @@
 <script>
   export let data; // The data provided by the load function
-  const { insiders } = data; // Extract the insiders from the data
+  const { insiders, hairtypeId } = data; // Extract the insiders from the data
   import InsiderCard from "$lib/components/InsiderCard.svelte";
+
+  let selectedHairtype = hairtypeId || ""; // Aktuell ausgewählter Filter
+
 
   // Function to group insiders into chunks of 6
   const chunkedInsiders = [];
   for (let i = 0; i < insiders.length; i += 6) {
     chunkedInsiders.push(insiders.slice(i, i + 6));
+  }
+
+  function applyFilter() {
+    // Filter anwenden und Seite mit Parameter neu laden
+    window.location.href = `/insider?hairtype=${selectedHairtype}`;
   }
 </script>
 
@@ -48,6 +56,34 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+</div>
+
+<!-- Filter-Dropdown -->
+<div>
+<label for="hairtype">Filter by Hairtype:</label>
+<select id="hairtype" bind:value={selectedHairtype}>
+  <option value="">All Hairtypes</option>
+  <option value="1A">1A</option>
+  <option value="1B">1B</option>
+  <option value="2A">2A</option>
+  <option value="2B">2B</option>
+  <!-- Weitere Optionen hinzufügen -->
+</select>
+<button on:click={applyFilter}>Apply Filter</button>
+</div>
+
+<!-- Insider-Daten anzeigen -->
+<div>
+{#if insiders.length > 0}
+  {#each insiders as insider}
+    <div>
+      <h3>{insider.tip_for}</h3>
+      <p>{insider.tip_text}</p>
+    </div>
+  {/each}
+{:else}
+  <p>No tips found!</p>
+{/if}
 </div>
 
 
