@@ -89,7 +89,7 @@
     padding: 10px;
     width: 50%;
     height: auto;
-    align-items: center;
+    position: center;
   }
 
   .card-text {
