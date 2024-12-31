@@ -20,7 +20,7 @@
     </a>
       </div>
       <div class="card" style="width: 18rem;">
-        <a href="/insiders" class="card-link" aria-label="Insiders read">
+        <a href="/insider" class="card-link" aria-label="Insiders read">
         <img src="/images/icons/community.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
           <p class="card-text">Read the community insiders.</p>
@@ -28,7 +28,7 @@
     </a>
       </div>
       <div class="card" style="width: 18rem;">
-        <a href="/insiders/create" class="card-link" aria-label="Insiders write">
+        <a href="/insider/create" class="card-link" aria-label="Insiders write">
         <img src="/images/icons/advice.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
           <p class="card-text">Share your insiders.</p>
