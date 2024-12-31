@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<div class="main-content">
+<div class="card-container">
     <div class="card" style="width: 18rem;">
         <img src="/images/icons/hairtype.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
@@ -32,8 +32,6 @@
 </div>
 
 <style>
-
-    
 
     .hero-section {
     width: 100%;
@@ -75,7 +73,21 @@
         font-family: 'Roboto', sans-serif;
     }
 
-    .main-content {
-        padding: 2rem;
-    }
+    .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible Spalten */
+    gap: 1.8rem; /* Abstand zwischen den Karten */
+    padding: 2rem;
+    width: 100%;
+    background-color: transparent !important;
+    margin-top: 0rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+
+  .card-img-top {
+    padding: 10px;
+    width: 50%;
+    height: auto;
+  }
 </style>
