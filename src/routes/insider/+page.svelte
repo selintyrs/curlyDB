@@ -6,6 +6,22 @@
 
   let selectedHairtype = hairtypeId || ""; // Aktuell ausgewählter Filter
 
+  let formElement;
+
+const handleEnhance = enhance((form) => {
+  formElement = form;
+
+  return {
+    // Callback nach dem Senden
+    afterNavigate: () => {
+      if (formElement) {
+        // Verhindere das automatische Scrollen, indem nichts getan wird
+        formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+});
+
 
   // Function to group insiders into chunks of 6
   const chunkedInsiders = [];
@@ -225,14 +241,14 @@ position: relative;
   right: 3%; /* Push the button to the right */
   border-color: black;
   border-width: 2px;
-  border-radius: 2%;
+  border-radius: 10%;
   background-color: transparent;
   font-style: italic;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: black;
-  padding: 5px 10px; /* Optional: Adjust padding for better spacing */
-  font-weight: bold; /* Make the text stand out */
+  padding: none; /* Optional: Adjust padding for better spacing */
+  font-weight: lighter; /* Make the text stand out */
   }
 
 </style>
