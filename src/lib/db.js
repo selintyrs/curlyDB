@@ -83,6 +83,7 @@ async function createInsider(insiders) {
     return insiders;
   }
 
+  // Get insiders by hairtype
   export async function getInsidersByHairtype(hairtypeId) {
     try {
       const collection = db.collection("insiders");

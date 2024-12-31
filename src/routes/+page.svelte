@@ -11,7 +11,24 @@
 </div>
 
 <div class="main-content">
-    <p></p>
+    <div class="card" style="width: 18rem;">
+        <img src="/images/icons/hairtype.png" class="card-img-top" alt="hairtype">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/images/icons/community.png" class="card-img-top" alt="hairtype">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/images/icons/advice.png" class="card-img-top" alt="hairtype">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
 </div>
 
 <style>

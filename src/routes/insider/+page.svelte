@@ -225,7 +225,7 @@ position: relative;
     bottom: 15%; /* Push the button to the bottom */
   right: 3%; /* Push the button to the right */
   border-color: black;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 10%;
   background-color: transparent;
   font-style: italic;
