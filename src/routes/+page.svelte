@@ -20,16 +20,20 @@
     </a>
       </div>
       <div class="card" style="width: 18rem;">
+        <a href="/insiders" class="card-link" aria-label="Insiders read">
         <img src="/images/icons/community.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
           <p class="card-text">Read the community insiders.</p>
         </div>
+    </a>
       </div>
       <div class="card" style="width: 18rem;">
+        <a href="/insiders/create" class="card-link" aria-label="Insiders write">
         <img src="/images/icons/advice.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
           <p class="card-text">Share your insiders.</p>
         </div>
+    </a>
       </div>
 </div>
 
@@ -85,9 +89,20 @@
     margin-top: 0rem;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
-    align-items: center;
-    justify-content: center;
   }
+
+  .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Zentriert die Inhalte vertikal */
+  text-align: center;
+  width: 18rem;
+  padding: 1rem;
+  border: 1px solid #ddd; /* Optional für die Karten-Rahmen */
+  border-radius: 8px; /* Optional für abgerundete Ecken */
+  background-color: #fff;
+}
 
   .card-img-top {
     padding: 10px;
