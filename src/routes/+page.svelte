@@ -12,6 +12,7 @@
 
 <div class="card-container">
     <div class="card" style="width: 18rem;">
+        <a href="/hairtypes" class="card-link" aria-label="Hair Types"></a>
         <img src="/images/icons/hairtype.png" class="card-img-top" alt="hairtype">
         <div class="card-body">
           <p class="card-text">Find out your curl type.</p>
@@ -101,4 +102,11 @@
     background-color: transparent !important;
     text-align: center;
   }
+
+  .card-link {
+  display: block; /* Macht den gesamten Inhalt klickbar */
+  text-decoration: none;
+  color: inherit;
+}
+
 </style>
