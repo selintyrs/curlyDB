@@ -81,14 +81,12 @@
 
     .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible Spalten */
+    grid-template-columns: repeat(3, 1fr); /* Fixiere drei Spalten */
     gap: 1.8rem; /* Abstand zwischen den Karten */
     padding: 2rem;
     width: 100%;
     background-color: transparent !important;
-    margin-top: 0rem;
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
   }
