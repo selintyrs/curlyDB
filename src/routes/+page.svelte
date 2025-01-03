@@ -90,6 +90,7 @@
     margin-left: 0.2rem;
     margin-right: 0.2rem;
     align-items: center;
+    justify-content: center;
   }
 
   .card {
