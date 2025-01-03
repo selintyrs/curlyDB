@@ -81,10 +81,10 @@
 
     .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Fixiere drei Spalten */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Dynamically adjust columns */
     gap: 1.8rem; /* Abstand zwischen den Karten */
     padding: 2rem;
-    width: 100%;
+    max-width: 1200px; /* Optional: Limit the container width */
     background-color: transparent !important;
     margin: 0 auto;
     align-items: center;
@@ -96,7 +96,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 18rem;
+  width: 100%;
+  max-width: 18rem; /* Ensure the cards don’t exceed their intended size */
   padding: 1rem;
   border: transparent; /* Optional für die Karten-Rahmen */
   border-radius: 8px; /* Optional für abgerundete Ecken */

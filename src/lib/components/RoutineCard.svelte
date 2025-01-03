@@ -1,6 +1,21 @@
 <script>
   let { hairtype } = $props();
+
+  // Collect all image paths dynamically
+  const routineImages = [
+    hairtype.routines.washing.image,
+    hairtype.routines.styling.image,
+    hairtype.routines.drying.image,
+    hairtype.routines.refreshing.image
+  ];
 </script>
+
+<svelte:head>
+  {#each routineImages as image}
+    <link rel="preload" as="image" href={image} />
+  {/each}
+</svelte:head>
+
 
 <div class="card-container">
   <!-- Washing Card -->
