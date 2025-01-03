@@ -22,15 +22,15 @@
 
 <style>
 .container {
-  margin: 0 auto; /* Zentriert den Container horizontal */
+  margin: 0 auto; 
   display: flex;
-  flex-direction: column; /* Stapelt Titel und Grid vertikal */
-  align-items: center; /* Zentriert den Grid-Inhalt horizontal */
+  flex-direction: column; 
+  align-items: center;
   width: 100%;
 }
 
 .page-title {
-  text-align: left; /* Behält den Titel linksbündig */
+  text-align: left;
   margin-top: 0rem;
   font-size: 3.5rem;
   font-weight: 900;
@@ -46,7 +46,7 @@
 }
 
 .card-link {
-  display: block; /* Macht den gesamten Inhalt klickbar */
+  display: block;
   text-decoration: none;
   color: inherit;
 }

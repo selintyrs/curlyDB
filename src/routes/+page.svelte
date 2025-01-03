@@ -1,10 +1,6 @@
-<script>
-    // Kein JS-Code notwendig
-</script>
 
-
-<div class="hero-section">
-    <div class="hero-content">
+<div class="section-1">
+    <div class="section-1-content">
         <h1>Welcome to your <br /> curly hair database</h1>
         <p>Learn to embrace your curls!</p>
     </div>
@@ -39,35 +35,35 @@
 
 <style>
 
-    .hero-section {
+    .section-1 {
     width: 100%;
-    height: calc(100vh - 30px); /* 100vh minus der Navbar-Höhe (56px bei Bootstrap) */
+    height: calc(100vh - 30px);
     background-image: url("/images/models/main.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; /* Wichtig für absolute Positionierung der Inhalte */
-    margin: 0; /* Entfernt unnötige Margins */
-    padding: 0; /* Keine Abstände */
-    top: 0px; /* Beginnt direkt unter der Navbar */
-    z-index: 1; /* Stellt sicher, dass es unter der Navbar liegt */
+    position: relative;
+    margin: 0; 
+    padding: 0; 
+    top: 0px; 
+    z-index: 1; 
     }
 
-    .hero-content h1 {
+    .section-1-content h1 {
         position: absolute;
         top: 7%;
         right: 3%;
         text-align: right;
         color: rgb(0, 0, 0);
-        font-size: 2.8rem; /* Größere Schrift für mehr Präsenz */
+        font-size: 2.8rem;
         font-weight: 900;
         font-style: italic;
         font-family: 'Roboto', sans-serif;
-        line-height: 1.5; /* Abstand zwischen den Zeilen */
+        line-height: 1.5;
         word-wrap: break-word;
     }
 
-    .hero-content p {
+    .section-1-content p {
         position: absolute;
         bottom: 5%;
         right: 3%;
@@ -81,10 +77,10 @@
 
     .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Dynamically adjust columns */
-    gap: 2.3rem; /* Abstand zwischen den Karten */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2.3rem;
     padding: 2rem;
-    max-width: 1200px; /* Optional: Limit the container width */
+    max-width: 1200px;
     background-color: transparent !important;
     margin: 0 auto;
     align-items: center;
@@ -97,9 +93,9 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  max-width: 18rem; /* Ensure the cards don’t exceed their intended size */
+  max-width: 18rem;
   padding: 1rem;
-  border: transparent; /* Optional für die Karten-Rahmen */
+  border: transparent;
   background-color: #fff;
 }
 

@@ -14,11 +14,8 @@
 <style>
   .card {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(250px, 1fr)
-    ); /* Flexible Spalten */
-    gap: 0rem; /* Abstand zwischen den Karten */
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr)); 
+    gap: 0rem;
     padding: 0rem;
     width: 100%;
     background-color: transparent !important;
@@ -49,7 +46,7 @@
     font-family: "Roboto", sans-serif;
     font-weight: lighter;
     color: #000000;
-    word-wrap: break-word; /* Allows text to wrap to the next line */
-    margin: 0; /* Removes default margin */
+    word-wrap: break-word;
+    margin: 0; 
   }
 </style>

@@ -1,10 +1,10 @@
-import { MongoClient, ObjectId } from "mongodb"; // See https://www.mongodb.com/docs/drivers/node/current/quick-start/
+import { MongoClient, ObjectId } from "mongodb"; 
 import { DB_URI } from "$env/static/private";
 
 const client = new MongoClient(DB_URI);
 
 await client.connect();
-const db = client.db("CurlyDB"); // select database
+const db = client.db("CurlyDB");
 
 // Get all hair types
 async function getHairTypes() {
@@ -12,16 +12,15 @@ async function getHairTypes() {
   try {
     const collection = db.collection("hairtypes");
     const query = {};
-    const sort = { hairtype: 1 }; // sort by hairtype in ascending order
+    const sort = { hairtype: 1 }; // ascending order
 
-    // Get all objects that match the query
     hairtypes = await collection.find({}).sort(sort).toArray();
     hairtypes.forEach((hairtype) => {
-      hairtype._id = hairtype._id.toString(); // convert ObjectId to String
+      hairtype._id = hairtype._id.toString();
     });
   } catch (error) {
     console.log(error);
-    // TODO: errorhandling
+
   }
   return hairtypes;
 }
@@ -31,7 +30,7 @@ async function getHairType(id) {
   let hairtype = null;
   try {
       const collection = db.collection("hairtypes");
-      const query = { _id: new ObjectId(id) }; // filter by id
+      const query = { _id: new ObjectId(id) };
       hairtype = await collection.findOne(query);
 
       if (!hairtype) {
@@ -72,9 +71,9 @@ async function createInsider(insiders) {
       const collection = db.collection("insiders");
       const query = {};
 
-      insiders = await collection.aggregate([{ $sample: { size: 100 } }]).toArray(); // Adjust size as needed
+      insiders = await collection.aggregate([{ $sample: { size: 100 } }]).toArray();
       insiders.forEach((insider) => {
-        insider._id = insider._id.toString(); // Convert ObjectId to String
+        insider._id = insider._id.toString();
       });
       
     } catch (error) {
@@ -89,7 +88,7 @@ async function createInsider(insiders) {
       const collection = db.collection("insiders");
       const results = await collection.find({ hairtype_id: hairtypeId }).toArray();
       results.forEach(insider => {
-        insider._id = insider._id.toString(); // ObjectId zu String konvertieren
+        insider._id = insider._id.toString();
       });
       return results;
     } catch (error) {

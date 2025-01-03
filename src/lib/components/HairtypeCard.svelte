@@ -30,14 +30,14 @@
     border: none; 
     box-shadow: none;
     border-radius: 0;
-    background-color: transparent !important; /* Card is see-through */
+    background-color: transparent !important;
     margin-bottom: 1px;
 
   }
 
   .card-header {
-    margin-bottom: 0.8px; /* Abstand zwischen Header und Bild */
-    background-color: transparent !important; /* Header is see-through */
+    margin-bottom: 0.8px;
+    background-color: transparent !important; 
   }
 
   .card-title {
@@ -45,7 +45,7 @@
     font-weight: bold;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 5px; /* Kleiner Abstand zwischen Titel und Subtitle */
+    margin-bottom: 5px; 
     color: #000000;
   }
 
@@ -58,16 +58,16 @@
   }
 
   .card-image img {
-    width: 200px; /* Bild wird in voller Breite angezeigt */
-    height: 300px; /* Einheitliche Höhe */
-    object-fit: contain; /* Bild wird nicht abgeschnitten, sondern skaliert */
-    border-radius: 0; /* Keine abgerundeten Ecken */
+    width: 200px; 
+    height: 300px;
+    object-fit: contain; 
+    border-radius: 0; 
   }
 
   .card-body {
-    padding: 10px; /* Adds padding around the description */
+    padding: 10px; 
     background-color: transparent !important;
-    margin-top: 0.7px; /* Abstand zwischen Bild und Beschreibung */
+    margin-top: 0.7px;
     
   }
 
@@ -77,8 +77,8 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     color: #000000;
-    word-wrap: break-word; /* Allows text to wrap to the next line */
-    margin: 0; /* Removes default margin */
+    word-wrap: break-word;
+    margin: 0;
   }
 
 

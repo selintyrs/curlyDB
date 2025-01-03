@@ -1,20 +1,7 @@
 <script>
   let { hairtype } = $props();
 
-  // Collect all image paths dynamically
-  const routineImages = [
-    hairtype.routines.washing.image,
-    hairtype.routines.styling.image,
-    hairtype.routines.drying.image,
-    hairtype.routines.refreshing.image
-  ];
 </script>
-
-<svelte:head>
-  {#each routineImages as image}
-    <link rel="preload" as="image" href={image} />
-  {/each}
-</svelte:head>
 
 
 <div class="card-container">
@@ -99,7 +86,7 @@
   .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible Spalten */
-    gap: 1.8rem; /* Abstand zwischen den Karten */
+    gap: 1.8rem;
     padding: 2rem;
     width: 100%;
     background-color: transparent !important;
@@ -162,12 +149,12 @@
   }
 
   ul {
-  list-style: none; /* Entfernt die Disks */
-  padding: 0; /* Entfernt den Standard-Abstand auf der linken Seite */
-  margin: 0; /* Entfernt den Standard-Abstand oben und unten */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-  margin-bottom: 0.5rem; /* Fügt etwas Abstand zwischen den Listenpunkten hinzu */
+  margin-bottom: 0.5rem; /* Abstand zwischen den Listenpunkten */
 }
 </style>

@@ -5,8 +5,7 @@
 <svelte:head>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet"/>
 </svelte:head>
 
 <nav

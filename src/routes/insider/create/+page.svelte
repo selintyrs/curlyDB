@@ -167,7 +167,7 @@
   .form-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px; /* Space between columns */
+  gap: 20px;
   margin-top: 50px;
   padding: 0 30px;
   margin-bottom: 10px;
@@ -176,7 +176,7 @@
 .form-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Center content horizontally */
+  align-items: flex-start;
   gap: 10px;
   font-family: "Roboto", sans-serif;
   font-style: italic;
@@ -185,14 +185,14 @@
 .form-check {
   display: flex;
   align-items: center; 
-  margin-bottom: 5px;/* Centers radio button with label */
+  margin-bottom: 5px;
 }
 
 .form-check-input {
   width: 20px;
-  height: 20px; /* Enlarges the radio button */
-  border-width: 2px; /* Increases border thickness */
-  margin-right: 10px; /* Space between radio button and label */
+  height: 20px; 
+  border-width: 2px; 
+  margin-right: 10px; 
   color:#000000;
 }
 
@@ -201,7 +201,7 @@
   font-style: italic;
   font-size: 1.2rem;
   font-weight: lighter;
-  line-height: 0.5; /* Reduces spacing between lines */
+  line-height: 0.5; 
   text-align: left;
 }
 
@@ -235,24 +235,24 @@
 }
 
 .banner img {
-  width: 100vw; /* Full width of the viewport */
+  width: 100vw; 
   height: auto;
   display: block;
   overflow: hidden;
-  margin: 0; /* Removes any extra margins */
+  margin: 0; 
   padding: 0;
 }
 
 /* Responsive Adjustment */
 @media (max-width: 768px) {
   .form-container {
-    grid-template-columns: 1fr; /* Stacks both columns vertically */
+    grid-template-columns: 1fr;
   }
 
   .form-left,
   .form-right {
     padding: 0;
-    align-items: center; /* Center content in smaller screens */
+    align-items: center;
   }
 }
 </style>
