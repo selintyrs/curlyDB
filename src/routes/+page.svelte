@@ -95,13 +95,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Zentriert die Inhalte vertikal */
   text-align: center;
   width: 18rem;
   padding: 1rem;
   border: transparent; /* Optional für die Karten-Rahmen */
   border-radius: 8px; /* Optional für abgerundete Ecken */
   background-color: #fff;
+  border: 1px solid #ddd; /* Rahmen für Debugging */
 }
 
   .card-img-top {
