@@ -82,7 +82,7 @@
     .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Dynamically adjust columns */
-    gap: 1.8rem; /* Abstand zwischen den Karten */
+    gap: 2.3rem; /* Abstand zwischen den Karten */
     padding: 2rem;
     max-width: 1200px; /* Optional: Limit the container width */
     background-color: transparent !important;
@@ -100,9 +100,7 @@
   max-width: 18rem; /* Ensure the cards don’t exceed their intended size */
   padding: 1rem;
   border: transparent; /* Optional für die Karten-Rahmen */
-  border-radius: 8px; /* Optional für abgerundete Ecken */
   background-color: #fff;
-  border: 1px solid #ddd; /* Rahmen für Debugging */
 }
 
   .card-img-top {
