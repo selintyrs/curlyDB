@@ -22,7 +22,7 @@ export async function load({ url }) {
 
 
 export const actions = {
-  default: async ({ request }) => {
+  update: async ({ request }) => {
     const formData = await request.formData();
     const insiderId = formData.get("insiderId");
     const newRating = parseInt(formData.get("rating"), 10);

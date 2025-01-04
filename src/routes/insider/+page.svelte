@@ -1,8 +1,10 @@
 <script>
   export let data; // The data provided by the load function
   const { insiders, hairtypeId } = data; // Extract the insiders from the data
+
   import InsiderCard from "$lib/components/InsiderCard.svelte";
   import { enhance } from "$app/forms";
+
 
   let selectedHairtype = hairtypeId || ""; // Aktuell ausgewählter Filter
 
