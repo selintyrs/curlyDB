@@ -1,5 +1,31 @@
 <script>
   let { insider } = $props();
+let rating = insider.rating?.average || 0; // Use optional chaining to avoid errors
+const stars = [1, 2, 3, 4, 5]; // Define the star array
+
+const setRating = async (value) => {
+  rating = value;
+
+  try {
+    const response = await fetch("/insider", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        insiderId: insider._id, // Make sure this matches your backend structure
+        newRating: value,
+      }),
+    });
+
+    if (response.ok) {
+      console.log("Rating submitted successfully!");
+    } else {
+      console.error("Failed to submit rating.");
+    }
+  } catch (error) {
+    console.error("Error submitting rating:", error);
+  }
+};
+
 </script>
 
 <div class="card" style="width: 18rem;">
@@ -8,6 +34,20 @@
       <span class="hairtype">{insider.hairtype_id}</span>{insider.tip_for}
     </h5>
     <p class="card-text">{insider.tip_text}</p>
+
+    <!-- Rating System -->
+    <div class="stars">
+      {#each stars as star}
+        <span
+          class="star {star <= rating ? 'active' : ''}"
+          on:click={() => setRating(star)}
+        >
+          ★
+        </span>
+      {/each}
+    </div>
+    <p class="rating-text">Average rating: {rating} / 5</p>
+    
   </div>
 </div>
 

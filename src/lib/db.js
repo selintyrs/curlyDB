@@ -57,6 +57,15 @@ async function createInsider(insiders) {
 
   try {
     const collection = db.collection("insiders");
+
+    // Add default rating field if it doesn't exist
+    if (!insiders.rating) {
+      insiders.rating = {
+        total: 0, // Total sum of ratings
+        count: 0, // Number of ratings
+      };
+    }
+
     const result = await collection.insertOne(insiders);
     return result.insertedId.toString();
   } catch (error) {
@@ -97,6 +106,53 @@ export async function getInsidersByHairtype(hairtypeId) {
   }
 }
 
+async function addRating(insiderId, newRating) {
+  try {
+    const collection = db.collection("insiders");
+    const insiderObjectId = new ObjectId(insiderId);
+
+    // Update the rating field by incrementing total and count
+    const result = await collection.updateOne(
+      { _id: insiderObjectId },
+      {
+        $inc: { "rating.total": newRating, "rating.count": 1 },
+        $setOnInsert: { rating: { total: 0, count: 0 } }, // Default if not existing
+      }
+    );
+
+    if (result.modifiedCount === 0) {
+      throw new Error(`Insider with ID ${insiderId} not found or not updated.`);
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error updating rating:", error);
+    return false;
+  }
+}
+
+async function getAverageRating(insiderId) {
+  try {
+    const collection = db.collection("insiders");
+    const insiderObjectId = new ObjectId(insiderId);
+
+    const insider = await collection.findOne({ _id: insiderObjectId });
+    if (!insider || !insider.rating) {
+      throw new Error(`No rating data found for insider with ID ${insiderId}`);
+    }
+
+    const { total, count } = insider.rating;
+    const average = count > 0 ? (total / count).toFixed(2) : "No ratings yet";
+
+    return average;
+  } catch (error) {
+    console.error("Error fetching average rating:", error);
+    return null;
+  }
+}
+
+
+
 
 export default {
   getHairTypes,
@@ -104,4 +160,6 @@ export default {
   createInsider,
   getInsiders,
   getInsidersByHairtype,
+  addRating,
+  getAverageRating,
 }

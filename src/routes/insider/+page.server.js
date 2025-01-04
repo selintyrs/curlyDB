@@ -18,3 +18,24 @@ export async function load({ url }) {
     hairtypeId, // Gib den aktuellen Filter zurück, falls nötig
   };
 }
+
+export async function _POST({ request }) {
+  try {
+    const { insiderId, newRating } = await request.json();
+
+    if (!insiderId || !newRating || newRating < 1 || newRating > 5) {
+      return new Response("Invalid data", { status: 400 });
+    }
+
+    const success = await db.addRating(insiderId, newRating);
+
+    if (success) {
+      return new Response("Rating added successfully", { status: 200 });
+    } else {
+      return new Response("Failed to add rating", { status: 500 });
+    }
+  } catch (error) {
+    console.error("Error handling rating submission:", error);
+    return new Response("Server error", { status: 500 });
+  }
+}
