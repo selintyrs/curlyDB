@@ -28,9 +28,7 @@ export const actions = {
       const insiders = {
         _id: data.get("_id"),
         rating: {
-          total: data.get("rating"),
-          count: 1,
-          average: 0,
+          total: parseInt(data.get("rating")),
         },
       };
 
