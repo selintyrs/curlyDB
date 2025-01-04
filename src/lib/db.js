@@ -115,11 +115,11 @@ async function updateInsider(insiders) {
     // Update the rating object
     const update = {
       $inc: { 
-        "rating.total": insiders.rating.total, // Total sum of ratings
+        "rating.total": selectedRating, // Total sum of ratings
         "rating.count": 1                     // Increment count by 1
       },
       $set: { 
-        "rating.average": (insiders.rating.total + insiders.rating.average * insiders.rating.count) / (insiders.rating.count + 1) 
+        "rating.average": (insiders.rating.total + selectedRating) / (insiders.rating.count + 1)
       }
     };
 

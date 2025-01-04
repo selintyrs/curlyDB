@@ -18,7 +18,7 @@ let selectedRating = $state(0);
     <form method="POST" action="/insider">
       <input type="hidden" name="_id" value={insider._id} />
       <label for="rating">Rate this tip:</label>
-      <select name="rating" bind:value={insider.rating}>
+      <select name="rating" bind:value={selectedRating}>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
