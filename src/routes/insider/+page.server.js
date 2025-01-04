@@ -25,23 +25,20 @@ export const actions = {
   update: async ({ request }) => {
     try {
       const data = await request.formData();
-      console.log("Form Data Received:", Object.fromEntries(data));
-
-
-      let insiders = {
-        hairtype_id: data.get("hairtype_id"),
+      const insiders = {
+        _id: data.get("_id"),
         rating: {
-          total: data.get("rating.total"), // Falls total ein Unterfeld von rating ist
-          count: data.get("rating.count"),
-          average: data.get("rating.average"),
-
+          total: parseInt(data.get("rating"), 10),
+          count: 1, // Optional, falls du nicht direkt aus der DB liest
         },
       };
+
+      console.log("Form Data Received:", insiders);
 
       await db.updateRating(insiders);
       return { success: true };
     } catch (error) {
-      console.error("Error in create action:", error); // Debugging
+      console.error("Fehler in update Action:", error);
       return { success: false, error: error.message };
     }
   },

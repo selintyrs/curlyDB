@@ -17,8 +17,8 @@ let selectedRating = $state(0);
     <p class="card-text">{insider.tip_text}</p>
     
     <!-- Rating Form -->
-    <form method="POST" action="/insider">
-      <input type="hidden" name="insiderId" value={insider._id} />
+    <form method="POST" action="/update">
+      <input type="hidden" name="_id" value={insider._id} />
       <label for="rating">Rate this tip:</label>
       <select name="rating" bind:value={selectedRating}>
         <option value="1">1</option>
@@ -30,7 +30,7 @@ let selectedRating = $state(0);
       <button type="submit">Submit</button>
     </form>
 
-    <p class="rating-text">Average rating: {rating} / 5</p>
+    <p class="rating-text">Average rating: {rating.average} / 5</p>
   </div>
 </div>
 

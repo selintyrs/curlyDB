@@ -108,24 +108,27 @@ export async function getInsidersByHairtype(hairtypeId) {
 
 async function updateRating(insiders) {
   try {
-    let id = insiders._id;
-    delete insiders._id;
+    const id = insiders._id;
     const collection = db.collection("insiders");
-    const query = { _id: new ObjectId(id) }; 
-    const result = await collection.updateOne(query,{$setOnInsert: { rating: { total: 0, count: 0 } }}), // Default if not existin   
+    const query = { _id: new ObjectId(id) };
+    const update = {
+      $inc: { "rating.total": insiders.rating.total, "rating.count": 1 },
+      $set: { "rating.average": insiders.rating.total / insiders.rating.count },
+    };
 
+    const result = await collection.updateOne(query, update);
     if (result.matchedCount === 0) {
-      console.log("No artist with id " + id);
-      throw new Error(`Insider with ID ${insiderId} not found.`);
-    } else {
-      onsole.log("Artist with id " + id + " has been updated.");
-      return id;
+      console.error("Kein Insider mit ID " + id + "gefunden.");
+      return null;
     }
+    console.log("Rating für Insider mit ID " + id + "aktualisiert.");
+    return id;
   } catch (error) {
-    console.error("Error updating rating:", error);
+    console.error("Fehler beim Aktualisieren des Ratings:", error);
+    return null;
   }
-  return null;
 }
+
 
 
 async function getAverageRating(insiderId) {
