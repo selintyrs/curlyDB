@@ -1,9 +1,7 @@
 <script>
   let { insider } = $props();
 let rating = insider.rating?.average || 0; // Use optional chaining to avoid errors
-const stars = [1, 2, 3, 4, 5]; // Define the star array
 
-// To bind the selected rating for the form
 let selectedRating = $state(0);
 
 
@@ -20,7 +18,7 @@ let selectedRating = $state(0);
     <form method="POST" action="/insider">
       <input type="hidden" name="_id" value={insider._id} />
       <label for="rating">Rate this tip:</label>
-      <select name="rating" bind:value={selectedRating}>
+      <select name="rating" bind:value={insider.rating}>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -30,7 +28,7 @@ let selectedRating = $state(0);
       <button type="submit">Submit</button>
     </form>
 
-    <p class="rating-text">Average rating: {rating.average} / 5</p>
+    <p class="rating-text">Average rating: {insider.rating.average} / 5</p>
   </div>
 </div>
 

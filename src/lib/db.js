@@ -106,7 +106,7 @@ export async function getInsidersByHairtype(hairtypeId) {
   }
 }
 
-async function updateRating(insiders) {
+async function updateInsider(insiders) {
   try {
     const id = insiders._id;
     const collection = db.collection("insiders");
@@ -147,5 +147,5 @@ export default {
   createInsider,
   getInsiders,
   getInsidersByHairtype,
-  updateRating
+  updateInsider
 }

@@ -28,14 +28,15 @@ export const actions = {
       const insiders = {
         _id: data.get("_id"),
         rating: {
-          total: parseInt(data.get("rating"), 10),
-          count: 1, // Optional, falls du nicht direkt aus der DB liest
+          total: data.get("rating"),
+          count: data.get("count"),
+          average: data.get("average"),
         },
       };
 
       console.log("Form Data Received:", insiders);
 
-      await db.updateRating(insiders);
+      await db.updateInsider(insiders);
       return { success: true };
     } catch (error) {
       console.error("Fehler in update Action:", error);
