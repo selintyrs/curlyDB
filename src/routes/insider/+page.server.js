@@ -19,23 +19,24 @@ export async function load({ url }) {
   };
 }
 
-export async function _POST({ request }) {
-  try {
-    const { insiderId, newRating } = await request.json();
+
+
+export const actions = {
+  default: async ({ request }) => {
+    const formData = await request.formData();
+    const insiderId = formData.get("insiderId");
+    const newRating = parseInt(formData.get("rating"), 10);
 
     if (!insiderId || !newRating || newRating < 1 || newRating > 5) {
-      return new Response("Invalid data", { status: 400 });
+      return { success: false, message: "Invalid input." };
     }
 
     const success = await db.addRating(insiderId, newRating);
 
     if (success) {
-      return new Response("Rating added successfully", { status: 200 });
+      return { success: true, message: "Rating added successfully." };
     } else {
-      return new Response("Failed to add rating", { status: 500 });
+      return { success: false, message: "Failed to add rating." };
     }
-  } catch (error) {
-    console.error("Error handling rating submission:", error);
-    return new Response("Server error", { status: 500 });
-  }
-}
+  },
+};

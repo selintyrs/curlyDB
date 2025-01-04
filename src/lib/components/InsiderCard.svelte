@@ -3,28 +3,9 @@
 let rating = insider.rating?.average || 0; // Use optional chaining to avoid errors
 const stars = [1, 2, 3, 4, 5]; // Define the star array
 
-const setRating = async (value) => {
-  rating = value;
+// To bind the selected rating for the form
+let selectedRating = $state(0);
 
-  try {
-    const response = await fetch("/insider", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        insiderId: insider._id, // Make sure this matches your backend structure
-        newRating: value,
-      }),
-    });
-
-    if (response.ok) {
-      console.log("Rating submitted successfully!");
-    } else {
-      console.error("Failed to submit rating.");
-    }
-  } catch (error) {
-    console.error("Error submitting rating:", error);
-  }
-};
 
 </script>
 
@@ -34,20 +15,22 @@ const setRating = async (value) => {
       <span class="hairtype">{insider.hairtype_id}</span>{insider.tip_for}
     </h5>
     <p class="card-text">{insider.tip_text}</p>
-
-    <!-- Rating System -->
-    <div class="stars">
-      {#each stars as star}
-        <span
-          class="star {star <= rating ? 'active' : ''}"
-          on:click={() => setRating(star)}
-        >
-          ★
-        </span>
-      {/each}
-    </div>
-    <p class="rating-text">Average rating: {rating} / 5</p>
     
+    <!-- Rating Form -->
+    <form method="POST" action="/insider">
+      <input type="hidden" name="insiderId" value={insider._id} />
+      <label for="rating">Rate this tip:</label>
+      <select name="rating" bind:value={selectedRating}>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+
+    <p class="rating-text">Average rating: {rating} / 5</p>
   </div>
 </div>
 

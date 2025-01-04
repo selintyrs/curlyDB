@@ -111,17 +111,16 @@ async function addRating(insiderId, newRating) {
     const collection = db.collection("insiders");
     const insiderObjectId = new ObjectId(insiderId);
 
-    // Update the rating field by incrementing total and count
     const result = await collection.updateOne(
       { _id: insiderObjectId },
       {
-        $inc: { "rating.total": newRating, "rating.count": 1 },
         $setOnInsert: { rating: { total: 0, count: 0 } }, // Default if not existing
+        $inc: { "rating.total": newRating, "rating.count": 1 },
       }
     );
 
-    if (result.modifiedCount === 0) {
-      throw new Error(`Insider with ID ${insiderId} not found or not updated.`);
+    if (result.matchedCount === 0) {
+      throw new Error(`Insider with ID ${insiderId} not found.`);
     }
 
     return true;
@@ -130,6 +129,7 @@ async function addRating(insiderId, newRating) {
     return false;
   }
 }
+
 
 async function getAverageRating(insiderId) {
   try {
