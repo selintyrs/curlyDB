@@ -15,7 +15,7 @@ let selectedRating = $state(0);
     <p class="card-text">{insider.tip_text}</p>
     
     <!-- Rating Form -->
-    <form method="POST" action="/insider?update">
+    <form method="POST" action="?/update">
       <input type="hidden" name="_id" value={insider._id} />
       <label for="rating">Rate this tip:</label>
       <select name="rating" bind:value={selectedRating}>
