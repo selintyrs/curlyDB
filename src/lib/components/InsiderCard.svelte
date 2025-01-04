@@ -1,5 +1,5 @@
 <script>
-  let { insider } = $props();
+  let { insider, form } = $props();
 let rating = insider.rating?.average || 0; // Use optional chaining to avoid errors
 
 let selectedRating = $state(0);
@@ -15,7 +15,7 @@ let selectedRating = $state(0);
     <p class="card-text">{insider.tip_text}</p>
     
     <!-- Rating Form -->
-    <form method="POST" action="/insider">
+    <form method="POST" action="/insider?update">
       <input type="hidden" name="_id" value={insider._id} />
       <label for="rating">Rate this tip:</label>
       <select name="rating" bind:value={selectedRating}>
