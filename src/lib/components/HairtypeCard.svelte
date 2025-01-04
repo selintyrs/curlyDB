@@ -2,7 +2,7 @@
     let { hairtype } = $props();
 </script>
 
-<div class="card">
+<div class="card text-center shadow-none">
   <!-- Name und Hairtype über dem Bild -->
   <div class="card-header">
     <h5 class="card-title"><span class="hairtype">{hairtype.hairtype}</span> {hairtype.name.toUpperCase()}</h5>
