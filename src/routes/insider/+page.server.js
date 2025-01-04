@@ -27,9 +27,8 @@ export const actions = {
       const data = await request.formData();
       const insiders = {
         _id: data.get("_id"),
-        rating: {
-          total: parseInt(data.get("rating")),
-        },
+        rating: parseInt(data.get("rating")), // Parse rating as an integer
+        
       };
 
       console.log("Form Data Received:", insiders);
