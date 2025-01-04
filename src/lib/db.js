@@ -131,27 +131,6 @@ async function updateRating(insiders) {
 
 
 
-async function getAverageRating(insiderId) {
-  try {
-    const collection = db.collection("insiders");
-    const insiderObjectId = new ObjectId(insiderId);
-
-    const insider = await collection.findOne({ _id: insiderObjectId });
-    if (!insider || !insider.rating) {
-      throw new Error(`No rating data found for insider with ID ${insiderId}`);
-    }
-
-    const { total, count } = insider.rating;
-    const average = count > 0 ? (total / count).toFixed(2) : "No ratings yet";
-
-    return average;
-  } catch (error) {
-    console.error("Error fetching average rating:", error);
-    return null;
-  }
-}
-
-
 
 
 export default {
@@ -160,6 +139,5 @@ export default {
   createInsider,
   getInsiders,
   getInsidersByHairtype,
-  addRating,
-  getAverageRating,
+  updateRating
 }
