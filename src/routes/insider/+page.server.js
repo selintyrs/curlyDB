@@ -29,8 +29,8 @@ export const actions = {
         _id: data.get("_id"),
         rating: {
           total: data.get("rating"),
-          count: data.get("count"),
-          average: data.get("average"),
+          count: 1,
+          average: 0,
         },
       };
 
