@@ -1,8 +1,6 @@
 <script>
   let { hairtype } = $props();
-
 </script>
-
 
 <div class="card-container">
   <!-- Washing Card -->
@@ -85,7 +83,10 @@
 <style>
   .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible Spalten */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Flexible Spalten */
     gap: 1.8rem;
     padding: 2rem;
     width: 100%;
@@ -115,7 +116,7 @@
     font-size: 1.7rem;
     font-weight: bold;
     font-style: italic;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #000000;
     margin-bottom: 0.5rem;
   }
@@ -132,7 +133,7 @@
   .card-body {
     font-size: 1rem;
     font-style: italic;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: transparent !important;
@@ -143,18 +144,18 @@
   .step-number {
     font-size: 2.2rem;
     font-style: italic;
-    font-family: 'Roboto', sans-serif;
-    color: #000000; 
+    font-family: "Roboto", sans-serif;
+    color: #000000;
     margin-right: 0.5rem;
   }
 
   ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-li {
-  margin-bottom: 0.5rem; /* Abstand zwischen den Listenpunkten */
-}
+  li {
+    margin-bottom: 0.5rem; /* Abstand zwischen den Listenpunkten */
+  }
 </style>

@@ -1,18 +1,20 @@
 <script>
   let { children } = $props();
+
+  
 </script>
 
 <svelte:head>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
-    rel="stylesheet"/>
+    rel="stylesheet"
+  />
 </svelte:head>
 
 <nav
-  class="navbar navbar-expand-lg bg-body-tertiary" 
+  class="navbar navbar-expand-lg bg-body-tertiary"
   style="background-color: #ffffff;"
 >
-  
   <div class="container-fluid">
     <a class="navbar-brand" href="/" style="color: black;">
       <img

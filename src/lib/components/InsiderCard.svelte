@@ -14,7 +14,7 @@
 <style>
   .card {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 0rem;
     padding: 0rem;
     width: 100%;
@@ -47,6 +47,6 @@
     font-weight: lighter;
     color: #000000;
     word-wrap: break-word;
-    margin: 0; 
+    margin: 0;
   }
 </style>
