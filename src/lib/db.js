@@ -119,7 +119,7 @@ async function updateInsider(insiders) {
         "rating.count": 1                     // Increment count by 1
       },
       $set: { 
-        "rating.average": (insiders.rating.total + selectedRating) / (insiders.rating.count + 1)
+        "rating.average": insiders.rating.total / (insiders.rating.count + 1)
       }
     };
 
