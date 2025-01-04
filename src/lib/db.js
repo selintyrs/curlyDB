@@ -111,17 +111,25 @@ async function updateRating(insiders) {
     const id = insiders._id;
     const collection = db.collection("insiders");
     const query = { _id: new ObjectId(id) };
+
+    // Update the rating object
     const update = {
-      $inc: { "rating.total": insiders.rating.total, "rating.count": 1 },
-      $set: { "rating.average": insiders.rating.total / insiders.rating.count },
+      $inc: { 
+        "rating.total": insiders.rating.total, // Total sum of ratings
+        "rating.count": 1                     // Increment count by 1
+      },
+      $set: { 
+        "rating.average": (insiders.rating.total + insiders.rating.average * insiders.rating.count) / (insiders.rating.count + 1) 
+      }
     };
 
     const result = await collection.updateOne(query, update);
+
     if (result.matchedCount === 0) {
-      console.error("Kein Insider mit ID " + id + "gefunden.");
+      console.error("Kein Insider mit ID " + id + " gefunden.");
       return null;
     }
-    console.log("Rating für Insider mit ID " + id + "aktualisiert.");
+    console.log("Rating für Insider mit ID " + id + " aktualisiert.");
     return id;
   } catch (error) {
     console.error("Fehler beim Aktualisieren des Ratings:", error);
