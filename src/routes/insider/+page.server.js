@@ -29,7 +29,7 @@ export const actions = {
 
 
       let insiders = {
-        _id: data.get("_id"),
+        hairtype_id: data.get("hairtype_id"),
         rating: {
           total: data.get("rating.total"), // Falls total ein Unterfeld von rating ist
           count: data.get("rating.count"),
