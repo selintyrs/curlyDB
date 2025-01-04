@@ -106,28 +106,25 @@ export async function getInsidersByHairtype(hairtypeId) {
   }
 }
 
-async function addRating(insiderId, newRating) {
+async function updateRating(insiders) {
   try {
+    let id = insiders._id;
+    delete insiders._id;
     const collection = db.collection("insiders");
-    const insiderObjectId = new ObjectId(insiderId);
-
-    const result = await collection.updateOne(
-      { _id: insiderObjectId },
-      {
-        $setOnInsert: { rating: { total: 0, count: 0 } }, // Default if not existing
-        $inc: { "rating.total": newRating, "rating.count": 1 },
-      }
-    );
+    const query = { _id: new ObjectId(id) }; 
+    const result = await collection.updateOne(query,{$setOnInsert: { rating: { total: 0, count: 0 } }}), // Default if not existin   
 
     if (result.matchedCount === 0) {
+      console.log("No artist with id " + id);
       throw new Error(`Insider with ID ${insiderId} not found.`);
+    } else {
+      onsole.log("Artist with id " + id + " has been updated.");
+      return id;
     }
-
-    return true;
   } catch (error) {
     console.error("Error updating rating:", error);
-    return false;
   }
+  return null;
 }
 
 

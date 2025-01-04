@@ -23,20 +23,26 @@ export async function load({ url }) {
 
 export const actions = {
   update: async ({ request }) => {
-    const formData = await request.formData();
-    const insiderId = formData.get("insiderId");
-    const newRating = parseInt(formData.get("rating"), 10);
+    try {
+      const data = await request.formData();
+      console.log("Form Data Received:", Object.fromEntries(data));
 
-    if (!insiderId || !newRating || newRating < 1 || newRating > 5) {
-      return { success: false, message: "Invalid input." };
-    }
 
-    const success = await db.addRating(insiderId, newRating);
+      let insiders = {
+        _id: data.get("_id"),
+        rating: {
+          total: data.get("rating.total"), // Falls total ein Unterfeld von rating ist
+          count: data.get("rating.count"),
+          average: data.get("rating.average"),
 
-    if (success) {
-      return { success: true, message: "Rating added successfully." };
-    } else {
-      return { success: false, message: "Failed to add rating." };
+        },
+      };
+
+      await db.updateRating(insiders);
+      return { success: true };
+    } catch (error) {
+      console.error("Error in create action:", error); // Debugging
+      return { success: false, error: error.message };
     }
   },
 };
