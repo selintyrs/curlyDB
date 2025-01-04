@@ -170,7 +170,7 @@
   gap: 20px;
   margin-top: 50px;
   padding: 0 30px;
-  margin-bottom: 10px;
+  margin-bottom: 80px;
 }
 
 .form-left {

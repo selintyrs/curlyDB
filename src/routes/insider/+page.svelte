@@ -157,15 +157,6 @@
     padding: 20px 0;
   }
 
-  .carousel {
-    position: relative;
-  }
-
-  .carousel-inner {
-    margin: 0 auto;
-    width: 90%;
-  }
-
   .page-title {
     font-size: 3.5rem;
     font-weight: 900;
@@ -175,21 +166,29 @@
     text-align: center;
   }
 
+  .carousel {
+    position: relative;
+  }
+
+  .carousel-inner {
+    margin: 0 auto;
+    width: 90%;
+  }
+
   .carousel-control-prev,
   .carousel-control-next {
     position: absolute;
     z-index: 10;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .carousel-control-prev {
-    left: -20px;
+    left: -35px;
   }
 
   .carousel-control-next {
-    right: -20px;
+    right: -35px;
   }
 
   .carousel-control-prev-icon,
@@ -223,17 +222,13 @@
   }
 
   .apply {
-    bottom: 15%;
-    right: 3%;
     border-color: black;
     border-width: 1px;
-    border-radius: 10%;
+    border-radius: 5%;
     background-color: transparent;
     font-style: italic;
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     color: black;
-    padding: none;
-    font-weight: lighter;
   }
 </style>

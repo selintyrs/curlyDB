@@ -26,23 +26,18 @@
   display: flex;
   flex-direction: column; 
   align-items: center;
-  width: 100%;
 }
 
 .page-title {
-  text-align: left;
-  margin-top: 0rem;
   font-size: 3.5rem;
   font-weight: 900;
   font-style: italic;
   color: #000000;
   font-family: 'Roboto', sans-serif;
-  padding-left: 5px;
 }
 
 .row {
   margin-top: 20px;
-  justify-content: center;
 }
 
 .card-link {
