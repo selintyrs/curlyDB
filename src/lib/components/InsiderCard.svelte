@@ -20,7 +20,7 @@ let selectedRating = $state(0);
     <form method="POST" action="/insider">
       <input type="hidden" name="_id" value={insider._id} />
       <label for="rating">Rate this tip:</label>
-      <select id="rating" name="rating">
+      <select name="rating" bind:value={selectedRating}>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -33,10 +33,6 @@ let selectedRating = $state(0);
     <p class="rating-text">Average rating: {rating.average} / 5</p>
   </div>
 </div>
-
-{#if form?.success}
-  <p>Successfully added!</p>
-{/if}
 
 
 <style>
