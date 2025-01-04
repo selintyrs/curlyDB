@@ -1,10 +1,7 @@
 <script>
   let { insider, form } = $props();
-let rating = insider.rating?.average || 0; // Use optional chaining to avoid errors
-
-let selectedRating = $state(0);
-
-
+  let rating = insider.rating.total; 
+  let selectedRating = $state(0);
 </script>
 
 <div class="card" style="width: 18rem;">
@@ -13,7 +10,7 @@ let selectedRating = $state(0);
       <span class="hairtype">{insider.hairtype_id}</span>{insider.tip_for}
     </h5>
     <p class="card-text">{insider.tip_text}</p>
-    
+
     <!-- Rating Form -->
     <form method="POST" action="?/update">
       <input type="hidden" name="_id" value={insider._id} />
@@ -31,7 +28,6 @@ let selectedRating = $state(0);
     <p class="rating-text">Average rating: {insider.rating.average} / 5</p>
   </div>
 </div>
-
 
 <style>
   .card {
