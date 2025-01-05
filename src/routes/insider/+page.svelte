@@ -140,7 +140,7 @@
 
   .btn {
     position: absolute;
-    bottom: 40%;
+    bottom: 45%;
     right: 3%;
     border-color: black;
     border-width: 2px;
