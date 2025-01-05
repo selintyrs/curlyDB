@@ -19,26 +19,3 @@ export async function load({ url }) {
   };
 }
 
-
-
-export const actions = {
-  update: async ({ request }) => {
-    try {
-      const data = await request.formData();
-      let insiders = {
-        _id: data.get("_id"),
-        rating: {
-          total: parseInt(data.get("rating")), // Parse rating as an integer
-        }
-      };
-
-      console.log("Form Data Received:", insiders);
-
-      await db.updateInsider(insiders);
-      return { success: true };
-    } catch (error) {
-      console.error("Fehler in update Action:", error);
-      return { success: false, error: error.message };
-    }
-  },
-};

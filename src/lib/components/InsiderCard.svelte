@@ -1,6 +1,7 @@
 <script>
-  let { insider, form } = $props();
-  let rating = insider.rating.total; 
+  let { insider } = $props();
+  
+  
 </script>
 
 <div class="card" style="width: 18rem;">
@@ -9,28 +10,8 @@
       <span class="hairtype">{insider.hairtype_id}</span>{insider.tip_for}
     </h5>
     <p class="card-text">{insider.tip_text}</p>
-
-    <!-- Rating Form -->
-    <form method="POST" action="?/update">
-      <input type="hidden" name="id" value={insider._id} />
-      <label for="rating">Rate this tip:</label>
-      <select name="rating" bind:value={insider.rating.total}>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <button type="submit">Submit</button>
-    </form>
-
-    <p class="rating-text">Average rating: {insider.rating.average} / 5</p>
   </div>
 </div>
-
-{#if form?.success}
-  <p>Insider updated</p>
-{/if}
 
 <style>
   .card {
