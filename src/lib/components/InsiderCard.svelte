@@ -28,6 +28,10 @@
   </div>
 </div>
 
+{#if form?.success}
+  <p>Insider updated</p>
+{/if}
+
 <style>
   .card {
     display: grid;
