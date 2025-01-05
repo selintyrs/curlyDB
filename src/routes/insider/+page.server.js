@@ -25,10 +25,11 @@ export const actions = {
   update: async ({ request }) => {
     try {
       const data = await request.formData();
-      const insiders = {
+      let insiders = {
         _id: data.get("_id"),
-        rating: parseInt(data.get("rating")), // Parse rating as an integer
-        
+        rating: {
+          total: parseInt(data.get("rating")), // Parse rating as an integer
+        }
       };
 
       console.log("Form Data Received:", insiders);

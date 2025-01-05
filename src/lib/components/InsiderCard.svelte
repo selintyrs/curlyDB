@@ -1,7 +1,6 @@
 <script>
   let { insider, form } = $props();
   let rating = insider.rating.total; 
-  let selectedRating = $state(0);
 </script>
 
 <div class="card" style="width: 18rem;">
@@ -15,7 +14,7 @@
     <form method="POST" action="?/update">
       <input type="hidden" name="_id" value={insider._id} />
       <label for="rating">Rate this tip:</label>
-      <select name="rating" bind:value={selectedRating}>
+      <select name="rating" bind:value={insider.rating.total}>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
