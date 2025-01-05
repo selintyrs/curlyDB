@@ -128,7 +128,7 @@
 
   .section-1-content p {
     position: absolute;
-    bottom: 23%;
+    bottom: 50%;
     right: 3%;
     text-align: right;
     color: black;
@@ -140,7 +140,7 @@
 
   .btn {
     position: absolute;
-    bottom: 15%;
+    bottom: 40%;
     right: 3%;
     border-color: black;
     border-width: 2px;
