@@ -12,7 +12,7 @@
 
     <!-- Rating Form -->
     <form method="POST" action="?/update">
-      <input type="hidden" name="_id" value={insider._id} />
+      <input type="hidden" name="id" value={insider._id} />
       <label for="rating">Rate this tip:</label>
       <select name="rating" bind:value={insider.rating.total}>
         <option value="1">1</option>
