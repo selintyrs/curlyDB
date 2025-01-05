@@ -1,5 +1,15 @@
 <script>
   let { form } = $props();
+
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute(
+        "6LcF7K4qAAAAAAvmfOwSpeReVvjDoDAVHTSxJrCf",
+        { action: "LOGIN" },
+      );
+    });
+  }
 </script>
 
 <h1 class="page-title">Sharing is caring!</h1>
