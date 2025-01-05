@@ -109,13 +109,14 @@ export async function getInsidersByHairtype(hairtypeId) {
 async function updateInsider(insiders) {
   try {
     const id = insiders._id;
+    const selectedRating = insiders.rating.total;
     const collection = db.collection("insiders");
     const query = { _id: new ObjectId(id) };
 
     // Update the rating object
     const update = {
       $inc: { 
-        "rating.total": insiders.rating.total || selectedRating, // Add the selected rating to the total
+        "rating.total": selectedRating, // Add the selected rating to the total
         "rating.count": 1                     // Increment count by 1
       },
       $set: { 
