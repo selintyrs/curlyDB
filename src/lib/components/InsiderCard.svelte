@@ -2,11 +2,15 @@
   let { insider } = $props();
   import { addRating } from "$lib/db.js";
 
-async function handleRating(rating) {
-  await addRating(insider._id, rating);
-  // Refresh the page to show updated rating
-  window.location.reload();
-}
+  async function handleRating(rating) {
+    try {
+      await addRating({ tip_id: insider._id, rating }); // Use the insider's ID and the selected rating
+      window.location.reload(); // Refresh the page to display the updated ratings
+    } catch (error) {
+      console.error("Error handling rating:", error);
+    }
+  }
+
   
 </script>
 
@@ -19,14 +23,17 @@ async function handleRating(rating) {
     <!-- Add rating display and controls -->
     <div class="rating">
       {#each Array(5) as _, i}
-        <button 
-          onclick={() => handleRating(i + 1)}
-          class="star {i < Math.round(insider.averageRating || 0) ? 'filled' : ''}"
-        >
-          ★
-        </button>
-      {/each}
-      <span class="rating-count">({insider.totalRatings || 0})</span>
+      <button
+  onclick={() => handleRating(i + 1)}
+  class="star {i < Math.round(insider.averageRating || 0) ? 'filled' : ''}"
+>
+  ★
+</button>
+
+    
+{/each}
+
+      <span class="rating-count">({insider.totalRating || 0})</span>
     </div>
   </div>
 </div>

@@ -60,14 +60,6 @@ async function createInsider(insiders) {
   try {
     const collection = db.collection("insiders");
 
-    // Add default rating field if it doesn't exist
-    if (!insiders.rating) {
-      insiders.rating = {
-        total: 0, // Total sum of ratings
-        count: 0, // Number of ratings
-      };
-    }
-
     const result = await collection.insertOne(insiders);
     return result.insertedId.toString();
   } catch (error) {
@@ -109,42 +101,61 @@ export async function getInsidersByHairtype(hairtypeId) {
 }
 
 // Create a rating for a tip
-async function addRating(tipId, rating) {
-  let result = null;
-  
+async function addRating(rating) {
   try {
+    if (!rating.tip_id || !ObjectId.isValid(rating.tip_id)) {
+      console.log("Invalid tip ID:", rating.tip_id);
+      return null;
+    }
+    if (!rating.rating || isNaN(rating.rating) || rating.rating < 1 || rating.rating > 5) {
+      console.log("Invalid rating:", rating.rating);
+      return null;
+    }
+
     const collection = db.collection("ratings");
-    result = await collection.insertOne({
-      tip_id: new ObjectId(tipId),
-      rating: rating
-    });
+    await collection.insertOne(rating);
+
+    // Recalculate the average rating
+    await updateInsiderRating(rating.tip_id);
+
+    return true;
   } catch (error) {
-    console.log("Error creating rating:", error);
-    throw error;
+    console.log("Error adding rating:", error);
+    return null;
   }
-  
-  return result;
 }
 
-// Get average rating for a tip
-async function getTipRating(tipId) {
+async function updateInsiderRating(tipId) {
   try {
     const collection = db.collection("ratings");
-    const result = await collection.aggregate([
-      { $match: { tip_id: new ObjectId(tipId) } },
-      { $group: {
-          _id: '$tip_id',
-          averageRating: { $avg: '$rating' },
-          totalRatings: { $sum: 1 }
-        }}
-    ]).toArray();
-    
-    return result[0] || { averageRating: 0, totalRatings: 0 };
+    const result = await collection
+      .aggregate([
+        { $match: { tip_id: ObjectId(tipId) } },
+        {
+          $group: {
+            _id: "$tip_id",
+            averageRating: { $avg: "$rating" },
+            totalRatings: { $sum: 1 },
+          },
+        },
+      ])
+      .toArray();
+
+    if (result.length > 0) {
+      const { averageRating, totalRatings } = result[0];
+
+      await db.collection("insiders").updateOne(
+        { _id: ObjectId(tipId) },
+        { $set: { averageRating, totalRatings } }
+      );
+    }
   } catch (error) {
-    console.log("Error getting tip rating:", error);
-    return { averageRating: 0, totalRatings: 0 };
+    console.log("Error updating insider rating:", error);
   }
 }
+
+module.exports = { addRating };
+
 
 
 
@@ -156,5 +167,5 @@ export default {
   getInsiders,
   getInsidersByHairtype,
   addRating,
-  getTipRating
+  updateInsiderRating
 }
