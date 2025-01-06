@@ -95,7 +95,7 @@
   .stars {
   display: flex; /* Sterne nebeneinander anordnen */
   flex-direction: row-reverse; /* Drehe die Sterne um, damit das höchste Rating links ist */
-  justify-content: center; /* Zentriere die Sterne */
+  justify-content: flex-end; /* Zentriere die Sterne */
   gap: 5px; /* Abstand zwischen den Sternen */
 }
 
