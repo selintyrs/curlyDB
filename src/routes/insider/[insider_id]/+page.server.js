@@ -27,15 +27,21 @@ export async function load({ params }) {
   export const actions = {
     create: async ({ request }) => {
         try {
+            console.log("Form submission started");
+
             const data = await request.formData();
             const insiderId = data.get("insiderId");
             const rating = parseInt(data.get("rating"));
 
+            console.log("Received Data:", { insiderId, rating });
+
             if (!ObjectId.isValid(insiderId)) {
+                console.error("Invalid insider ID:", insiderId);
                 throw error(400, "Invalid insider ID");
             }
 
             if (isNaN(rating) || rating < 1 || rating > 5) {
+                console.error("Invalid rating value:", rating);
                 throw error(400, "Rating must be between 1 and 5");
             }
 
@@ -44,7 +50,7 @@ export async function load({ params }) {
                 rating,
             });
 
-            console.log("Rating added:", ratingResult);
+            console.log("Rating saved successfully:", ratingResult);
             return { success: true };
         } catch (err) {
             console.error("Error saving rating:", err);
