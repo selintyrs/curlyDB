@@ -40,6 +40,11 @@
   </div>
 </div>
 
+<div class="section-2">
+  <div class="section-2-content"></div>
+</div>
+
+
 <style>
   .section-1 {
     width: 100%;
@@ -126,5 +131,9 @@
     display: block; /* Macht den gesamten Inhalt klickbar */
     text-decoration: none;
     color: inherit;
+  }
+
+  .section-2 {
+    background-image: url("/images/models/group2.jpeg");
   }
 </style>

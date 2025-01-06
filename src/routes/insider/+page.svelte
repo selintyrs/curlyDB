@@ -222,7 +222,6 @@
 
   .filter {
     font-size: 1rem;
-    font-style: italic;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #000000;
@@ -234,7 +233,6 @@
     border-width: 1px;
     border-radius: 5%;
     background-color: transparent;
-    font-style: italic;
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     color: black;

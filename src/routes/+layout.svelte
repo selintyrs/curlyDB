@@ -20,8 +20,8 @@
       <img
         src="/images/icon.png"
         alt="Logo"
-        width="38"
-        height="36"
+        width="43"
+        height="40"
         class="d-inline-block align-text-top"
       />
       CurlyDB</a
@@ -52,7 +52,15 @@
             class="nav-link active"
             aria-current="page"
             href="/insider"
-            style="color: black;">Insider</a
+            style="color: black;">Community</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="/insider/create"
+            style="color: black;">Your Insider</a
           >
         </li>
       </ul>
@@ -75,6 +83,10 @@
     display: flex;
     position: sticky;
     top: 0;
+  }
+
+  .navbar-brand {
+    font-size: 2rem;
   }
 
   .content-container {

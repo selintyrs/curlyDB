@@ -241,7 +241,8 @@
     font-style: italic;
     font-family: "Roboto", sans-serif;
     color: black;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
   }
 
   .banner img {

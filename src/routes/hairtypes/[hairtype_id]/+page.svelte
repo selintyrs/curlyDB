@@ -3,7 +3,7 @@
   import RoutineCard from "$lib/components/RoutineCard.svelte";
 </script>
 
-<a href="/insider" class="btn">Back</a>
+<a href="/hairtypes" class="btn">Back</a>
 <h1 class="page-title">{data.hairtype.hairtype} - {data.hairtype.name}</h1>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -34,6 +34,7 @@
     font-style: italic;
     font-family: "Roboto", sans-serif;
     color: black;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
   }
 </style>
