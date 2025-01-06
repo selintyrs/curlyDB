@@ -1,7 +1,7 @@
 <script>
-    let { insider } = $props();
+    let { data } = $props();
 </script>
 
-<h1 class="page-title">{insider.tip_for}</h1>
+<h1 class="page-title">{data.insider.tip_for}</h1>
 
 
