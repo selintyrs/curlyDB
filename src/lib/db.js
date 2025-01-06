@@ -101,7 +101,7 @@ export async function getInsidersByHairtype(hairtypeId) {
 
 //Get insiders by ID
 async function getInsider(id) {
-  let hairtype = null;
+  let insider = null;
   try {
     const collection = db.collection("insiders");
     const query = { _id: new ObjectId(id) };
