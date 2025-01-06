@@ -11,7 +11,7 @@
     });
   }
 </script>
-<a href="/insider" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="false">Back</a>
+<a href="/insider" class="btn">Back</a>
 <h1 class="page-title">Sharing is caring!</h1>
 
 <form method="Post" action="?/create" class="form-container">
@@ -165,7 +165,7 @@
 <style>
   .page-title {
     text-align: left;
-    margin-top: 0rem;
+    margin-top: 15px;
     margin-bottom: 15px;
     font-size: 3.5rem;
     font-weight: 900;
@@ -241,6 +241,7 @@
     font-style: italic;
     font-family: "Roboto", sans-serif;
     color: black;
+    margin-top: 10px;
   }
 
   .banner img {

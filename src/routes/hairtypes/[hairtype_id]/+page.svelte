@@ -3,6 +3,7 @@
   import RoutineCard from "$lib/components/RoutineCard.svelte";
 </script>
 
+<a href="/insider" class="btn">Back</a>
 <h1 class="page-title">{data.hairtype.hairtype} - {data.hairtype.name}</h1>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -23,6 +24,16 @@
   }
 
   .row {
+    margin-top: 10px;
+  }
+
+  .btn {
+    border-color: black;
+    border-width: 2px;
+    background-color: white;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    color: black;
     margin-top: 10px;
   }
 </style>

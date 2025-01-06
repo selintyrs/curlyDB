@@ -226,7 +226,7 @@
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #000000;
-    margin-bottom: 10px;
+    margin-top: 20px;
   }
 
   .apply {
