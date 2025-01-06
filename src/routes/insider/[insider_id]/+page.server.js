@@ -3,15 +3,27 @@ import { error, redirect } from '@sveltejs/kit';
 import { ObjectId } from "mongodb";
 
 export async function load({ params }) {
-  const insider = await db.getInsider(params.insider_id);
-  return {
-    insider: {
-      _id: params.insider_id,
-      ...insider,
+    try {
+      const insiderId = params.insider_id;
+      if (!ObjectId.isValid(insiderId)) {
+        throw error(400, 'Invalid insider ID');
+      }
+  
+      const insider = await db.getInsider(insiderId);
+      if (!insider) {
+        throw error(404, 'insider nicht gefunden');
+      }
+  
+      const ratings = await db.getRatings(insiderId);
+  
+      return {
+        insider,
+        ratings
+      };
+    } catch (err) {
+      throw error(500, err.message);
     }
   }
-}
-
 export const actions = {
     create: async ({ params, request }) => {
         try {
@@ -25,7 +37,6 @@ export const actions = {
             throw error(404, 'insider not found');
           }
     
-          const data = await request.formData();
           const rating = parseInt(data.get("rating"));
           
           if (isNaN(rating) || rating < 1 || rating > 5) {
