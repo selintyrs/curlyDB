@@ -100,9 +100,15 @@
     color: gray;
     cursor: pointer;
   }
-  .stars input[type="radio"]:checked ~ label {
-    color: gold;
-  }
+  .stars input[type="radio"]:checked ~ label,
+.stars input[type="radio"]:checked + label {
+  color: gold;
+}
+
+.stars label:hover,
+.stars label:hover ~ label {
+  color: gold;
+}
   .success {
     color: green;
     font-weight: bold;
