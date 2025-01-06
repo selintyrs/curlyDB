@@ -1,6 +1,5 @@
 import { MongoClient, ObjectId } from "mongodb";
 import { DB_URI } from "$env/static/private";
-import fetch from 'node-fetch';
 
 
 const client = new MongoClient(DB_URI);
@@ -100,25 +99,7 @@ export async function getInsidersByHairtype(hairtypeId) {
   }
 }
 
-async function addRating(rating) {
-  try {
-    const collection = db.collection("ratings");
 
-    if (!rating.tip_id || typeof rating.rating !== "number" || rating.rating < 1 || rating.rating > 5) {
-      throw new Error("Invalid rating object");
-    }
-
-    const result = await collection.insertOne(rating);
-
-    // Update the insider's aggregated rating
-    await updateInsiderRating(rating.tip_id);
-
-    return result.insertedId.toString();
-  } catch (error) {
-    console.log("Error adding rating:", error);
-    return null;
-  }
-}
 
 
 
@@ -130,6 +111,5 @@ export default {
   createInsider,
   getInsiders,
   getInsidersByHairtype,
-  addRating,
   
 }
