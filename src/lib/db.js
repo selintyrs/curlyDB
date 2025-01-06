@@ -140,7 +140,6 @@ async function createRating(rating) {
     const ratingDoc = {
       insiderId: new ObjectId(rating.insiderId),
       rating: parseInt(rating.rating),
-      timestamp: new Date()
     };
 
     const result = await collection.insertOne(ratingDoc);
