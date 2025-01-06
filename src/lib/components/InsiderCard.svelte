@@ -1,47 +1,57 @@
 <script>
-  export let insider; // Data for this card
-  export let form; // For handling server responses
+  import { onMount } from 'svelte';
+
+  export let insider;
+
+  async function handleSubmit(event) {
+    event.preventDefault(); // Prevent page reload
+    const form = new FormData(event.target);
+
+    const response = await fetch('/insider/' + insider._id + '/create', {
+      method: 'POST',
+      body: form
+    });
+
+    const result = await response.json();
+
+    if (result?.form?.success) {
+      alert('Rating submitted successfully!');
+    } else {
+      alert(result?.form?.error || 'An error occurred.');
+    }
+  }
 </script>
 
-<div class="card" style="width: 18rem;">
+<div class="card">
   <div class="card-body">
-      <h5 class="card-title">
-          <span class="hairtype">{insider.hairtype_id}</span> {insider.tip_for}
-      </h5>
-      <p class="card-text">{insider.tip_text}</p>
+    <h5 class="card-title">
+      <span class="hairtype">{insider.hairtype_id}</span>
+      {insider.tip_for}
+    </h5>
+    <p class="card-text">{insider.tip_text}</p>
+    <p>Average Rating: {insider.ratingAvg} ★</p>
 
-      <!-- Display Ratings -->
-      <p>Average Rating: {insider.ratingAvg?.toFixed(1) || 0} ⭐</p>
-
-      <!-- Rating Form -->
-      <form method="POST" action={`/insider/${insider._id}/create`} class="rating-form">
-          <input type="hidden" name="insiderId" value={insider._id} />
-          <div class="stars">
-              {#each Array(5) as _, i}
-                  <label for={`star-${insider._id}-${i + 1}`}>
-                      <input
-                          id={`star-${insider._id}-${i + 1}`}
-                          type="radio"
-                          name="rating"
-                          value={5 - i}
-                          required
-                      />
-                      ★
-                  </label>
-              {/each}
-          </div>
-          <button type="submit" class="btn btn-primary">Submit Rating</button>
-      </form>
-
-      <!-- Form Feedback -->
-      {#if form?.success}
-          <p style="color: green;">Rating successfully added!</p>
-      {/if}
-      {#if form?.error}
-          <p style="color: red;">{form.error}</p>
-      {/if}
+    <!-- Rating Form -->
+    <form on:submit={handleSubmit} class="rating-form">
+      <input type="hidden" name="insiderId" value="{insider._id}" />
+      <div class="stars">
+        {#each Array(5).fill() as _, index (index)}
+          <input
+            type="radio"
+            id="star{5 - index}"
+            name="rating"
+            value="{index + 1}"
+            required
+          />
+          <label for="star{5 - index}">★</label>
+        {/each}
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Rating</button>
+    </form>
   </div>
 </div>
+
+
 
 <style>
   .card {
@@ -69,38 +79,18 @@
   }
 
   .stars {
-      display: flex;
-      justify-content: start;
-      gap: 0.2rem;
-      margin: 0.5rem 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
   }
-
-  .stars label {
-      cursor: pointer;
-      font-size: 1.5rem;
-      color: #ddd;
+  input[type='radio'] {
+    display: none;
   }
-
-  .stars input {
-      display: none;
+  label {
+    font-size: 1.5rem;
+    cursor: pointer;
   }
-
-
-  .stars label:hover,
-  .stars label:hover ~ label {
-      color: gold;
-  }
-
-  .btn-primary {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 0.25rem;
-      cursor: pointer;
-  }
-
-  .btn-primary:hover {
-      background-color: #0056b3;
+  input[type='radio']:checked ~ label {
+    color: gold;
   }
 </style>
