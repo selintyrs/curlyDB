@@ -99,6 +99,61 @@ export async function getInsidersByHairtype(hairtypeId) {
   }
 }
 
+//Get insiders by ID
+async function getInsider(id) {
+  let hairtype = null;
+  try {
+    const collection = db.collection("insiders");
+    const query = { _id: new ObjectId(id) };
+    insider = await collection.findOne(query);
+
+    if (!insider) {
+      console.log("No hair type with id " + id);
+      throw new Error(`Hair type with ID ${id} not found`);
+    } else {
+      insider._id = insider._id.toString();
+    }
+  } catch (error) {
+    if (error instanceof TypeError) {
+      console.error("Invalid ID format:", id);
+    } else if (error.message.includes("not found")) {
+      console.warn(error.message);
+    } else {
+      console.error("Unexpected error while fetching hair type:", error.message);
+    }
+    throw error;
+  }
+  return hairtype;
+}
+
+// Add rating
+async function addRating(rating) {
+  try {
+    if (!rating.insiderId || !ObjectId.isValid(rating.insiderId)) {
+      console.error('Invalid insiderId:', rating.insiderId);
+      return null;
+    }
+
+    if (!rating.rating || isNaN(rating.rating) || rating.rating < 1 || rating.rating > 5) {
+      console.error('Invalid rating value:', rating.rating);
+      return null;
+    }
+
+    const collection = db.collection("ratings");
+    const ratingDoc = {
+      insiderId: new ObjectId(rating.insiderId),
+      rating: parseInt(rating.rating),
+      timestamp: new Date()
+    };
+
+    const result = await collection.insertOne(ratingDoc);
+    console.log("Rating added successfully:", result.insertedId);
+    return result.insertedId.toString();
+  } catch (error) {
+    console.error("Error adding rating:", error);
+    return null;
+  }
+}
 
 
 
@@ -111,5 +166,7 @@ export default {
   createInsider,
   getInsiders,
   getInsidersByHairtype,
+  getInsider,
+  addRating
   
 }
