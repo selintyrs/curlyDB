@@ -63,6 +63,11 @@ export async function load({ params }) {
         } catch (err) {
             console.error("Error in create action:", err);
             throw error(500, "Failed to save rating");
+            return {
+                success: false,
+                error: err.message,
+              };
         }
+
     }
 };
