@@ -41,9 +41,7 @@
             <div class="row">
               {#each group as insider}
                 <div class="col-md-4 d-flex align-items-stretch">
-                  <a href={`/insider/${insider._id}`} class="card-link">
                   <InsiderCard {insider} />
-                </a>
                 </div>
               {/each}
             </div>

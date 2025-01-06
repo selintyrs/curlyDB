@@ -1,8 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
-
   export let insider;
 
+  // Function to handle form submission without redirection
   async function handleSubmit(event) {
     event.preventDefault(); // Prevent page reload
     const form = new FormData(event.target);
@@ -30,20 +29,21 @@
     </h5>
     <p class="card-text">{insider.tip_text}</p>
     <p>Average Rating: {insider.ratingAvg} ★</p>
+    <p>Total Ratings: {insider.totalRating}</p>
 
     <!-- Rating Form -->
     <form on:submit={handleSubmit} class="rating-form">
       <input type="hidden" name="insiderId" value="{insider._id}" />
       <div class="stars">
-        {#each Array(5).fill() as _, index (index)}
+        {#each Array(5) as _, index}
           <input
             type="radio"
-            id="star{5 - index}"
+            id="star-{insider._id}-{5 - index}"
             name="rating"
-            value="{index + 1}"
+            value="{5 - index}"
             required
           />
-          <label for="star{5 - index}">★</label>
+          <label for="star-{insider._id}-{5 - index}">★</label>
         {/each}
       </div>
       <button type="submit" class="btn btn-primary">Submit Rating</button>
@@ -89,8 +89,10 @@
   label {
     font-size: 1.5rem;
     cursor: pointer;
+    color: #ccc;
   }
-  input[type='radio']:checked ~ label {
+  input[type='radio']:checked ~ label,
+  input[type='radio']:checked + label {
     color: gold;
   }
 </style>
