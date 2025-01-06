@@ -152,6 +152,30 @@ async function createRating(rating) {
   }
 }
 
+async function getRatings(insiderId) {
+  try {
+    if (!insiderId || !ObjectId.isValid(insiderId)) {
+      console.error('Invalid insiderId format:', insiderId);
+      return [];
+    }
+
+    const collection = db.collection("ratings");
+    const ratings = await collection.find({
+      insiderId: new ObjectId(insiderId)
+    })
+
+    return ratings.map(rating => ({
+      ...rating,
+      _id: rating._id.toString(),
+      insiderId: rating.insiderId.toString(),
+      rating: parseInt(rating.rating),
+    }));
+  } catch (error) {
+    console.error('Error getting ratings:', error);
+    return [];
+  }
+}
+
 
 
 
@@ -164,6 +188,7 @@ export default {
   getInsiders,
   getInsidersByHairtype,
   getInsider,
-  createRating
+  createRating,
+  getRatings
   
 }
