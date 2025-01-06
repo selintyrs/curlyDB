@@ -8,8 +8,8 @@
     <span class="hairtype">{insider.hairtype_id}</span> <strong>{insider.tip_for}</strong>
   </h4>
   <p class="card-text">{insider.tip_text}</p>
-  <p>Average Rating: {insider.ratingAvg} ★</p>
-  <p>Total Ratings: {insider.totalRating}</p>
+  <p class="card-text">★ Rating: {insider.ratingAvg} ★ </p>
+  <p class="card-text">Total: {insider.totalRating}</p>
 
   <!-- Bewertungsformular -->
   <form method="POST" action="/insider?/rate" class="rating-form">
@@ -40,28 +40,43 @@
 
 
 <style>
-  .card {
-      display: grid;
-      gap: 0.5rem;
-      padding: 1rem;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 0.5rem;
-      text-align: left;
-      background-color: transparent !important;
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0rem;
+    padding: 0rem;
+    width: 100%;
+    background-color: transparent !important;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border: 1.2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    text-align: left;
   }
 
   .card-title {
-      font-size: 1.5rem;
-      font-style: italic;
-      color: #000;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    color: #000000;
   }
 
   .hairtype {
-      margin-right: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   .card-text {
       font-size: 1rem;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    color: #000000;
+    word-wrap: break-word;
+    margin: 0;
+
   }
 
   .stars input[type="radio"] {
@@ -81,6 +96,17 @@
   }
   .error {
     color: red;
+    font-weight: bold;
+  }
+
+  .btn {
+    border-color: black;
+    border-width: 2px;
+    background-color: transparent;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    color: black;
+    padding: 10px 20px;
     font-weight: bold;
   }
 </style>
