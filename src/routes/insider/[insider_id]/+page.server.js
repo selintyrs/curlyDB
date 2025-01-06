@@ -26,7 +26,7 @@ export async function load({ params }) {
   }
 
   export const actions = {
-    rate: async ({ request }) => {
+    create: async ({ request }) => {
       try {
         const formData = await request.formData();
         const insiderId = formData.get("insiderId");
