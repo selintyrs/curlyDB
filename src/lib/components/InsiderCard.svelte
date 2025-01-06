@@ -12,7 +12,7 @@
   <p>Total Ratings: {insider.totalRating}</p>
 
   <!-- Bewertungsformular -->
-  <form method="POST" action="/insider?rate" class="rating-form">
+  <form method="POST" action="/insider?/rate" class="rating-form">
     <input type="hidden" name="insiderId" value="{insider._id}" />
     <div class="stars">
       {#each Array(5) as _, i}
