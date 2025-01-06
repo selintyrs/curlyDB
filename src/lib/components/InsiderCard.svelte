@@ -9,7 +9,7 @@
   </h4>
   <p class="card-text">{insider.tip_text}</p>
   <p class="card-rate">★ Rating: {insider.ratingAvg} ★ </p>
-  <p class="card-rate">Total: {insider.totalRating}</p>
+  <p class="card-rate">★ Total: {insider.totalRating} ★</p>
 
   <!-- Bewertungsformular -->
   <form method="POST" action="/insider?/rate" class="rating-form">
@@ -46,7 +46,6 @@
     justify-content: space-between; /* Platz zwischen den Elementen */
     align-items: stretch;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
     padding: 15px;
     width: 100%;
     max-width: 300px; /* Maximalbreite für Konsistenz */
@@ -90,6 +89,7 @@
     font-weight: lighter;
     color: #000000;
     margin: 0;
+    line-height: 0.2;
   }
 
   .stars input[type="radio"] {
