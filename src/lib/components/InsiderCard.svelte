@@ -8,8 +8,8 @@
     <span class="hairtype">{insider.hairtype_id}</span> <strong>{insider.tip_for}</strong>
   </h4>
   <p class="card-text">{insider.tip_text}</p>
-  <p class="card-rate">★ Rating: {insider.ratingAvg} ★ </p>
-  <p class="card-rate">★ Total: {insider.totalRating} ★</p>
+  <p class="card-rate">★ Rating: {insider.ratingAvg} </p>
+  <p class="card-rate">★ Total Ratings: {insider.totalRating}</p>
 
   <!-- Bewertungsformular -->
   <form method="POST" action="/insider?/rate" class="rating-form">
@@ -92,23 +92,36 @@
     line-height: 0;
   }
 
-  .stars input[type="radio"] {
-    display: none;
-  }
-  .stars label {
-    font-size: 2rem;
-    color: gray;
-    cursor: pointer;
-  }
-  .stars input[type="radio"]:checked ~ label,
-.stars input[type="radio"]:checked + label {
+  .stars {
+  display: flex; /* Sterne nebeneinander anordnen */
+  flex-direction: row-reverse; /* Drehe die Sterne um, damit das höchste Rating links ist */
+  justify-content: center; /* Zentriere die Sterne */
+  gap: 5px; /* Abstand zwischen den Sternen */
+}
+
+.stars input[type="radio"] {
+  display: none; /* Verberge die eigentlichen Radio-Buttons */
+}
+
+.stars label {
+  font-size: 2rem;
+  color: gray;
+  cursor: pointer;
+  transition: color 0.2s ease; /* Sanfter Übergang bei Hover */
+}
+
+/* Farbe für ausgewählte Sterne und die davor liegenden */
+.stars input[type="radio"]:checked ~ label,
+.stars input[type="radio"]:hover ~ label {
   color: gold;
 }
 
+/* Spezifischer Hover-Effekt für den aktuellen Stern */
 .stars label:hover,
-.stars label:hover ~ label {
+.stars input[type="radio"]:hover + label {
   color: gold;
 }
+
   .success {
     color: green;
     font-weight: bold;
