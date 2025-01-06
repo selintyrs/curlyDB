@@ -1,11 +1,12 @@
 <script>
-    import { enhance } from '$app/forms';
-    export let form;
+    export let data; // Contains insider and other data
+    export let form; // Handles the form response
   </script>
   
   <h1 class="page-title">{data.insider.tip_for}</h1>
   
-  <form method="POST" action="?/create" use:enhance>
+  <!-- Rating Form -->
+  <form method="POST" action="?/create" class="rating-form">
     <input type="hidden" name="insiderId" value={data.insider._id} />
     <div class="stars">
       {#each Array(5) as _, i}
@@ -16,6 +17,7 @@
     <button type="submit" class="btn btn-primary">Send Rating</button>
   </form>
   
+  <!-- Form Success/Error Messages -->
   {#if form?.success}
     <p>Successfully added!</p>
   {/if}

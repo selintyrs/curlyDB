@@ -32,15 +32,21 @@ export async function load({ params }) {
         const insiderId = formData.get("insiderId");
         const rating = parseInt(formData.get("rating"));
   
+        // Validate `insiderId`
         if (!ObjectId.isValid(insiderId)) {
           return { form: { success: false, error: "Invalid insider ID" } };
         }
   
+        // Validate `rating`
         if (isNaN(rating) || rating < 1 || rating > 5) {
           return { form: { success: false, error: "Rating must be between 1 and 5" } };
         }
   
-        const ratingResult = await db.createRating({ insiderId, rating });
+        // Save the rating to the database
+        const ratingResult = await db.createRating({
+          insiderId,
+          rating
+        });
   
         if (!ratingResult) {
           return { form: { success: false, error: "Failed to save rating" } };
@@ -49,8 +55,9 @@ export async function load({ params }) {
         return { form: { success: true, ratingId: ratingResult } };
       } catch (err) {
         console.error("Error in create action:", err);
-        return { form: { success: false, error: err.message } };
+        return { form: { success: false, error: "Failed to save rating" } };
       }
     }
   };
+  
   
