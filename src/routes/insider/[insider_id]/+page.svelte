@@ -23,12 +23,8 @@
 
 <h1 class="page-title">{data.insider.tip_for}</h1>
 
-<form
-    method="POST"
-    action="?/create"
-    on:submit={handleSubmit}
-    class="rating-form"
->
+<form method="POST" action="/insider/[insider_id]/create" on:submit={handleSubmit} class="rating-form">
+
     <input type="hidden" name="insiderId" value={data.insider._id} />
 
     <div class="stars">
