@@ -145,20 +145,21 @@ async function createRating(rating) {
       const ratingDoc = {
           insiderId: new ObjectId(rating.insiderId),
           rating: parseInt(rating.rating),
-          timestamp: new Date(),
+          timestamp: new Date()
       };
 
-      console.log("Rating document to insert:", ratingDoc);
+      console.log("Inserting Rating Document:", ratingDoc);
 
       const result = await collection.insertOne(ratingDoc);
       console.log("Rating added successfully:", result.insertedId);
 
       return result.insertedId.toString();
   } catch (err) {
-      console.error("Error adding rating in createRating:", err);
-      return null;
+      console.error("Error in createRating:", err);
+      throw err;
   }
 }
+
 
 
 async function getRatings(insiderId) {

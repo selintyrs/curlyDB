@@ -25,15 +25,14 @@ export async function load({ params }) {
     }
   }
   export const actions = {
-    create: async ({ request }) => {
+    create: async ({ params, request }) => {
         try {
-            console.log("Form submission started");
+            const formData = await request.formData();
+            const insiderId = formData.get("insiderId");
+            const rating = parseInt(formData.get("rating"));
 
-            const data = await request.formData();
-            const insiderId = data.get("insiderId");
-            const rating = parseInt(data.get("rating"));
-
-            console.log("Received Data:", { insiderId, rating });
+            // Debugging logs
+            console.log("Form Data:", { insiderId, rating });
 
             if (!ObjectId.isValid(insiderId)) {
                 console.error("Invalid insider ID:", insiderId);
@@ -47,14 +46,28 @@ export async function load({ params }) {
 
             const ratingResult = await db.createRating({
                 insiderId,
-                rating,
+                rating
             });
 
-            console.log("Rating saved successfully:", ratingResult);
-            return { success: true };
+            if (!ratingResult) {
+                console.error("Failed to save rating");
+                throw error(500, "Failed to save rating");
+            }
+
+            console.log("Rating successfully saved:", ratingResult);
+
+            return {
+                type: "success",
+                status: 200,
+                body: {
+                    success: true,
+                    ratingId: ratingResult
+                }
+            };
         } catch (err) {
-            console.error("Error saving rating:", err);
+            console.error("Error in create action:", err);
             throw error(500, "Failed to save rating");
         }
-    },
+    }
 };
+
