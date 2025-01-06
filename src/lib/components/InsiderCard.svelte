@@ -49,8 +49,8 @@
     padding: 15px;
     width: 100%;
     max-width: 300px; /* Maximalbreite für Konsistenz */
-    height: 350px; /* Feste Höhe für alle Karten */
-    min-height: 350px; /* Mindesthöhe für alle Karten */
+    height: 300px; /* Feste Höhe für alle Karten */
+    min-height: 300px; /* Mindesthöhe für alle Karten */
     background-color: transparent !important;
     border: 1.2px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -89,7 +89,7 @@
     font-weight: lighter;
     color: #000000;
     margin: 0;
-    line-height: 0.2;
+    line-height: 0;
   }
 
   .stars input[type="radio"] {
