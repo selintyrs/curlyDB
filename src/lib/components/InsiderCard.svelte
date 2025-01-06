@@ -1,6 +1,12 @@
 <script>
   let { insider } = $props();
-  
+  import { addRating } from "$lib/db.js";
+
+async function handleRating(rating) {
+  await addRating(insider._id, rating);
+  // Refresh the page to show updated rating
+  window.location.reload();
+}
   
 </script>
 
@@ -10,6 +16,18 @@
       <span class="hairtype">{insider.hairtype_id}</span>{insider.tip_for}
     </h5>
     <p class="card-text">{insider.tip_text}</p>
+    <!-- Add rating display and controls -->
+    <div class="rating">
+      {#each Array(5) as _, i}
+        <button 
+          onclick={() => handleRating(i + 1)}
+          class="star {i < Math.round(insider.averageRating || 0) ? 'filled' : ''}"
+        >
+          ★
+        </button>
+      {/each}
+      <span class="rating-count">({insider.totalRatings || 0})</span>
+    </div>
   </div>
 </div>
 
@@ -50,5 +68,27 @@
     color: #000000;
     word-wrap: break-word;
     margin: 0;
+  }
+
+  .rating {
+    margin-top: 10px;
+  }
+  
+  .star {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .star.filled {
+    color: gold;
+  }
+  
+  .rating-count {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 5px;
   }
 </style>

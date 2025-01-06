@@ -1,5 +1,7 @@
 import { MongoClient, ObjectId } from "mongodb";
 import { DB_URI } from "$env/static/private";
+import fetch from 'node-fetch';
+
 
 const client = new MongoClient(DB_URI);
 
@@ -106,8 +108,43 @@ export async function getInsidersByHairtype(hairtypeId) {
   }
 }
 
+// Create a rating for a tip
+async function addRating(tipId, rating) {
+  let result = null;
+  
+  try {
+    const collection = db.collection("ratings");
+    result = await collection.insertOne({
+      tip_id: new ObjectId(tipId),
+      rating: rating
+    });
+  } catch (error) {
+    console.log("Error creating rating:", error);
+    throw error;
+  }
+  
+  return result;
+}
 
-
+// Get average rating for a tip
+async function getTipRating(tipId) {
+  try {
+    const collection = db.collection("ratings");
+    const result = await collection.aggregate([
+      { $match: { tip_id: new ObjectId(tipId) } },
+      { $group: {
+          _id: '$tip_id',
+          averageRating: { $avg: '$rating' },
+          totalRatings: { $sum: 1 }
+        }}
+    ]).toArray();
+    
+    return result[0] || { averageRating: 0, totalRatings: 0 };
+  } catch (error) {
+    console.log("Error getting tip rating:", error);
+    return { averageRating: 0, totalRatings: 0 };
+  }
+}
 
 
 
@@ -118,4 +155,6 @@ export default {
   createInsider,
   getInsiders,
   getInsidersByHairtype,
+  addRating,
+  getTipRating
 }
