@@ -127,7 +127,7 @@ async function getInsider(id) {
 }
 
 // Add rating
-async function addRating(rating) {
+async function createRating(rating) {
   try {
     if (!rating.insiderId || !ObjectId.isValid(rating.insiderId)) {
       throw new Error("Invalid insider ID");
@@ -164,6 +164,6 @@ export default {
   getInsiders,
   getInsidersByHairtype,
   getInsider,
-  addRating
+  createRating
   
 }
