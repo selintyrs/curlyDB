@@ -130,13 +130,10 @@ async function getInsider(id) {
 async function addRating(rating) {
   try {
     if (!rating.insiderId || !ObjectId.isValid(rating.insiderId)) {
-      console.error('Invalid insiderId:', rating.insiderId);
-      return null;
+      throw new Error("Invalid insider ID");
     }
-
     if (!rating.rating || isNaN(rating.rating) || rating.rating < 1 || rating.rating > 5) {
-      console.error('Invalid rating value:', rating.rating);
-      return null;
+      throw new Error("Invalid rating value");
     }
 
     const collection = db.collection("ratings");
