@@ -45,7 +45,7 @@ export const actions = {
     
           const ratingResult = await db.createRating({
             insiderId: insiderId,
-            rating: rating,
+            rating: rating
           });
     
           if (!ratingResult) {

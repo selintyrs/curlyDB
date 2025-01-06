@@ -163,6 +163,7 @@ async function getRatings(insiderId) {
     const ratings = await collection.find({
       insiderId: new ObjectId(insiderId)
     })
+    .toArray();
 
     return ratings.map(rating => ({
       ...rating,
