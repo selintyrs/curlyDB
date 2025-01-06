@@ -8,8 +8,8 @@
     <span class="hairtype">{insider.hairtype_id}</span> <strong>{insider.tip_for}</strong>
   </h4>
   <p class="card-text">{insider.tip_text}</p>
-  <p class="card-text">★ Rating: {insider.ratingAvg} ★ </p>
-  <p class="card-text">Total: {insider.totalRating}</p>
+  <p class="card-rate">★ Rating: {insider.ratingAvg} ★ </p>
+  <p class="card-rate">Total: {insider.totalRating}</p>
 
   <!-- Bewertungsformular -->
   <form method="POST" action="/insider?/rate" class="rating-form">
@@ -41,20 +41,25 @@
 
 <style>
 .card {
-    display: grid;
+    display: flex;
+    flex-direction: column; /* Damit Inhalte gestapelt werden */
+    justify-content: space-between; /* Platz zwischen den Elementen */
+    align-items: stretch;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0rem;
+    gap: 1rem;
     padding: 15px;
-    max-width: 300px; /* Maximale Breite der Karte */    background-color: transparent !important;
-    margin-top: 0rem;
-    margin-left: 0rem;
-    margin-right: 0rem;
+    width: 100%;
+    max-width: 300px; /* Maximalbreite für Konsistenz */
+    height: 350px; /* Feste Höhe für alle Karten */
+    min-height: 350px; /* Mindesthöhe für alle Karten */
+    background-color: transparent !important;
     border: 1.2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0px;
+    border-radius: 5px;
     overflow: hidden;
     box-shadow: none;
     text-align: left;
-  }
+}
+
 
   .card-title {
     font-size: 1.5rem;
@@ -76,6 +81,15 @@
     word-wrap: break-word;
     margin: 0;
 
+  }
+
+  .card-rate {
+    font-size: 0.8rem;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    color: #000000;
+    margin: 0;
   }
 
   .stars input[type="radio"] {
@@ -106,6 +120,6 @@
     font-family: "Roboto", sans-serif;
     color: black;
     font-weight: bold;
-    font-size: 0.5rem ;
+    font-size: 0.8rem ;
   }
 </style>

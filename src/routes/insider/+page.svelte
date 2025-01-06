@@ -202,6 +202,8 @@
   }
 
   .row {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 20px;
     justify-content: center;
