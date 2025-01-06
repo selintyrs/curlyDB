@@ -14,14 +14,14 @@
 <h1 class="page-title">{data.insider.tip_for}</h1>
 
 
-<form method="POST" action="?/create" use:enhance={handleRatingSubmit}>
-    <input type="radio" name="rating" value="1" />
-    <input type="radio" name="rating" value="2" />
-    <input type="radio" name="rating" value="3" />
-    <input type="radio" name="rating" value="4" />
-    <input type="radio" name="rating" value="5" />
-    <button type="submit">Submit</button>
+<form method="POST" action="?/create">
+    <input type="hidden" name="insiderId" value="{data.insider._id}" />
+    {#each Array(5) as _, i}
+        <input type="radio" name="rating" value="{i + 1}" required />
+    {/each}
+    <button type="submit">Send Rating</button>
 </form>
+
 
   {#if form?.success}
   <p>Successfully added!</p>
