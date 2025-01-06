@@ -32,3 +32,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Send Rating</button>
 </form>
+
+{#if form?.success}
+  <p>Successfully added!</p>
+{/if}
