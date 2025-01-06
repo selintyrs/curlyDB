@@ -123,7 +123,7 @@ async function getInsider(id) {
     }
     throw error;
   }
-  return hairtype;
+  return insider;
 }
 
 // Add rating
