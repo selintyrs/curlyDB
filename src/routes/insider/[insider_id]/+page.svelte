@@ -1,13 +1,23 @@
 <script>
-    import { enhance } from "@sveltejs/kit";
     export let data;
 
-    function handleRatingSubmit(event) {
-        return async ({ result }) => {
-            if (result.type === "success") {
-                window.location.reload(); // Reload to update the UI
-            }
-        };
+    async function handleSubmit(event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+
+        const response = await fetch(event.target.action, {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            window.location.reload(); // Reload to update the page
+        } else {
+            console.error('Failed to save rating:', result);
+        }
     }
 </script>
 
@@ -16,10 +26,9 @@
 <form
     method="POST"
     action="?/create"
-    use:enhance={handleRatingSubmit}
+    on:submit={handleSubmit}
     class="rating-form"
 >
-    <!-- Pass the insiderId as a hidden input -->
     <input type="hidden" name="insiderId" value={data.insider._id} />
 
     <div class="stars">
