@@ -210,8 +210,9 @@
   .col-md-4 {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 0px;
-    padding: 0px;
+    padding: 10px;
   }
 
   .filter {

@@ -44,9 +44,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 0rem;
-    padding: 0rem;
-    width: 100%;
-    background-color: transparent !important;
+    padding: 15px;
+    max-width: 300px; /* Maximale Breite der Karte */    background-color: transparent !important;
     margin-top: 0rem;
     margin-left: 0rem;
     margin-right: 0rem;
@@ -106,7 +105,7 @@
     font-style: italic;
     font-family: "Roboto", sans-serif;
     color: black;
-    padding: 10px 20px;
     font-weight: bold;
+    font-size: 0.5rem ;
   }
 </style>
