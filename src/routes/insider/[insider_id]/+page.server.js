@@ -28,11 +28,27 @@ export async function load({ params }) {
     create: async ({ request }) => {
         try {
             const data = await request.formData();
-            console.log("Form Data Received:", Object.fromEntries(data));
+            const insiderId = data.get("insiderId");
+            const rating = parseInt(data.get("rating"));
+
+            if (!ObjectId.isValid(insiderId)) {
+                throw error(400, "Invalid insider ID");
+            }
+
+            if (isNaN(rating) || rating < 1 || rating > 5) {
+                throw error(400, "Rating must be between 1 and 5");
+            }
+
+            const ratingResult = await db.createRating({
+                insiderId,
+                rating,
+            });
+
+            console.log("Rating added:", ratingResult);
             return { success: true };
         } catch (err) {
-            console.error("Error in form submission:", err);
-            throw error(500, "Form submission failed");
+            console.error("Error saving rating:", err);
+            throw error(500, "Failed to save rating");
         }
     },
 };
