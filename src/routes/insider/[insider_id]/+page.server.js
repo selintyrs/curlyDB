@@ -24,25 +24,32 @@ export async function load({ params }) {
       throw error(500, err.message);
     }
   }
-  
+
   export const actions = {
     create: async ({ params, request }) => {
         try {
-            const formData = await request.formData();
-            const insiderId = formData.get("insiderId");
-            const rating = parseInt(formData.get("rating"));
+            
 
+            const insiderId = params.insider_id;
             if (!ObjectId.isValid(insiderId)) {
                 throw error(400, "Invalid insider ID");
             }
+
+            const insider = await db.getInsider(insiderId);
+            if (!insider) {
+                throw error(404, "Insider not found");
+            }
+
+            const formData = await request.formData();
+            const rating = parseInt(formData.get("rating"));
 
             if (isNaN(rating) || rating < 1 || rating > 5) {
                 throw error(400, "Rating must be between 1 and 5");
             }
 
             const ratingResult = await db.createRating({
-                insiderId,
-                rating
+                insiderId: insiderId,
+                rating: rating
             });
 
             if (!ratingResult) {

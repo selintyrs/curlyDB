@@ -1,4 +1,6 @@
 <script>
+    import { enhance } from '$app/forms';
+
     export let data;
 
     async function handleSubmit(event) {
@@ -23,7 +25,7 @@
 
 <h1 class="page-title">{data.insider.tip_for}</h1>
 
-<form method="POST" action="/insider/[insider_id]/create" on:submit={handleSubmit} class="rating-form">
+<form method="POST" action="?/create" use:enhance={handleSubmit} class="rating-form">
 
     <input type="hidden" name="insiderId" value={data.insider._id} />
 

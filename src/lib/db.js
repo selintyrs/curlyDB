@@ -145,7 +145,6 @@ async function createRating(rating) {
       const ratingDoc = {
           insiderId: new ObjectId(rating.insiderId),
           rating: parseInt(rating.rating),
-          timestamp: new Date()
       };
 
       console.log("Inserting Rating Document:", ratingDoc);
