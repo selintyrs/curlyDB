@@ -26,7 +26,7 @@ export async function load({ params }) {
   }
 
   export const actions = {
-    create: async ({ request }) => {
+    rate: async ({ request }) => {
       try {
         const formData = await request.formData();
         const insiderId = formData.get("insiderId");
@@ -42,7 +42,7 @@ export async function load({ params }) {
           return { form: { success: false, error: "Rating must be between 1 and 5" } };
         }
   
-        // Save the rating to the database
+        // Speichert das Rating in der Datenbank
         const ratingResult = await db.createRating({
           insiderId,
           rating
@@ -54,10 +54,9 @@ export async function load({ params }) {
   
         return { form: { success: true, ratingId: ratingResult } };
       } catch (err) {
-        console.error("Error in create action:", err);
+        console.error("Error in rate action:", err);
         return { form: { success: false, error: "Failed to save rating" } };
       }
     }
   };
-  
   

@@ -18,3 +18,38 @@ export async function load({ url }) {
     hairtypeId, // Gib den aktuellen Filter zurück, falls nötig
   };
 }
+
+export const actions = {
+  rate: async ({ request }) => {
+    try {
+      const formData = await request.formData();
+      const insiderId = formData.get("insiderId");
+      const rating = parseInt(formData.get("rating"));
+
+      // Validate `insiderId`
+      if (!ObjectId.isValid(insiderId)) {
+        return { form: { success: false, error: "Invalid insider ID" } };
+      }
+
+      // Validate `rating`
+      if (isNaN(rating) || rating < 1 || rating > 5) {
+        return { form: { success: false, error: "Rating must be between 1 and 5" } };
+      }
+
+      // Speichert das Rating in der Datenbank
+      const ratingResult = await db.createRating({
+        insiderId,
+        rating
+      });
+
+      if (!ratingResult) {
+        return { form: { success: false, error: "Failed to save rating" } };
+      }
+
+      return { form: { success: true, ratingId: ratingResult } };
+    } catch (err) {
+      console.error("Error in rate action:", err);
+      return { form: { success: false, error: "Failed to save rating" } };
+    }
+  }
+};

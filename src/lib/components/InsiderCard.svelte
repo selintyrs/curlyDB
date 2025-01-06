@@ -1,56 +1,42 @@
 <script>
-  export let insider;
-
-  // Function to handle form submission without redirection
-  async function handleSubmit(event) {
-    event.preventDefault(); // Prevent page reload
-    const form = new FormData(event.target);
-
-    const response = await fetch('/insider/' + insider._id + '/create', {
-      method: 'POST',
-      body: form
-    });
-
-    const result = await response.json();
-
-    if (result?.form?.success) {
-      alert('Rating submitted successfully!');
-    } else {
-      alert(result?.form?.error || 'An error occurred.');
-    }
-  }
+  export let insider; // Insider-Daten
+  export let form; // Form-Ergebnis von der Action
 </script>
 
 <div class="card">
-  <div class="card-body">
-    <h5 class="card-title">
-      <span class="hairtype">{insider.hairtype_id}</span>
-      {insider.tip_for}
-    </h5>
-    <p class="card-text">{insider.tip_text}</p>
-    <p>Average Rating: {insider.ratingAvg} ★</p>
-    <p>Total Ratings: {insider.totalRating}</p>
+  <h4 class="card-title">
+    <span class="hairtype">{insider.hairtype_id}</span> <strong>{insider.tip_for}</strong>
+  </h4>
+  <p class="card-text">{insider.tip_text}</p>
+  <p>Average Rating: {insider.ratingAvg} ★</p>
+  <p>Total Ratings: {insider.totalRating}</p>
 
-    <!-- Rating Form -->
-    <form on:submit={handleSubmit} class="rating-form">
-      <input type="hidden" name="insiderId" value="{insider._id}" />
-      <div class="stars">
-        {#each Array(5) as _, index}
-          <input
-            type="radio"
-            id="star-{insider._id}-{5 - index}"
-            name="rating"
-            value="{5 - index}"
-            required
-          />
-          <label for="star-{insider._id}-{5 - index}">★</label>
-        {/each}
-      </div>
-      <button type="submit" class="btn btn-primary">Submit Rating</button>
-    </form>
-  </div>
+  <!-- Bewertungsformular -->
+  <form method="POST" action="/insider/rate" class="rating-form">
+    <input type="hidden" name="insiderId" value="{insider._id}" />
+    <div class="stars">
+      {#each Array(5) as _, i}
+        <input
+          type="radio"
+          id="star-{insider._id}-{i + 1}"
+          name="rating"
+          value={5 - i}
+          required
+        />
+        <label for="star-{insider._id}-{i + 1}">★</label>
+      {/each}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Rating</button>
+  </form>
+
+  <!-- Erfolg- oder Fehlermeldung -->
+  {#if form?.success && form?.ratingId}
+    <p class="success">Rating submitted successfully!</p>
+  {/if}
+  {#if form?.error}
+    <p class="error">{form.error}</p>
+  {/if}
 </div>
-
 
 
 <style>
@@ -78,21 +64,23 @@
       font-size: 1rem;
   }
 
-  .stars {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-  }
-  input[type='radio'] {
+  .stars input[type="radio"] {
     display: none;
   }
-  label {
-    font-size: 1.5rem;
+  .stars label {
+    font-size: 2rem;
+    color: gray;
     cursor: pointer;
-    color: #ccc;
   }
-  input[type='radio']:checked ~ label,
-  input[type='radio']:checked + label {
+  .stars input[type="radio"]:checked ~ label {
     color: gold;
+  }
+  .success {
+    color: green;
+    font-weight: bold;
+  }
+  .error {
+    color: red;
+    font-weight: bold;
   }
 </style>
