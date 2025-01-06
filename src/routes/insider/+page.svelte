@@ -31,7 +31,29 @@
 </div>
 
 <div class="container">
-  <h1 class="page-title">Read the tips of your community:</h1>
+  <h1 class="page-title">
+    <span>Read the tips of your community: </span>
+
+    <!-- Filter-Dropdown -->
+    <form method="GET" use:enhance>
+      <div class="filter">
+        <label for="hairtype">Filter by Hairtype:</label>
+        <select id="hairtype" bind:value={selectedHairtype}>
+          <option value="">All Hairtypes</option>
+          <option value="2A">2A</option>
+          <option value="2B">2B</option>
+          <option value="2C">2C</option>
+          <option value="3A">3A</option>
+          <option value="3B">3B</option>
+          <option value="3C">3C</option>
+          <option value="4A">4A</option>
+          <option value="4B">4B</option>
+          <option value="4C">4C</option>
+        </select>
+        <button on:click={applyFilter} class="apply">Apply Filter</button>
+      </div>
+    </form>
+  </h1>
 
   <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
@@ -71,25 +93,6 @@
   </div>
 </div>
 
-<!-- Filter-Dropdown -->
-<form method="GET" use:enhance>
-  <div class="filter">
-    <label for="hairtype">Filter by Hairtype:</label>
-    <select id="hairtype" bind:value={selectedHairtype}>
-      <option value="">All Hairtypes</option>
-      <option value="2A">2A</option>
-      <option value="2B">2B</option>
-      <option value="2C">2C</option>
-      <option value="3A">3A</option>
-      <option value="3B">3B</option>
-      <option value="3C">3C</option>
-      <option value="4A">4A</option>
-      <option value="4B">4B</option>
-      <option value="4C">4C</option>
-    </select>
-    <button on:click={applyFilter} class="apply">Apply Filter</button>
-  </div>
-</form>
 
 <div class="section-2">
   <div class="section-2-content"></div>
@@ -128,7 +131,7 @@
 
   .section-1-content p {
     position: absolute;
-    bottom: 50%;
+    bottom: 30%;
     right: 3%;
     text-align: right;
     color: black;
@@ -140,7 +143,7 @@
 
   .btn {
     position: absolute;
-    bottom: 45%;
+    bottom: 25%;
     right: 3%;
     border-color: black;
     border-width: 2px;

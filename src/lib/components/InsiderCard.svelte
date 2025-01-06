@@ -1,6 +1,8 @@
 <script>
+   import { enhance } from "$app/forms";
   export let insider; // Insider-Daten
   export let form; // Form-Ergebnis von der Action
+
 </script>
 
 <div class="card">
@@ -12,7 +14,7 @@
   <p class="card-rate">★ Total Ratings: {insider.totalRating}</p>
 
   <!-- Bewertungsformular -->
-  <form method="POST" action="/insider?/rate" class="rating-form">
+  <form method="POST" action="/insider?/rate" class="rating-form" use:enhance>
     <input type="hidden" name="insiderId" value="{insider._id}" />
     <div class="stars">
       {#each Array(5) as _, i}
