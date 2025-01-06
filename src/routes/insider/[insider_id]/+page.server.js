@@ -32,12 +32,14 @@ export const actions = {
             throw error(400, 'Invalid insider ID');
           }
     
-          const insider = await db.getinsider(insiderId);
+          const insider = await db.getInsider(insiderId);
           if (!insider) {
             throw error(404, 'insider not found');
           }
     
-          const rating = parseInt(data.get("rating"));
+          const data = await request.formData();
+const rating = parseInt(data.get("rating"));
+
           
           if (isNaN(rating) || rating < 1 || rating > 5) {
             throw error(400, 'Rating must be between 1 and 5');
