@@ -14,7 +14,10 @@
   <p class="card-rate">★ Total Ratings: {insider.totalRating}</p>
 
   <!-- Bewertungsformular -->
-  <form method="POST" action="/insider?/rate" class="rating-form" use:enhance>
+  <form method="POST" action="/insider?/rate" class="rating-form" use:enhance={{
+    pending: (data) => console.log("Pending:", data),
+    after: (data) => console.log("After submission:", data),
+  }}>
     <input type="hidden" name="insiderId" value="{insider._id}" />
     <div class="stars">
       {#each Array(5) as _, i}
@@ -33,7 +36,7 @@
 </div>
 
   {#if form?.success && form?.ratingId}
-  <p class="success">Rating submitted successfully!</p>
+  <p class="success">Rating submitted!</p>
 {/if}
 {#if form?.error}
   <p class="error">{form.error}</p>
