@@ -41,8 +41,9 @@
 </div>
 
 <div class="section-2">
-  <div class="section-2-content"></div>
+  <img src="/images/models/model2.jpeg" alt="Group" class="section-image">
 </div>
+
 
 
 <style>
@@ -60,9 +61,7 @@
     height: 100vh;
   }
 
-  .section-2 {
-    background-image: url("/images/models/model2.jpeg");
-  }
+
 
   .section-1-content h1 {
     position: absolute;

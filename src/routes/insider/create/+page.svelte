@@ -178,7 +178,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 0 30px;
     margin-bottom: 80px;
   }
