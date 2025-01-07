@@ -1,4 +1,5 @@
 <div class="section-1">
+  <img src="/images/models/main.jpeg" alt="Main" class="section-image">
   <div class="section-1-content">
     <h1>Welcome to your <br /> curly hair database</h1>
     <p>Learn to embrace your curls!</p>
@@ -47,26 +48,16 @@
 
 
 <style>
-  .section-1,
-  .section-2 {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-
   .section-1 {
-    background-image: url("/images/models/main.jpeg");
-    height: auto;
-    width: 100%;
+    position: relative; /* Ermöglicht das Positionieren des Inhalts über dem Bild */
   }
 
-  .section-2 img {
+  .section-1 img {
     width: 100%;
-    height: auto; /* Beibehaltung der Proportionen des Bildes */
-    object-fit: cover; /* Schneidet das Bild bei Bedarf, um Verzerrungen zu vermeiden */
-    display: block; /* Entfernt mögliche Lücken unter dem Bild */
-}
+    height: auto;
+    object-fit: cover; /* Schneidet das Bild, um es anzupassen */
+    display: block;
+  }
 
 
   .section-1-content h1 {
@@ -94,6 +85,13 @@
     font-weight: 900;
     font-family: "Roboto", sans-serif;
   }
+
+  .section-2 img {
+    width: 100%;
+    height: auto; /* Beibehaltung der Proportionen des Bildes */
+    object-fit: cover; /* Schneidet das Bild bei Bedarf, um Verzerrungen zu vermeiden */
+    display: block; /* Entfernt mögliche Lücken unter dem Bild */
+}
 
   .card-container {
     display: grid;
