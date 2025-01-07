@@ -49,7 +49,6 @@
   .section-1,
   .section-2 {
     width: 100%;
-    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,10 +57,12 @@
 
   .section-1 {
     background-image: url("/images/models/main.jpeg");
+    height: 100vh;
   }
 
   .section-2 {
     background-image: url("/images/models/model2.jpeg");
+    height: 100%;
   }
 
   .section-1-content h1 {
