@@ -30,15 +30,14 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit Rating</button>
   </form>
-
-  <!-- Erfolg- oder Fehlermeldung -->
-  {#if form?.success}
-    <p class="success">Rating added!</p>
-  {/if}
-  {#if form?.error}
-    <p class="error">{form.error}</p>
-  {/if}
 </div>
+
+  {#if form?.success && form?.ratingId}
+  <p class="success">Rating submitted successfully!</p>
+{/if}
+{#if form?.error}
+  <p class="error">{form.error}</p>
+  {/if}
 
 
 <style>

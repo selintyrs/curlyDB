@@ -1,6 +1,6 @@
 <script>
-  let { data } = $props();
-  console.log(data.insiders); // Prüfe, ob die Insider-Daten geladen werden
+export let data;
+const { hairtype, insiders } = data;
 
   import RoutineCard from "$lib/components/RoutineCard.svelte";
   import InsiderTypeCard from "$lib/components/InsiderTypeCard.svelte";
