@@ -1,19 +1,26 @@
 import db from "$lib/db.js";
+import { error } from "@sveltejs/kit";
+import { ObjectId } from "mongodb";
 
 export async function load({ params }) {
-  const hairtypeId = params.get("hairtype");
+  try{
+    const hairtypeId = params.hairtype_id;
+    if (!ObjectId.isValid(hairtypeId)) {
+     throw error(404, "Invalid hairtype ID");
+      }
+    const hairtype = await db.getHairType(hairtypeId); 
+    if (!hairtype) {
+      throw error(404, "Hair type not found");
+    }
 
-  // Hole den Haartyp aus der Datenbank
-  const hairtype = await db.getHairType(hairtypeId);
-
-  // Hole alle Insiders mit der passenden hairtype_id
-  const insiders = await db.getInsidersByHairtype(hairtypeId);
+    const insiders = await db.getInsidersByHairtype(hairtypeId);
 
   return {
-    hairtype: {
-      _id: hairtypeId,
-      ...hairtype,
-    },
-    insiders // Füge die Insiders hinzu
-  };
+    hairtype,
+    insiders,
+    };
+} catch (error) {
+  console.error("Error in load function:", error);
+  return error;
+}
 }
