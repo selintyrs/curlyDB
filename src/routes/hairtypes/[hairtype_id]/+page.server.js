@@ -1,7 +1,7 @@
 import db from "$lib/db.js";
 
 export async function load({ params }) {
-  const hairtypeId = params.searchParams.get("hairtype");
+  const hairtypeId = params.get("hairtype");
 
   // Hole den Haartyp aus der Datenbank
   const hairtype = await db.getHairType(hairtypeId);
