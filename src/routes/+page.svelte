@@ -62,7 +62,6 @@
 
   .section-2 {
     background-image: url("/images/models/model2.jpeg");
-    height: auto;
   }
 
   .section-1-content h1 {
