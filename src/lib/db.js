@@ -84,10 +84,11 @@ async function getInsiders() {
   return insiders;
 }
 
-// Get insiders by hairtype
+// Insider Filter by hairtype
 export async function getInsidersByHairtype(hairtypeId) {
   try {
     const collection = db.collection("insiders");
+    const query = { hairtype_id: hairtypeId };
     const results = await collection.find({ hairtype_id: hairtypeId }).toArray();
     results.forEach(insider => {
       insider._id = insider._id.toString();
@@ -98,6 +99,23 @@ export async function getInsidersByHairtype(hairtypeId) {
     return [];
   }
 }
+
+// Insider Filter by hairtype name
+export async function getInsidersByHairtypeName(hairtypeName) {
+  try {
+    const collection = db.collection("insiders");
+    const query = { hairtype_id: hairtypeName }; // Suche nach dem Namen statt ObjectId
+    const results = await collection.find(query).toArray();
+    results.forEach((insider) => {
+      insider._id = insider._id.toString(); // Konvertiere ObjectId in String
+    });
+    return results;
+  } catch (error) {
+    console.error("Error fetching insiders by hairtype name:", error);
+    return [];
+  }
+}
+
 
 //Get insiders by ID
 async function getInsider(id) {
@@ -230,6 +248,7 @@ export default {
   createInsider,
   getInsiders,
   getInsidersByHairtype,
+  getInsidersByHairtypeName,
   getInsider,
   createRating,
   getRatings

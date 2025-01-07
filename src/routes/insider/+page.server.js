@@ -10,7 +10,7 @@ export async function load({ url }) {
   let insiders;
   if (hairtypeId) {
     // Wenn ein Filterparameter vorhanden ist, rufe die neue Funktion auf
-    insiders = await db.getInsidersByHairtype(hairtypeId);
+    insiders = await db.getInsidersByHairtypeName(hairtypeName)
   } else {
     // Andernfalls alle Insider-Daten laden
     insiders = await db.getInsiders();
