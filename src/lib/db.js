@@ -156,7 +156,8 @@ async function updateInsiderRating(insiderId) {
         if (ratings.length > 0) {
             const totalRating = ratings.length;
             const sumRating = ratings.reduce((sum, rating) => sum + rating.rating, 0);
-            const ratingAvg = sumRating / totalRating;
+            const ratingAvg = parseFloat((sumRating / totalRating).toFixed(1));
+
 
             // Update the insider document
             await collectionInsiders.updateOne(
