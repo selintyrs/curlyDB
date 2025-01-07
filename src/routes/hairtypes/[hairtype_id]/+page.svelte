@@ -39,9 +39,6 @@ const { hairtype, insiders } = data;
     padding-left: 5px;
   }
 
-  .row {
-    margin-top: 10px;
-  }
 
   .btn {
     border-color: black;
@@ -51,6 +48,7 @@ const { hairtype, insiders } = data;
     font-family: "Roboto", sans-serif;
     color: black;
     margin-top: 20px;
+    margin-bottom: 10px;
     margin-left: 10px;
   }
 
@@ -69,7 +67,7 @@ const { hairtype, insiders } = data;
     font-size: 1.7rem;
   }
 
-  
+
 
 
 </style>
