@@ -61,7 +61,7 @@
   }
 
   .section-2 {
-    background-image: url("/images/models/group2.jpg");
+    background-image: url("/images/models/model2.jpeg");
   }
 
   .section-1-content h1 {
