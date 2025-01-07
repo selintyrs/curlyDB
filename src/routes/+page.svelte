@@ -62,9 +62,10 @@
   }
 
   .section-2 img {
-    max-height: 100vh; /* Verhindert, dass das Bild höher als der Bildschirm wird */
-    width: 100%;
-    height: auto;
+    width: 100%; /* Passt die Breite des Bildes an die Bildschirmbreite an */
+    height: auto; /* Beibehaltung der Proportionen des Bildes */
+    object-fit: cover; /* Schneidet das Bild bei Bedarf, um Verzerrungen zu vermeiden */
+    display: block; /* Entfernt mögliche Lücken unter dem Bild */
 }
 
 
