@@ -46,18 +46,22 @@
 
 
 <style>
-  .section-1 {
+  .section-1,
+  .section-2 {
     width: 100%;
-    height: calc(100vh - 30px);
-    background-image: url("/images/models/main.jpeg");
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    margin: 0;
-    padding: 0;
-    top: 0px;
-    z-index: 1;
+  }
+
+  .section-1 {
+    background-image: url("/images/models/main.jpeg");
+  }
+
+  .section-2 {
+    background-image: url("/images/models/group2.jpeg");
   }
 
   .section-1-content h1 {
@@ -133,7 +137,5 @@
     color: inherit;
   }
 
-  .section-2 {
-    background-image: url("/images/models/group2.jpeg");
-  }
+  
 </style>
