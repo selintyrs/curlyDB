@@ -66,7 +66,7 @@
     right: 3%;
     text-align: right;
     color: rgb(0, 0, 0);
-    font-size: 2.8rem;
+    font-size: clamp(1.5rem, 5vw, 2.8rem);
     font-weight: 900;
     font-style: italic;
     font-family: "Roboto", sans-serif;
@@ -80,7 +80,7 @@
     right: 3%;
     text-align: right;
     color: black;
-    font-size: 2rem;
+    font-size: clamp(1rem, 4vw, 2rem);
     font-style: italic;
     font-weight: 900;
     font-family: "Roboto", sans-serif;

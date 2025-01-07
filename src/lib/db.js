@@ -185,10 +185,6 @@ async function createRating(rating) {
 }
 
 
-
-
-
-
 export default {
   getHairTypes,
   getHairType,
