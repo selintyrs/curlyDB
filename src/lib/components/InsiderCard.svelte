@@ -3,6 +3,14 @@
   export let insider; // Insider-Daten
   export let form; // Form-Ergebnis von der Action
 
+  function handleRatingSubmit(event) {
+    return async ({ result }) => {
+      if (result.type === "success") {
+        window.location.reload();
+      }
+    };
+  }
+
 </script>
 
 <div class="card">
@@ -14,13 +22,7 @@
   <p class="card-rate">★ Total Ratings: {insider.totalRating}</p>
 
   <!-- Bewertungsformular -->
-  <form method="POST" action="/insider?/rate" class="rating-form" use:enhance={{
-    pending: (data) => console.log("Pending:", data),
-    after: document.querySelectorAll(`input[name="rating"]`).forEach(input => {
-  input.checked = false; // Zurücksetzen der Auswahl
-})
-
-  }}>
+  <form method="POST" action="/insider?/rate" class="rating-form" use:enhance={handleRatingSubmit}>
     <input type="hidden" name="insiderId" value="{insider._id}" />
     <div class="stars">
       {#each Array(5) as _, i}
