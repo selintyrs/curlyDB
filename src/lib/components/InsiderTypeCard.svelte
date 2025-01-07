@@ -2,15 +2,16 @@
     export let insider;
 </script>
 
-<ol class="list-group">
+
+  <ol class="list-group list-group-numbered">
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto">
         <div class="fw-bold">{insider.tip_for}</div>
         {insider.tip_text}
       </div>
-      <span class="badge">{insider.ratingAvg}</span>
+      <span class="badge text-bg-primary rounded-pill">{insider.ratingAvg}</span>
     </li>
-  </ol>
+    </ol>
 
   <style>
     
