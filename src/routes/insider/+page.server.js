@@ -1,6 +1,4 @@
 import db from "$lib/db.js";
-import { error, redirect } from '@sveltejs/kit';
-import { ObjectId } from "mongodb";
 
 export async function load({ url }) {
   // Überprüfe, ob ein Filterparameter vorhanden ist
