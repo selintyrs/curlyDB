@@ -14,7 +14,7 @@ export async function load({ params }) {
       throw error(404, "Hair type not found");
     }
 
-    const insiders = await db.getInsidersByHairtype(hairtypeId);
+    const insiders = await db.getInsidersByHairtypeName(hairtype.hairtype);
 
   return {
     hairtype,
