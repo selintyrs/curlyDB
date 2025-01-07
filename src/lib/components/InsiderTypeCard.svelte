@@ -5,7 +5,7 @@
 <ol class="insider-list">
   <li class="insider-item">
     <div class="insider-content">
-      <h4 class="insider-title">{insider.tip_for}</h4>
+      <h4 class="insider-title">Tip for: {insider.tip_for}</h4>
       <p class="insider-text">{insider.tip_text}</p>
     </div>
     <span class="insider-rating">
@@ -31,15 +31,15 @@
     align-items: center;
     padding: 15px;
     margin-bottom: 10px;
-    background-color: #f8f9fa; /* Leichte Hintergrundfarbe */
-    border: 1px solid #ddd; /* Rahmen */
-    border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    background-color: transparent;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .insider-content {
     flex-grow: 1;
     margin-right: 20px;
+    text-align: center;
   }
 
   .insider-title {
@@ -55,8 +55,8 @@
   }
 
   .insider-rating {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #007bff; /* Blaue Farbe für das Rating */
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #000000; /* Blaue Farbe für das Rating */
   }
 </style>
