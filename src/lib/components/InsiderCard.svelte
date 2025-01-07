@@ -32,8 +32,8 @@
   </form>
 
   <!-- Erfolg- oder Fehlermeldung -->
-  {#if form?.success && form?.ratingId}
-    <p class="success">Rating submitted successfully!</p>
+  {#if form?.success}
+    <p class="success">Rating added!</p>
   {/if}
   {#if form?.error}
     <p class="error">{form.error}</p>
