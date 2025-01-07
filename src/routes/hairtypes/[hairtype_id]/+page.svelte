@@ -1,6 +1,7 @@
 <script>
   let { data } = $props();
   import RoutineCard from "$lib/components/RoutineCard.svelte";
+  import InsiderTypeCard from "$lib/components/InsiderTypeCard.svelte";
 </script>
 
 <a href="/hairtypes" class="btn">Back</a>
@@ -9,6 +10,13 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <RoutineCard hairtype={data.hairtype} />
 </div>
+
+<!-- Liste der Insider-Tipps -->
+<ol>
+  {#each insiders as insider}
+    <InsiderTypeCard {insider} />
+  {/each}
+</ol>
 
 <style>
   .page-title {
