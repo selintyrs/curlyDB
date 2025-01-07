@@ -1,5 +1,5 @@
 <script>
-    let { insider } = $props();
+    export let insider;
 </script>
 
 <ol class="list-group">
