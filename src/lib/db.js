@@ -117,33 +117,6 @@ export async function getInsidersByHairtypeName(hairtypeName) {
 }
 
 
-//Get insiders by ID
-async function getInsider(id) {
-  let insider = null;
-  try {
-    const collection = db.collection("insiders");
-    const query = { _id: new ObjectId(id) };
-    insider = await collection.findOne(query);
-
-    if (!insider) {
-      console.log("No hair type with id " + id);
-      throw new Error(`Hair type with ID ${id} not found`);
-    } else {
-      insider._id = insider._id.toString();
-    }
-  } catch (error) {
-    if (error instanceof TypeError) {
-      console.error("Invalid ID format:", id);
-    } else if (error.message.includes("not found")) {
-      console.warn(error.message);
-    } else {
-      console.error("Unexpected error while fetching hair type:", error.message);
-    }
-    throw error;
-  }
-  return insider;
-}
-
 // Function to calculate and update average rating for an insider
 async function updateInsiderRating(insiderId) {
     try {
@@ -213,33 +186,6 @@ async function createRating(rating) {
 
 
 
-async function getRatings(insiderId) {
-  try {
-    if (!insiderId || !ObjectId.isValid(insiderId)) {
-      console.error('Invalid insiderId format:', insiderId);
-      return [];
-    }
-
-    const collection = db.collection("ratings");
-    const ratings = await collection.find({
-      insiderId: new ObjectId(insiderId)
-    })
-    .toArray();
-
-    return ratings.map(rating => ({
-      ...rating,
-      _id: rating._id.toString(),
-      insiderId: rating.insiderId.toString(),
-      rating: parseInt(rating.rating),
-    }));
-  } catch (error) {
-    console.error('Error getting ratings:', error);
-    return [];
-  }
-}
-
-
-
 
 
 
@@ -250,8 +196,6 @@ export default {
   getInsiders,
   getInsidersByHairtype,
   getInsidersByHairtypeName,
-  getInsider,
   createRating,
-  getRatings
   
 }

@@ -57,12 +57,12 @@
 
   .section-1 {
     background-image: url("/images/models/main.jpeg");
-    height: 100vh;
+    height: auto;
     width: 100%;
   }
 
   .section-2 img {
-    width: 100%; /* Passt die Breite des Bildes an die Bildschirmbreite an */
+    width: 100%;
     height: auto; /* Beibehaltung der Proportionen des Bildes */
     object-fit: cover; /* Schneidet das Bild bei Bedarf, um Verzerrungen zu vermeiden */
     display: block; /* Entfernt mögliche Lücken unter dem Bild */
