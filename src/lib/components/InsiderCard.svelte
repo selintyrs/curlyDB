@@ -16,7 +16,10 @@
   <!-- Bewertungsformular -->
   <form method="POST" action="/insider?/rate" class="rating-form" use:enhance={{
     pending: (data) => console.log("Pending:", data),
-    after: (data) => console.log("After submission:", data),
+    after: document.querySelectorAll(`input[name="rating"]`).forEach(input => {
+  input.checked = false; // Zurücksetzen der Auswahl
+})
+
   }}>
     <input type="hidden" name="insiderId" value="{insider._id}" />
     <div class="stars">
