@@ -16,11 +16,19 @@
 <!-- Liste der Insider-Tipps -->
 <h2>Insider-Tipps</h2>
 
+console.log(data.insiders);
+
+
 <div class="col-12">
   <ol>
-    {#each data.insiders as insider}
-      <li>{insider.tip_text || 'Kein Text vorhanden'}</li>
-    {/each}
+    {#if data.insiders && data.insiders.length > 0}
+  {#each data.insiders as insider}
+    <li>{insider.tip_text || 'Kein Text vorhanden'}</li>
+  {/each}
+{:else}
+  <p>Keine Insider-Tipps verfügbar.</p>
+{/if}
+
   </ol>
   
 </div>
@@ -56,7 +64,7 @@
 
   .col-12 ol {
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #791919;
   }
 
 

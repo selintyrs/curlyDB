@@ -5,6 +5,7 @@ import { ObjectId } from "mongodb";
 export async function load({ params }) {
   try{
     const hairtypeId = params.hairtype_id;
+    console.log("Hairtype ID:", hairtypeId);
     if (!ObjectId.isValid(hairtypeId)) {
      throw error(404, "Invalid hairtype ID");
       }
