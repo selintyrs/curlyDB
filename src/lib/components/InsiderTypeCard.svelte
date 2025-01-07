@@ -9,7 +9,11 @@
       {insider.tip_text}
     </div>
     <span class="badge text-bg-primary rounded-pill">
-      {insider.ratingAvg ?? '-'}
+        {#if insider.ratingAvg > 0}
+        {insider.ratingAvg}
+        {:else}
+            -
+        {/if}
     </span>
   </li>
 </ol>

@@ -128,32 +128,32 @@ async function getInsider(id) {
 
 // Function to calculate and update average rating for an insider
 async function updateInsiderRating(insiderId) {
-  try {
-      const collectionRatings = db.collection("ratings");
-      const collectionInsiders = db.collection("insiders");
+    try {
+        const collectionRatings = db.collection("ratings");
+        const collectionInsiders = db.collection("insiders");
 
-      // Get all ratings for the insider
-      const ratings = await collectionRatings.find({ insiderId: new ObjectId(insiderId) }).toArray();
+        // Get all ratings for the insider
+        const ratings = await collectionRatings.find({ insiderId: new ObjectId(insiderId) }).toArray();
 
-      if (ratings.length > 0) {
-          const totalRating = ratings.length;
-          const sumRating = ratings.reduce((sum, rating) => sum + rating.rating, 0);
-          const ratingAvg = sumRating / totalRating;
+        if (ratings.length > 0) {
+            const totalRating = ratings.length;
+            const sumRating = ratings.reduce((sum, rating) => sum + rating.rating, 0);
+            const ratingAvg = sumRating / totalRating;
 
-          // Update the insider document
-          await collectionInsiders.updateOne(
-              { _id: new ObjectId(insiderId) },
-              {
-                  $set: {
-                      ratingAvg,
-                      totalRating,
-                  },
-              }
-          );
-      }
-  } catch (error) {
-      console.error("Error updating insider rating:", error);
-  }
+            // Update the insider document
+            await collectionInsiders.updateOne(
+                { _id: new ObjectId(insiderId) },
+                {
+                    $set: {
+                        ratingAvg,
+                        totalRating,
+                    },
+                }
+            );
+        }
+    } catch (error) {
+        console.error("Error updating insider rating:", error);
+    }
 }
 
 
