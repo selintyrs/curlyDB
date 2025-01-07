@@ -1,12 +1,11 @@
 <script>
-  export let data; // The data provided by the load function
-  const { insiders, hairtypeId } = data; // Extract the insiders from the data
+  export let data;
+  const { insiders, hairtypeId } = data;
 
   import InsiderCard from "$lib/components/InsiderCard.svelte";
   import { enhance } from "$app/forms";
 
-
-  let selectedHairtype = hairtypeId || ""; // Aktuell ausgewählter Filter
+  let selectedHairtype = hairtypeId || "";
 
   // Function to group insiders into chunks of 6
   const chunkedInsiders = [];
@@ -92,7 +91,6 @@
     </button>
   </div>
 </div>
-
 
 <div class="section-2">
   <div class="section-2-content"></div>

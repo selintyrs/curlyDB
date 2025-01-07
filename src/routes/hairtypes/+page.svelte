@@ -5,10 +5,8 @@
 </script>
 
 <div class="container">
-  <!-- Überschrift -->
   <h1 class="page-title">Discover Your Curl Type</h1>
 
-  <!-- Grid für Karten -->
   <div class="row row-cols-1 row-cols-md-3 g-4">
     {#each hairtypes as hairtype}
       <div class="col d-flex align-items-stretch">

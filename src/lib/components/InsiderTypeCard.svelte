@@ -58,6 +58,6 @@
   .insider-rating {
     font-size: 1rem;
     font-weight: lighter;
-    color: #000000; /* Blaue Farbe für das Rating */
+    color: #000000; 
   }
 </style>

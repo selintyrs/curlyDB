@@ -83,10 +83,7 @@
 <style>
   .card-container {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(250px, 1fr)
-    ); /* Flexible Spalten */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.8rem;
     padding: 2rem;
     width: 100%;
@@ -156,6 +153,6 @@
   }
 
   li {
-    margin-bottom: 0.5rem; /* Abstand zwischen den Listenpunkten */
+    margin-bottom: 0.5rem;
   }
 </style>

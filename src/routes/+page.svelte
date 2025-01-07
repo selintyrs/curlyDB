@@ -1,5 +1,5 @@
 <div class="section-1">
-  <img src="/images/models/main.jpeg" alt="Main" class="section-image">
+  <img src="/images/models/main.jpeg" alt="Main" class="section-image" />
   <div class="section-1-content">
     <h1>Welcome to your <br /> curly hair database</h1>
     <p>Learn to embrace your curls!</p>
@@ -42,23 +42,20 @@
 </div>
 
 <div class="section-2">
-  <img src="/images/models/model2.jpeg" alt="Group" class="section-image">
+  <img src="/images/models/model2.jpeg" alt="Group" class="section-image" />
 </div>
-
-
 
 <style>
   .section-1 {
-    position: relative; /* Ermöglicht das Positionieren des Inhalts über dem Bild */
+    position: relative;
   }
 
   .section-1 img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Schneidet das Bild, um es anzupassen */
+    object-fit: cover;
     display: block;
   }
-
 
   .section-1-content h1 {
     position: absolute;
@@ -76,7 +73,7 @@
 
   .section-1-content p {
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     right: 3%;
     text-align: right;
     color: black;
@@ -88,10 +85,10 @@
 
   .section-2 img {
     width: 100%;
-    height: auto; /* Beibehaltung der Proportionen des Bildes */
-    object-fit: cover; /* Schneidet das Bild bei Bedarf, um Verzerrungen zu vermeiden */
-    display: block; /* Entfernt mögliche Lücken unter dem Bild */
-}
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
 
   .card-container {
     display: grid;
@@ -139,6 +136,4 @@
     text-decoration: none;
     color: inherit;
   }
-
-  
 </style>

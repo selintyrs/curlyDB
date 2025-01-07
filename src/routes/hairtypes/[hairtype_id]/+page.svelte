@@ -1,30 +1,28 @@
 <script>
-export let data;
-const { hairtype, insiders } = data;
+  export let data;
+  const { hairtype, insiders } = data;
 
   import RoutineCard from "$lib/components/RoutineCard.svelte";
   import InsiderTypeCard from "$lib/components/InsiderTypeCard.svelte";
 </script>
 
 <a href="/hairtypes" class="btn">Back</a>
+
 <h1 class="page-title">{data.hairtype.hairtype} - {data.hairtype.name}</h1>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <RoutineCard hairtype={data.hairtype} />
 </div>
 
-<div class="container">
 <!-- Liste der Insider-Tipps -->
-<h2>Insiders for your hairtype</h2>
-
-<div class="col-12">
-  {#each data.insiders as insider}
-    <InsiderTypeCard insider={insider} />
-  {/each}
+<div class="container">
+  <h2>Insiders for your hairtype</h2>
+  <div class="col-12">
+    {#each data.insiders as insider}
+      <InsiderTypeCard {insider} />
+    {/each}
+  </div>
 </div>
-  
-</div>
-
 
 <style>
   .page-title {
@@ -38,7 +36,6 @@ const { hairtype, insiders } = data;
     color: #000000;
     padding-left: 5px;
   }
-
 
   .btn {
     border-color: black;
@@ -66,8 +63,4 @@ const { hairtype, insiders } = data;
   .container h2 {
     font-size: 1.7rem;
   }
-
-
-
-
 </style>

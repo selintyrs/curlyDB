@@ -11,10 +11,11 @@
     });
   }
 </script>
+
 <a href="/insider" class="btn">Back</a>
 <h1 class="page-title">Sharing is caring!</h1>
 
-<form method="Post" action="?/create" class="form-container">
+<form method="POST" action="?/create" class="form-container">
   <!-- Left Column -->
   <div class="form-left">
     <h2 class="form-question">Select your hairtype:</h2>

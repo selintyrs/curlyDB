@@ -3,18 +3,18 @@
 </script>
 
 <div class="card text-center shadow-none">
-  <!-- Name und Hairtype über dem Bild -->
+
   <div class="card-header">
     <h5 class="card-title">
       <span class="hairtype">{hairtype.hairtype}</span>
       {hairtype.name.toUpperCase()}
     </h5>
   </div>
-  <!-- Bild -->
+
   <div class="card-image">
     <img src={hairtype.picture} alt={hairtype.name} />
   </div>
-  <!-- Beschreibung -->
+ 
   <div class="card-body">
     <p class="card-text">{hairtype.description}</p>
   </div>
