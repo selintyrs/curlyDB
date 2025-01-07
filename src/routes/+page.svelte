@@ -61,12 +61,11 @@
     width: 100%;
   }
 
-  .section-2 {
-    background-image: url("/images/models/group.jpeg");
-    width: 100vh;
+  .section-2 img {
+    max-height: 100vh; /* Verhindert, dass das Bild höher als der Bildschirm wird */
+    width: 100%;
     height: auto;
-  }
-
+}
 
 
   .section-1-content h1 {
