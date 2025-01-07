@@ -52,4 +52,11 @@
     margin-top: 20px;
     margin-left: 10px;
   }
+
+  .col-12 ol {
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+
 </style>

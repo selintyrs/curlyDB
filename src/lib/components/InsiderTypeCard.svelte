@@ -11,3 +11,17 @@
       <span class="badge">{insider.ratingAvg}</span>
     </li>
   </ol>
+
+  <style>
+    
+    .list-group {
+      margin-top: 10px;
+      display: flex;
+        flex-direction: column;
+    }
+
+    ol li {
+    margin: 10px 0;
+    list-style-type: none;
+  }
+  </style>
