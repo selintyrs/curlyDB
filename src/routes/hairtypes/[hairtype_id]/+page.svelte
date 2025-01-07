@@ -13,26 +13,18 @@ const { hairtype, insiders } = data;
   <RoutineCard hairtype={data.hairtype} />
 </div>
 
+<div class="container">
 <!-- Liste der Insider-Tipps -->
-<h2>Insider-Tipps</h2>
-
-console.log(data.insiders);
-
+<h2>Insiders for your hairtype</h2>
 
 <div class="col-12">
-  <ol>
-    {#if data.insiders && data.insiders.length > 0}
   {#each data.insiders as insider}
-    <li>{insider.tip_text || 'Kein Text vorhanden'}</li>
+    <InsiderTypeCard insider={insider} />
   {/each}
-{:else}
-  <p>Keine Insider-Tipps verfügbar.</p>
-{/if}
-
-  </ol>
-  
 </div>
   
+</div>
+
 
 <style>
   .page-title {
@@ -62,10 +54,22 @@ console.log(data.insiders);
     margin-left: 10px;
   }
 
-  .col-12 ol {
-    padding: 10px;
-    background-color: #791919;
+  .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: italic;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    background-color: transparent !important;
   }
+
+  .container h2 {
+    font-size: 1.7rem;
+  }
+
+  
 
 
 </style>
