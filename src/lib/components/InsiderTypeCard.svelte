@@ -17,8 +17,9 @@
     
     .list-group {
       margin-top: 10px;
-      display: flex;
-        flex-direction: column;
+        padding: 10px;
+        background-color: #bd3030;
+
     }
 
     ol li {
