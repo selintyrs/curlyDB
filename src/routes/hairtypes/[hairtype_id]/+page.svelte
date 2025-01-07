@@ -12,10 +12,13 @@
 </div>
 
 <!-- Liste der Insider-Tipps -->
+<h2>Insider-Tipps</h2>
 <ol>
-  {#each insiders as insider}
-    <InsiderTypeCard {insider} />
-  {/each}
+
+    {#each data.insiders as insider}
+      <InsiderTypeCard {insider} />
+    {/each}
+  
 </ol>
 
 <style>

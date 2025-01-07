@@ -1,14 +1,19 @@
 import db from "$lib/db.js";
 
 export async function load({ params }) {
-  const hairtype = await db.getHairType(params.hairtype_id); // Lade Haartyp-Daten
-  const insiders = await db.getInsidersByHairtype(params.hairtype_id); // Lade Insider-Tipps für den Haartyp
-  
+  const hairtypeId = params.hairtype_id;
+
+  // Hole den Haartyp aus der Datenbank
+  const hairtype = await db.getHairType(hairtypeId);
+
+  // Hole alle Insiders mit der passenden hairtype_id
+  const insiders = await db.getInsidersByHairtype(hairtypeId);
+
   return {
     hairtype: {
-      _id: params.hairtype_id,
+      _id: hairtypeId,
       ...hairtype,
     },
-    insiders, // Gib die Insider-Daten zurück
+    insiders // Füge die Insiders hinzu
   };
 }
