@@ -24,5 +24,8 @@
   ol li {
     margin: 10px 0;
     list-style-type: none;
+    background-color: #f8d7da; /* Leichte rote Farbe zum Testen */
+    padding: 10px;
+    
   }
 </style>

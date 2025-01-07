@@ -1,5 +1,7 @@
 <script>
   let { data } = $props();
+  console.log(data.insiders); // Prüfe, ob die Insider-Daten geladen werden
+
   import RoutineCard from "$lib/components/RoutineCard.svelte";
   import InsiderTypeCard from "$lib/components/InsiderTypeCard.svelte";
 </script>
@@ -16,12 +18,11 @@
 
 <div class="col-12">
   <ol>
-
     {#each data.insiders as insider}
-      <InsiderTypeCard {insider} />
+      <li>{insider.tip_text || 'Kein Text vorhanden'}</li>
     {/each}
+  </ol>
   
-</ol>
 </div>
   
 
