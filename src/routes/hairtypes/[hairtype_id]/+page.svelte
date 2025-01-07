@@ -13,13 +13,17 @@
 
 <!-- Liste der Insider-Tipps -->
 <h2>Insider-Tipps</h2>
-<ol>
+
+<div class="col-12">
+  <ol>
 
     {#each data.insiders as insider}
       <InsiderTypeCard {insider} />
     {/each}
   
 </ol>
+</div>
+  
 
 <style>
   .page-title {
