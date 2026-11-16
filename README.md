@@ -1,38 +1,70 @@
-# sv
+# CurlyDB
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A web platform that helps people with curly hair find the right care for their hair type and share tips with each other.
 
-## Creating a project
+Only around 15 % of people have naturally curly hair, and finding the right routine, products and techniques can be overwhelming. CurlyDB brings together structured care guides for all nine curl types and a community where people share what works for them.
 
-If you're seeing this, you've probably already done this step. Congrats!
+> Semester project for the *Prototyping* module, BSc Business Information Systems, ZHAW (December 2024 to January 2025).
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Features
 
-# create a new project in my-app
-npx sv create my-app
+- **Curl type overview:** all nine curl types, from waves to tight coils, with a description of how to recognise each one.
+- **Care routines:** a detail page per curl type with a four-step routine (wash, style, dry, refresh) and the community tips for that type.
+- **Insider community:** users share their own tips through a form with validation. Tips can be filtered by curl type.
+- **Ratings:** every tip can be rated with stars. Ratings are stored in a separate collection, and the average rating and count are updated on the tip.
+- **Chatbot:** an embedded chatbot answers questions about curly hair care.
+
+## Tech stack
+
+- **Frontend & server:** SvelteKit (server-side data loading and form actions)
+- **Database:** MongoDB with the official Node.js driver
+- **Styling:** Bootstrap 5
+- **Deployment:** Netlify
+
+## Data model
+
+Three MongoDB collections:
+
+| Collection  | Content                                                           |
+|-------------|-------------------------------------------------------------------|
+| `hairtypes` | The nine curl types, each with its care routine                   |
+| `insiders`  | Community tips, linked to a curl type, with average rating        |
+| `ratings`   | Individual star ratings, referencing a tip                        |
+
+## Project structure
+
+```
+src/
+├── lib/
+│   ├── db.js                  # Database access (queries, inserts, rating update)
+│   └── components/            # HairtypeCard, RoutineCard, InsiderCard, InsiderTypeCard
+└── routes/
+    ├── +page.svelte           # Landing page
+    ├── hairtypes/             # Curl type overview and detail pages
+    └── insider/               # Community tips, filter and create form
 ```
 
-## Developing
+## Running locally
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Requirements: Node.js 18+ and a MongoDB database.
 
-```bash
-npm run dev
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create a `.env` file in the project root:
+   ```
+   DB_URI=mongodb+srv://<user>:<password>@<cluster>/
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Documentation
 
-## Building
+The full project documentation (in German) is in [`src/documentation/`](src/documentation/).
 
-To create a production version of your app:
+## Author
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Selin Soy
